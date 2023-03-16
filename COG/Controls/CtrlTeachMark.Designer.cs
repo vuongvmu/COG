@@ -38,9 +38,6 @@
             this.tlpROI = new System.Windows.Forms.TableLayoutPanel();
             this.btnApply = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnMarkROI = new System.Windows.Forms.Button();
-            this.btnSetMark = new System.Windows.Forms.Button();
-            this.btnSearchROI = new System.Windows.Forms.Button();
             this.btnMasking = new System.Windows.Forms.Button();
             this.lblMarkIndex = new System.Windows.Forms.Label();
             this.lblMainMark = new System.Windows.Forms.Label();
@@ -55,6 +52,10 @@
             this.btnSubMark4 = new System.Windows.Forms.Button();
             this.pnlMainMarkIndex = new System.Windows.Forms.Panel();
             this.btnMainMark = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnMarkROI = new System.Windows.Forms.Button();
+            this.btnSetMark = new System.Windows.Forms.Button();
+            this.btnSearchROI = new System.Windows.Forms.Button();
             this.tlpROIPosition = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMarkPosition = new System.Windows.Forms.Label();
@@ -87,7 +88,6 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.lblAngle = new System.Windows.Forms.Label();
             this.lblMarkAngleThreshold = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpTeachMark.SuspendLayout();
             this.tlpMarkRegister.SuspendLayout();
             this.tlpTest.SuspendLayout();
@@ -98,6 +98,7 @@
             this.tlpSeperateMarkIndex.SuspendLayout();
             this.tlpSubMarkIndex.SuspendLayout();
             this.pnlMainMarkIndex.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tlpROIPosition.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpMarkPosition.SuspendLayout();
@@ -114,7 +115,6 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tlpSpec.SuspendLayout();
             this.tlpSpecData.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpTeachMark
@@ -130,9 +130,9 @@
             this.tlpTeachMark.Name = "tlpTeachMark";
             this.tlpTeachMark.RowCount = 7;
             this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlpTeachMark.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -151,14 +151,14 @@
             this.tlpMarkRegister.Controls.Add(this.pnlMainMark, 1, 1);
             this.tlpMarkRegister.Controls.Add(this.tlpMarkIndex, 0, 1);
             this.tlpMarkRegister.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMarkRegister.Location = new System.Drawing.Point(0, 138);
+            this.tlpMarkRegister.Location = new System.Drawing.Point(0, 120);
             this.tlpMarkRegister.Margin = new System.Windows.Forms.Padding(0);
             this.tlpMarkRegister.Name = "tlpMarkRegister";
             this.tlpMarkRegister.RowCount = 3;
             this.tlpMarkRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpMarkRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlpMarkRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpMarkRegister.Size = new System.Drawing.Size(800, 585);
+            this.tlpMarkRegister.Size = new System.Drawing.Size(800, 612);
             this.tlpMarkRegister.TabIndex = 284;
             // 
             // tlpTest
@@ -170,13 +170,13 @@
             this.tlpTest.Controls.Add(this.btnAlignTest, 1, 1);
             this.tlpTest.Controls.Add(this.btnMarkTest, 2, 1);
             this.tlpTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpTest.Location = new System.Drawing.Point(400, 363);
+            this.tlpTest.Location = new System.Drawing.Point(400, 379);
             this.tlpTest.Margin = new System.Windows.Forms.Padding(0);
             this.tlpTest.Name = "tlpTest";
             this.tlpTest.RowCount = 2;
             this.tlpTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTest.Size = new System.Drawing.Size(400, 222);
+            this.tlpTest.Size = new System.Drawing.Size(400, 233);
             this.tlpTest.TabIndex = 185;
             // 
             // btnAlignTest
@@ -185,9 +185,9 @@
             this.btnAlignTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAlignTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAlignTest.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAlignTest.Location = new System.Drawing.Point(136, 114);
+            this.btnAlignTest.Location = new System.Drawing.Point(136, 119);
             this.btnAlignTest.Name = "btnAlignTest";
-            this.btnAlignTest.Size = new System.Drawing.Size(127, 105);
+            this.btnAlignTest.Size = new System.Drawing.Size(127, 111);
             this.btnAlignTest.TabIndex = 195;
             this.btnAlignTest.Text = "ALIGN TEST";
             this.btnAlignTest.UseVisualStyleBackColor = false;
@@ -199,9 +199,9 @@
             this.btnMarkTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMarkTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMarkTest.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnMarkTest.Location = new System.Drawing.Point(269, 114);
+            this.btnMarkTest.Location = new System.Drawing.Point(269, 119);
             this.btnMarkTest.Name = "btnMarkTest";
-            this.btnMarkTest.Size = new System.Drawing.Size(128, 105);
+            this.btnMarkTest.Size = new System.Drawing.Size(128, 111);
             this.btnMarkTest.TabIndex = 195;
             this.btnMarkTest.Text = "MARK TEST";
             this.btnMarkTest.UseVisualStyleBackColor = false;
@@ -217,13 +217,13 @@
             this.tlpROI.Controls.Add(this.btnDelete, 1, 1);
             this.tlpROI.Controls.Add(this.btnMasking, 2, 1);
             this.tlpROI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpROI.Location = new System.Drawing.Point(0, 363);
+            this.tlpROI.Location = new System.Drawing.Point(0, 379);
             this.tlpROI.Margin = new System.Windows.Forms.Padding(0);
             this.tlpROI.Name = "tlpROI";
             this.tlpROI.RowCount = 2;
             this.tlpROI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpROI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpROI.Size = new System.Drawing.Size(400, 222);
+            this.tlpROI.Size = new System.Drawing.Size(400, 233);
             this.tlpROI.TabIndex = 188;
             // 
             // btnApply
@@ -232,9 +232,9 @@
             this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnApply.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnApply.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnApply.Location = new System.Drawing.Point(3, 114);
+            this.btnApply.Location = new System.Drawing.Point(3, 119);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(130, 105);
+            this.btnApply.Size = new System.Drawing.Size(130, 111);
             this.btnApply.TabIndex = 192;
             this.btnApply.Text = "APPLY";
             this.btnApply.UseVisualStyleBackColor = false;
@@ -246,55 +246,13 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Location = new System.Drawing.Point(139, 114);
+            this.btnDelete.Location = new System.Drawing.Point(139, 119);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 105);
+            this.btnDelete.Size = new System.Drawing.Size(126, 111);
             this.btnDelete.TabIndex = 191;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnMarkROI
-            // 
-            this.btnMarkROI.BackColor = System.Drawing.Color.DarkGray;
-            this.btnMarkROI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMarkROI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMarkROI.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnMarkROI.Location = new System.Drawing.Point(3, 3);
-            this.btnMarkROI.Name = "btnMarkROI";
-            this.btnMarkROI.Size = new System.Drawing.Size(127, 108);
-            this.btnMarkROI.TabIndex = 187;
-            this.btnMarkROI.Text = "MARK ROI";
-            this.btnMarkROI.UseVisualStyleBackColor = false;
-            this.btnMarkROI.Click += new System.EventHandler(this.btnMarkROI_Click);
-            // 
-            // btnSetMark
-            // 
-            this.btnSetMark.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSetMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSetMark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSetMark.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSetMark.Location = new System.Drawing.Point(136, 3);
-            this.btnSetMark.Name = "btnSetMark";
-            this.btnSetMark.Size = new System.Drawing.Size(127, 108);
-            this.btnSetMark.TabIndex = 188;
-            this.btnSetMark.Text = "SET MARK";
-            this.btnSetMark.UseVisualStyleBackColor = false;
-            this.btnSetMark.Click += new System.EventHandler(this.btnSetMark_Click);
-            // 
-            // btnSearchROI
-            // 
-            this.btnSearchROI.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSearchROI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSearchROI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearchROI.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSearchROI.Location = new System.Drawing.Point(269, 3);
-            this.btnSearchROI.Name = "btnSearchROI";
-            this.btnSearchROI.Size = new System.Drawing.Size(128, 108);
-            this.btnSearchROI.TabIndex = 189;
-            this.btnSearchROI.Text = "SEARCH ROI";
-            this.btnSearchROI.UseVisualStyleBackColor = false;
-            this.btnSearchROI.Click += new System.EventHandler(this.btnSearchROI_Click);
             // 
             // btnMasking
             // 
@@ -302,9 +260,9 @@
             this.btnMasking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMasking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMasking.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnMasking.Location = new System.Drawing.Point(271, 114);
+            this.btnMasking.Location = new System.Drawing.Point(271, 119);
             this.btnMasking.Name = "btnMasking";
-            this.btnMasking.Size = new System.Drawing.Size(126, 105);
+            this.btnMasking.Size = new System.Drawing.Size(126, 111);
             this.btnMasking.TabIndex = 190;
             this.btnMasking.Text = "MASKING";
             this.btnMasking.UseVisualStyleBackColor = false;
@@ -317,10 +275,10 @@
             this.lblMarkIndex.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMarkIndex.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
             this.lblMarkIndex.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMarkIndex.Location = new System.Drawing.Point(1, 1);
-            this.lblMarkIndex.Margin = new System.Windows.Forms.Padding(1);
+            this.lblMarkIndex.Location = new System.Drawing.Point(0, 0);
+            this.lblMarkIndex.Margin = new System.Windows.Forms.Padding(0);
             this.lblMarkIndex.Name = "lblMarkIndex";
-            this.lblMarkIndex.Size = new System.Drawing.Size(398, 28);
+            this.lblMarkIndex.Size = new System.Drawing.Size(400, 30);
             this.lblMarkIndex.TabIndex = 182;
             this.lblMarkIndex.Text = "MARK INDEX";
             this.lblMarkIndex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -332,10 +290,10 @@
             this.lblMainMark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMainMark.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
             this.lblMainMark.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMainMark.Location = new System.Drawing.Point(401, 1);
-            this.lblMainMark.Margin = new System.Windows.Forms.Padding(1);
+            this.lblMainMark.Location = new System.Drawing.Point(400, 0);
+            this.lblMainMark.Margin = new System.Windows.Forms.Padding(0);
             this.lblMainMark.Name = "lblMainMark";
-            this.lblMainMark.Size = new System.Drawing.Size(398, 28);
+            this.lblMainMark.Size = new System.Drawing.Size(400, 30);
             this.lblMainMark.TabIndex = 119;
             this.lblMainMark.Text = "REGISTERED MARK";
             this.lblMainMark.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,7 +304,7 @@
             this.pnlMainMark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainMark.Location = new System.Drawing.Point(403, 33);
             this.pnlMainMark.Name = "pnlMainMark";
-            this.pnlMainMark.Size = new System.Drawing.Size(394, 327);
+            this.pnlMainMark.Size = new System.Drawing.Size(394, 343);
             this.pnlMainMark.TabIndex = 183;
             // 
             // cogMarkDisplay
@@ -364,7 +322,7 @@
             this.cogMarkDisplay.MouseWheelSensitivity = 1D;
             this.cogMarkDisplay.Name = "cogMarkDisplay";
             this.cogMarkDisplay.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cogMarkDisplay.OcxState")));
-            this.cogMarkDisplay.Size = new System.Drawing.Size(394, 327);
+            this.cogMarkDisplay.Size = new System.Drawing.Size(394, 343);
             this.cogMarkDisplay.TabIndex = 0;
             // 
             // tlpMarkIndex
@@ -380,7 +338,7 @@
             this.tlpMarkIndex.RowCount = 2;
             this.tlpMarkIndex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66F));
             this.tlpMarkIndex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tlpMarkIndex.Size = new System.Drawing.Size(400, 333);
+            this.tlpMarkIndex.Size = new System.Drawing.Size(400, 349);
             this.tlpMarkIndex.TabIndex = 187;
             // 
             // tlpSeperateMarkIndex
@@ -396,7 +354,7 @@
             this.tlpSeperateMarkIndex.Name = "tlpSeperateMarkIndex";
             this.tlpSeperateMarkIndex.RowCount = 1;
             this.tlpSeperateMarkIndex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSeperateMarkIndex.Size = new System.Drawing.Size(400, 219);
+            this.tlpSeperateMarkIndex.Size = new System.Drawing.Size(400, 230);
             this.tlpSeperateMarkIndex.TabIndex = 187;
             // 
             // tlpSubMarkIndex
@@ -415,7 +373,7 @@
             this.tlpSubMarkIndex.RowCount = 2;
             this.tlpSubMarkIndex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpSubMarkIndex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSubMarkIndex.Size = new System.Drawing.Size(267, 219);
+            this.tlpSubMarkIndex.Size = new System.Drawing.Size(267, 230);
             this.tlpSubMarkIndex.TabIndex = 0;
             // 
             // btnSubMark2
@@ -425,7 +383,7 @@
             this.btnSubMark2.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.btnSubMark2.Location = new System.Drawing.Point(136, 3);
             this.btnSubMark2.Name = "btnSubMark2";
-            this.btnSubMark2.Size = new System.Drawing.Size(128, 103);
+            this.btnSubMark2.Size = new System.Drawing.Size(128, 109);
             this.btnSubMark2.TabIndex = 184;
             this.btnSubMark2.Tag = "2";
             this.btnSubMark2.Text = "SUB 2";
@@ -439,7 +397,7 @@
             this.btnSubMark1.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.btnSubMark1.Location = new System.Drawing.Point(3, 3);
             this.btnSubMark1.Name = "btnSubMark1";
-            this.btnSubMark1.Size = new System.Drawing.Size(127, 103);
+            this.btnSubMark1.Size = new System.Drawing.Size(127, 109);
             this.btnSubMark1.TabIndex = 183;
             this.btnSubMark1.Tag = "1";
             this.btnSubMark1.Text = "SUB 1";
@@ -451,9 +409,9 @@
             this.btnSubMark3.BackColor = System.Drawing.Color.DarkGray;
             this.btnSubMark3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSubMark3.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSubMark3.Location = new System.Drawing.Point(3, 112);
+            this.btnSubMark3.Location = new System.Drawing.Point(3, 118);
             this.btnSubMark3.Name = "btnSubMark3";
-            this.btnSubMark3.Size = new System.Drawing.Size(127, 104);
+            this.btnSubMark3.Size = new System.Drawing.Size(127, 109);
             this.btnSubMark3.TabIndex = 185;
             this.btnSubMark3.Tag = "3";
             this.btnSubMark3.Text = "SUB 3";
@@ -465,9 +423,9 @@
             this.btnSubMark4.BackColor = System.Drawing.Color.DarkGray;
             this.btnSubMark4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSubMark4.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSubMark4.Location = new System.Drawing.Point(136, 112);
+            this.btnSubMark4.Location = new System.Drawing.Point(136, 118);
             this.btnSubMark4.Name = "btnSubMark4";
-            this.btnSubMark4.Size = new System.Drawing.Size(128, 104);
+            this.btnSubMark4.Size = new System.Drawing.Size(128, 109);
             this.btnSubMark4.TabIndex = 186;
             this.btnSubMark4.Tag = "4";
             this.btnSubMark4.Text = "SUB 4";
@@ -481,7 +439,7 @@
             this.pnlMainMarkIndex.Location = new System.Drawing.Point(0, 0);
             this.pnlMainMarkIndex.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainMarkIndex.Name = "pnlMainMarkIndex";
-            this.pnlMainMarkIndex.Size = new System.Drawing.Size(133, 219);
+            this.pnlMainMarkIndex.Size = new System.Drawing.Size(133, 230);
             this.pnlMainMarkIndex.TabIndex = 1;
             // 
             // btnMainMark
@@ -491,12 +449,72 @@
             this.btnMainMark.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.btnMainMark.Location = new System.Drawing.Point(0, 0);
             this.btnMainMark.Name = "btnMainMark";
-            this.btnMainMark.Size = new System.Drawing.Size(133, 219);
+            this.btnMainMark.Size = new System.Drawing.Size(133, 230);
             this.btnMainMark.TabIndex = 181;
             this.btnMainMark.Tag = "0";
             this.btnMainMark.Text = "MAIN";
             this.btnMainMark.UseVisualStyleBackColor = false;
             this.btnMainMark.Click += new System.EventHandler(this.btnSetMarkIndex_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btnMarkROI, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnSetMark, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearchROI, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 230);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 119);
+            this.tableLayoutPanel1.TabIndex = 188;
+            // 
+            // btnMarkROI
+            // 
+            this.btnMarkROI.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMarkROI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMarkROI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMarkROI.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnMarkROI.Location = new System.Drawing.Point(3, 3);
+            this.btnMarkROI.Name = "btnMarkROI";
+            this.btnMarkROI.Size = new System.Drawing.Size(127, 113);
+            this.btnMarkROI.TabIndex = 187;
+            this.btnMarkROI.Text = "MARK ROI";
+            this.btnMarkROI.UseVisualStyleBackColor = false;
+            this.btnMarkROI.Click += new System.EventHandler(this.btnMarkROI_Click);
+            // 
+            // btnSetMark
+            // 
+            this.btnSetMark.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSetMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSetMark.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSetMark.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSetMark.Location = new System.Drawing.Point(136, 3);
+            this.btnSetMark.Name = "btnSetMark";
+            this.btnSetMark.Size = new System.Drawing.Size(127, 113);
+            this.btnSetMark.TabIndex = 188;
+            this.btnSetMark.Text = "SET MARK";
+            this.btnSetMark.UseVisualStyleBackColor = false;
+            this.btnSetMark.Click += new System.EventHandler(this.btnSetMark_Click);
+            // 
+            // btnSearchROI
+            // 
+            this.btnSearchROI.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSearchROI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearchROI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSearchROI.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSearchROI.Location = new System.Drawing.Point(269, 3);
+            this.btnSearchROI.Name = "btnSearchROI";
+            this.btnSearchROI.Size = new System.Drawing.Size(128, 113);
+            this.btnSearchROI.TabIndex = 189;
+            this.btnSearchROI.Text = "SEARCH ROI";
+            this.btnSearchROI.UseVisualStyleBackColor = false;
+            this.btnSearchROI.Click += new System.EventHandler(this.btnSearchROI_Click);
             // 
             // tlpROIPosition
             // 
@@ -512,7 +530,7 @@
             this.tlpROIPosition.RowCount = 1;
             this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tlpROIPosition.Size = new System.Drawing.Size(800, 78);
+            this.tlpROIPosition.Size = new System.Drawing.Size(800, 60);
             this.tlpROIPosition.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -527,8 +545,8 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 78);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 60);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lblMarkPosition
@@ -557,7 +575,7 @@
             this.tlpMarkPosition.Name = "tlpMarkPosition";
             this.tlpMarkPosition.RowCount = 1;
             this.tlpMarkPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMarkPosition.Size = new System.Drawing.Size(400, 48);
+            this.tlpMarkPosition.Size = new System.Drawing.Size(400, 30);
             this.tlpMarkPosition.TabIndex = 0;
             // 
             // rdoMarkRight
@@ -570,7 +588,7 @@
             this.rdoMarkRight.Location = new System.Drawing.Point(200, 0);
             this.rdoMarkRight.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMarkRight.Name = "rdoMarkRight";
-            this.rdoMarkRight.Size = new System.Drawing.Size(200, 48);
+            this.rdoMarkRight.Size = new System.Drawing.Size(200, 30);
             this.rdoMarkRight.TabIndex = 142;
             this.rdoMarkRight.Tag = "0";
             this.rdoMarkRight.Text = "RIGHT MARK";
@@ -588,7 +606,7 @@
             this.rdoMarkLeft.Location = new System.Drawing.Point(0, 0);
             this.rdoMarkLeft.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMarkLeft.Name = "rdoMarkLeft";
-            this.rdoMarkLeft.Size = new System.Drawing.Size(200, 48);
+            this.rdoMarkLeft.Size = new System.Drawing.Size(200, 30);
             this.rdoMarkLeft.TabIndex = 141;
             this.rdoMarkLeft.Tag = "0";
             this.rdoMarkLeft.Text = "LEFT MARK";
@@ -608,8 +626,8 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 78);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 60);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lblTargetObject
@@ -638,7 +656,7 @@
             this.tlpTargetObject.Name = "tlpTargetObject";
             this.tlpTargetObject.RowCount = 1;
             this.tlpTargetObject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTargetObject.Size = new System.Drawing.Size(400, 48);
+            this.tlpTargetObject.Size = new System.Drawing.Size(400, 30);
             this.tlpTargetObject.TabIndex = 1;
             // 
             // rdoPanel
@@ -651,7 +669,7 @@
             this.rdoPanel.Location = new System.Drawing.Point(200, 0);
             this.rdoPanel.Margin = new System.Windows.Forms.Padding(0);
             this.rdoPanel.Name = "rdoPanel";
-            this.rdoPanel.Size = new System.Drawing.Size(200, 48);
+            this.rdoPanel.Size = new System.Drawing.Size(200, 30);
             this.rdoPanel.TabIndex = 143;
             this.rdoPanel.Tag = "0";
             this.rdoPanel.Text = "PANEL";
@@ -669,7 +687,7 @@
             this.rdoFPC.Location = new System.Drawing.Point(0, 0);
             this.rdoFPC.Margin = new System.Windows.Forms.Padding(0);
             this.rdoFPC.Name = "rdoFPC";
-            this.rdoFPC.Size = new System.Drawing.Size(200, 48);
+            this.rdoFPC.Size = new System.Drawing.Size(200, 30);
             this.rdoFPC.TabIndex = 142;
             this.rdoFPC.Tag = "0";
             this.rdoFPC.Text = "FPC";
@@ -686,12 +704,12 @@
             this.tableLayoutPanel6.Controls.Add(this.tlpPreAlignLight, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 753);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 762);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 117);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 108);
             this.tableLayoutPanel6.TabIndex = 286;
             // 
             // tlpPreAlignLight
@@ -707,7 +725,7 @@
             this.tlpPreAlignLight.RowCount = 2;
             this.tlpPreAlignLight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpPreAlignLight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPreAlignLight.Size = new System.Drawing.Size(385, 117);
+            this.tlpPreAlignLight.Size = new System.Drawing.Size(385, 108);
             this.tlpPreAlignLight.TabIndex = 296;
             // 
             // tlpLight
@@ -727,7 +745,7 @@
             this.tlpLight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpLight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpLight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpLight.Size = new System.Drawing.Size(385, 87);
+            this.tlpLight.Size = new System.Drawing.Size(385, 78);
             this.tlpLight.TabIndex = 300;
             // 
             // lblLightOnOff
@@ -736,10 +754,10 @@
             this.lblLightOnOff.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLightOnOff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLightOnOff.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblLightOnOff.Location = new System.Drawing.Point(0, 43);
+            this.lblLightOnOff.Location = new System.Drawing.Point(0, 39);
             this.lblLightOnOff.Margin = new System.Windows.Forms.Padding(0);
             this.lblLightOnOff.Name = "lblLightOnOff";
-            this.lblLightOnOff.Size = new System.Drawing.Size(192, 44);
+            this.lblLightOnOff.Size = new System.Drawing.Size(192, 39);
             this.lblLightOnOff.TabIndex = 150;
             this.lblLightOnOff.Text = "ON / OFF";
             this.lblLightOnOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -753,7 +771,7 @@
             this.lblLightDimmingLevel.Location = new System.Drawing.Point(0, 0);
             this.lblLightDimmingLevel.Margin = new System.Windows.Forms.Padding(0);
             this.lblLightDimmingLevel.Name = "lblLightDimmingLevel";
-            this.lblLightDimmingLevel.Size = new System.Drawing.Size(192, 43);
+            this.lblLightDimmingLevel.Size = new System.Drawing.Size(192, 39);
             this.lblLightDimmingLevel.TabIndex = 146;
             this.lblLightDimmingLevel.Text = "LIGHT [0~255]";
             this.lblLightDimmingLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -771,7 +789,7 @@
             this.tlpLightDimmingLevel.Name = "tlpLightDimmingLevel";
             this.tlpLightDimmingLevel.RowCount = 1;
             this.tlpLightDimmingLevel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpLightDimmingLevel.Size = new System.Drawing.Size(193, 43);
+            this.tlpLightDimmingLevel.Size = new System.Drawing.Size(193, 39);
             this.tlpLightDimmingLevel.TabIndex = 5;
             // 
             // nudLightDimmingLevel
@@ -801,7 +819,7 @@
             this.pnlTrbDimmingLevelValue.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.pnlTrbDimmingLevelValue.Name = "pnlTrbDimmingLevelValue";
             this.pnlTrbDimmingLevelValue.Padding = new System.Windows.Forms.Padding(0, 9, 0, 0);
-            this.pnlTrbDimmingLevelValue.Size = new System.Drawing.Size(123, 37);
+            this.pnlTrbDimmingLevelValue.Size = new System.Drawing.Size(123, 33);
             this.pnlTrbDimmingLevelValue.TabIndex = 209;
             // 
             // trbDimmingLevelValue
@@ -812,7 +830,7 @@
             this.trbDimmingLevelValue.Margin = new System.Windows.Forms.Padding(0);
             this.trbDimmingLevelValue.Maximum = 255;
             this.trbDimmingLevelValue.Name = "trbDimmingLevelValue";
-            this.trbDimmingLevelValue.Size = new System.Drawing.Size(121, 26);
+            this.trbDimmingLevelValue.Size = new System.Drawing.Size(121, 22);
             this.trbDimmingLevelValue.TabIndex = 208;
             this.trbDimmingLevelValue.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trbDimmingLevelValue.Scroll += new System.EventHandler(this.trbDimmingLevelValue_Scroll);
@@ -825,12 +843,12 @@
             this.tlpLightOnOff.Controls.Add(this.lblLightOff, 0, 0);
             this.tlpLightOnOff.Controls.Add(this.lblLigntOn, 0, 0);
             this.tlpLightOnOff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpLightOnOff.Location = new System.Drawing.Point(192, 43);
+            this.tlpLightOnOff.Location = new System.Drawing.Point(192, 39);
             this.tlpLightOnOff.Margin = new System.Windows.Forms.Padding(0);
             this.tlpLightOnOff.Name = "tlpLightOnOff";
             this.tlpLightOnOff.RowCount = 1;
             this.tlpLightOnOff.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpLightOnOff.Size = new System.Drawing.Size(193, 44);
+            this.tlpLightOnOff.Size = new System.Drawing.Size(193, 39);
             this.tlpLightOnOff.TabIndex = 149;
             // 
             // lblLightOff
@@ -841,7 +859,7 @@
             this.lblLightOff.Location = new System.Drawing.Point(96, 0);
             this.lblLightOff.Margin = new System.Windows.Forms.Padding(0);
             this.lblLightOff.Name = "lblLightOff";
-            this.lblLightOff.Size = new System.Drawing.Size(97, 44);
+            this.lblLightOff.Size = new System.Drawing.Size(97, 39);
             this.lblLightOff.TabIndex = 152;
             this.lblLightOff.Text = "OFF";
             this.lblLightOff.UseVisualStyleBackColor = false;
@@ -855,7 +873,7 @@
             this.lblLigntOn.Location = new System.Drawing.Point(0, 0);
             this.lblLigntOn.Margin = new System.Windows.Forms.Padding(0);
             this.lblLigntOn.Name = "lblLigntOn";
-            this.lblLigntOn.Size = new System.Drawing.Size(96, 44);
+            this.lblLigntOn.Size = new System.Drawing.Size(96, 39);
             this.lblLigntOn.TabIndex = 151;
             this.lblLigntOn.Text = "ON";
             this.lblLigntOn.UseVisualStyleBackColor = false;
@@ -889,7 +907,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(385, 117);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(385, 108);
             this.tableLayoutPanel5.TabIndex = 297;
             // 
             // label1
@@ -919,7 +937,7 @@
             this.tlpSpec.Name = "tlpSpec";
             this.tlpSpec.RowCount = 1;
             this.tlpSpec.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSpec.Size = new System.Drawing.Size(385, 87);
+            this.tlpSpec.Size = new System.Drawing.Size(385, 78);
             this.tlpSpec.TabIndex = 190;
             // 
             // tlpSpecData
@@ -938,7 +956,7 @@
             this.tlpSpecData.RowCount = 2;
             this.tlpSpecData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpSpecData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSpecData.Size = new System.Drawing.Size(385, 87);
+            this.tlpSpecData.Size = new System.Drawing.Size(385, 78);
             this.tlpSpecData.TabIndex = 62;
             // 
             // lblMarkScore
@@ -952,7 +970,7 @@
             this.lblMarkScore.Location = new System.Drawing.Point(192, 0);
             this.lblMarkScore.Margin = new System.Windows.Forms.Padding(0);
             this.lblMarkScore.Name = "lblMarkScore";
-            this.lblMarkScore.Size = new System.Drawing.Size(193, 43);
+            this.lblMarkScore.Size = new System.Drawing.Size(193, 39);
             this.lblMarkScore.TabIndex = 261;
             this.lblMarkScore.Text = "80";
             this.lblMarkScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -967,7 +985,7 @@
             this.lblScore.Location = new System.Drawing.Point(0, 0);
             this.lblScore.Margin = new System.Windows.Forms.Padding(0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(192, 43);
+            this.lblScore.Size = new System.Drawing.Size(192, 39);
             this.lblScore.TabIndex = 61;
             this.lblScore.Text = "SCORE [%]";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -978,10 +996,10 @@
             this.lblAngle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAngle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAngle.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAngle.Location = new System.Drawing.Point(0, 43);
+            this.lblAngle.Location = new System.Drawing.Point(0, 39);
             this.lblAngle.Margin = new System.Windows.Forms.Padding(0);
             this.lblAngle.Name = "lblAngle";
-            this.lblAngle.Size = new System.Drawing.Size(192, 44);
+            this.lblAngle.Size = new System.Drawing.Size(192, 39);
             this.lblAngle.TabIndex = 194;
             this.lblAngle.Text = "ANGLE MAX";
             this.lblAngle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -994,32 +1012,14 @@
             this.lblMarkAngleThreshold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMarkAngleThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.lblMarkAngleThreshold.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMarkAngleThreshold.Location = new System.Drawing.Point(192, 43);
+            this.lblMarkAngleThreshold.Location = new System.Drawing.Point(192, 39);
             this.lblMarkAngleThreshold.Margin = new System.Windows.Forms.Padding(0);
             this.lblMarkAngleThreshold.Name = "lblMarkAngleThreshold";
-            this.lblMarkAngleThreshold.Size = new System.Drawing.Size(193, 44);
+            this.lblMarkAngleThreshold.Size = new System.Drawing.Size(193, 39);
             this.lblMarkAngleThreshold.TabIndex = 261;
             this.lblMarkAngleThreshold.Text = "0.1";
             this.lblMarkAngleThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMarkAngleThreshold.Click += new System.EventHandler(this.lblMarkAngleThreshold_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.btnMarkROI, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSetMark, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSearchROI, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 219);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 114);
-            this.tableLayoutPanel1.TabIndex = 188;
             // 
             // CtrlTeachMark
             // 
@@ -1040,6 +1040,7 @@
             this.tlpSeperateMarkIndex.ResumeLayout(false);
             this.tlpSubMarkIndex.ResumeLayout(false);
             this.pnlMainMarkIndex.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.tlpROIPosition.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpMarkPosition.ResumeLayout(false);
@@ -1057,7 +1058,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tlpSpec.ResumeLayout(false);
             this.tlpSpecData.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

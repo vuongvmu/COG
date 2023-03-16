@@ -931,8 +931,7 @@ namespace COG.Controls
                 _ShortParamList[i].SaveVPP(filePath, (int)_stageNo, (int)_camNo, i);
             }
         }
-
-        private void btnBlobTest_Click(object sender, EventArgs e)
+        private void btnBeadTest_Click(object sender, EventArgs e)
         {
             BeadTest();
         }
@@ -984,5 +983,7 @@ namespace COG.Controls
 
             _teachingDisplay.InteractiveGraphics.AddList(ResultGraphy, "result", false);
         }
+
+        
     }
 }
