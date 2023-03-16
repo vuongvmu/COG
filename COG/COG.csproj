@@ -1,0 +1,1847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp4.runtime.win.4.1.0.20190416\build\net\OpenCvSharp4.runtime.win.props" Condition="Exists('..\packages\OpenCvSharp4.runtime.win.4.1.0.20190416\build\net\OpenCvSharp4.runtime.win.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D2A103D-9B0E-405F-AB57-AD384DB775D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COG</RootNamespace>
+    <AssemblyName>VISION</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Runtime\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SIMUL, ATT_x, CGMS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Runtime\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Phone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_ACF_BONDER_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_ACF_BONDER_PC2_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_ACF_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_ACF_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_PRE_BONDER_PC3_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_PRE_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_PRE_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_COF_LOADER_PC4_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_COF_LOADER_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_COF_LOADER_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_COF_LOADER_PC5_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_COF_LOADER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_COF_LOADER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_FINAL_BONDER_PC6_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OLB_FINAL_BONDER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_FINAL_BONDER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOP_ACF_BONDER_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FOP_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOP_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOP_ACF_BONDER_PC2_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FOP_ACF_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOP_ACF_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_PRE_BONDER_PC3_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_PRE_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_PRE_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_PRE_BONDER_PC4_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_PRE_BONDER_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_PRE_BONDER_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FINAL_BONDER_PC5_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FINAL_BONDER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FINAL_BONDER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FPC_LOADER_PC6_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FPC_LOADER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FPC_LOADER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOF_ACF_BONDER_PC7_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FOF_ACF_BONDER_PC7_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOF_ACF_BONDER_PC7_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOF_ACF_BONDER_PC8_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOF_FOF_ACF_BONDER_PC8_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOF_ACF_BONDER_PC8_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_FOP_ACF_BONDER_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TFOG_FOP_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_FOP_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_PRE_BONDER_PC2_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TFOG_PRE_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_PRE_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_FINAL_BONDER_PC3_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TFOG_FINAL_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_FINAL_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_ALIGN_INSPECT_PC4_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TFOG_ALIGN_INSPECT_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_ALIGN_INSPECT_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_PANEL_ALIGN_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_PANEL_ALIGN_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_PANEL_ALIGN_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_FINAL_BONDER_PC2_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_FINAL_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_FINAL_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_FINAL_BONDER_PC3_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_FINAL_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_FINAL_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_INSPECT_PC4_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_INSPECT_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_INSPECT_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_ACF_BONDER_PC5_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_ACF_BONDER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_ACF_BONDER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_ACF_BONDER_PC6_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FOB_ACF_BONDER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_ACF_BONDER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ENCAP_CRD_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ENCAP_CRD_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENCAP_CRD_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CRD_TUFFY_PC1_MODE|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\CRD_TUFFY_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CRD_TUFFY_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releas|AnyCPU'">
+    <OutputPath>bin\Releas\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_ACF_BONDER_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_ACF_BONDER_PC2_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_ACF_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_ACF_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_PRE_BONDER_PC3_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_PRE_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_PRE_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_COF_LOADER_PC4_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_COF_LOADER_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_COF_LOADER_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_COF_LOADER_PC5_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_COF_LOADER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_COF_LOADER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OLB_FINAL_BONDER_PC6_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\OLB_FINAL_BONDER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OLB_FINAL_BONDER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOP_ACF_BONDER_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FOP_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOP_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOP_ACF_BONDER_PC2_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FOP_ACF_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOP_ACF_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_PRE_BONDER_PC3_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_PRE_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_PRE_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_PRE_BONDER_PC4_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_PRE_BONDER_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_PRE_BONDER_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FINAL_BONDER_PC5_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FINAL_BONDER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FINAL_BONDER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FPC_LOADER_PC6_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FPC_LOADER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FPC_LOADER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOF_ACF_BONDER_PC7_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FOF_ACF_BONDER_PC7_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOF_ACF_BONDER_PC7_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOF_FOF_ACF_BONDER_PC8_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOF_FOF_ACF_BONDER_PC8_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOF_FOF_ACF_BONDER_PC8_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_FOP_ACF_BONDER_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\TFOG_FOP_ACF_BONDER_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_FOP_ACF_BONDER_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_PRE_BONDER_PC2_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\TFOG_PRE_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_PRE_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_FINAL_BONDER_PC3_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\TFOG_FINAL_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_FINAL_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TFOG_ALIGN_INSPECT_PC4_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\TFOG_ALIGN_INSPECT_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TFOG_ALIGN_INSPECT_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_PANEL_ALIGN_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_PANEL_ALIGN_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_PANEL_ALIGN_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_FINAL_BONDER_PC2_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_FINAL_BONDER_PC2_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_FINAL_BONDER_PC2_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_FINAL_BONDER_PC3_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_FINAL_BONDER_PC3_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_FINAL_BONDER_PC3_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_INSPECT_PC4_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_INSPECT_PC4_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_INSPECT_PC4_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_ACF_BONDER_PC5_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_ACF_BONDER_PC5_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_ACF_BONDER_PC5_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FOB_ACF_BONDER_PC6_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\FOB_ACF_BONDER_PC6_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FOB_ACF_BONDER_PC6_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ENCAP_CRD_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\ENCAP_CRD_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENCAP_CRD_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CRD_TUFFY_PC1_MODE|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\CRD_TUFFY_PC1_MODE\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CRD_TUFFY_PC1_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releas|x64'">
+    <OutputPath>bin\x64\Releas\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACS.SPiiPlusNET, Version=2.50.0.26599, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\ACS\ACS.SPiiPlusNET.dll</HintPath>
+    </Reference>
+    <Reference Include="ATTWrapperd, Version=1.0.8075.32089, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Macron\Debug\ATTWrapperd.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Blob, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Blob.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CalibFix, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CalibFix.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CalibFixPlus, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Caliper, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Caliper.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CNLSearch, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CNLSearch.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Core, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.CorePlus, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Database, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Dimensioning, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Dimensioning.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Display.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.EdgeBlob, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.EdgeInspect, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Cognex\9.6\Cognex.VisionPro.EdgeInspect.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.EdgeInspect.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Cognex\9.6\Cognex.VisionPro.EdgeInspect.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.FG1394DCAM, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.FGGigE, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ImageFile, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ImageFile.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ImageProcessing, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ImageProcessing.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.Inspection, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.LineMax, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.LineMax.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.PMAlign, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.PMAlign.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.SearchMax, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.SearchMax.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ToolGroup, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="Cognex.VisionPro.ToolGroup.Controls, Version=71.2.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64" />
+    <Reference Include="JAS.Calibration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\JAS\JAS.Calibration.dll</HintPath>
+    </Reference>
+    <Reference Include="JAS.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\JAS\JAS.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="JASLogLibrary">
+      <HintPath>..\Library\JASLogLibrary\bin\Debug\JASLogLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="JASUtility">
+      <HintPath>..\Library\JASUtility\bin\Debug\JASUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Matrox.MatroxImagingLibrary, Version=10.10.614.1, Culture=neutral, PublicKeyToken=5a83d419d44a9d98, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Matrox\Matrox.MatroxImagingLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="mdWrapper">
+      <HintPath>..\Dll\CCLink\mdWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="netchartdir, Version=5.0.4.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\JAS\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.1.0.20190416\lib\net40\OpenCvSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.1.0.20190416\lib\net40\OpenCvSharp.Blob.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.1.0.20190416\lib\net40\OpenCvSharp.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.1.0.20190416\lib\net40\OpenCvSharp.UserInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\COM\LAFSensor.cs" />
+    <Compile Include="Class\COM\LightControl.cs" />
+    <Compile Include="Class\COM\VieworksLineScanner.cs" />
+    <Compile Include="Class\COM\SerialComm.cs" />
+    <Compile Include="Class\EnumType.cs" />
+    <Compile Include="Class\Manager\CSVManager.cs" />
+    <Compile Include="Class\FTPManager.cs" />
+    <Compile Include="Class\InspectionResult.cs" />
+    <Compile Include="Class\Main_ATT.cs" />
+    <Compile Include="Class\Main_CCLink.cs" />
+    <Compile Include="Class\LOG_CAL_LOAD_SAVE\Main_DataFile.cs" />
+    <Compile Include="Class\COM\COM_MCProtocol.cs" />
+    <Compile Include="Class\Main_RCS_.cs" />
+    <Compile Include="Class\Manager\MotionManager.cs" />
+    <Compile Include="Class\MIL\MILFrameGrabber.cs" />
+    <Compile Include="Class\MOTION\ACS\ACSMotion.cs" />
+    <Compile Include="Class\Main_MotionData.cs" />
+    <Compile Include="Class\MOTION\IMotion.cs" />
+    <Compile Include="Controls\CtrlATTRecipe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlATTRecipe.Designer.cs">
+      <DependentUpon>CtrlATTRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSHistory.Designer.cs">
+      <DependentUpon>CtrlCGMSHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSPreAlignViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSPreAlignViewer.Designer.cs">
+      <DependentUpon>CtrlCGMSPreAlignViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSRecipe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSRecipe.Designer.cs">
+      <DependentUpon>CtrlCGMSRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlDefectTrend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlDefectTrend.Designer.cs">
+      <DependentUpon>CtrlDefectTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlImageLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlImageLoad.Designer.cs">
+      <DependentUpon>CtrlImageLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlInspectionItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlInspectionItem.Designer.cs">
+      <DependentUpon>CtrlInspectionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceCCLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceCCLink.Designer.cs">
+      <DependentUpon>CtrlInterfaceCCLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceMelsec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceMelsec.Designer.cs">
+      <DependentUpon>CtrlInterfaceMelsec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceCCLinkAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceCCLinkAddress.Designer.cs">
+      <DependentUpon>CtrlInterfaceCCLinkAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceMelsecAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlInterfaceMelsecAddress.Designer.cs">
+      <DependentUpon>CtrlInterfaceMelsecAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameterCommon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameterCommon.Designer.cs">
+      <DependentUpon>CtrlMotionParameterCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameterVariable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameterVariable.Designer.cs">
+      <DependentUpon>CtrlMotionParameterVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachShort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachShort.Designer.cs">
+      <DependentUpon>CtrlTeachShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachParticle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachParticle.Designer.cs">
+      <DependentUpon>CtrlTeachParticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormBeadTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormBeadTool.Designer.cs">
+      <DependentUpon>FormBeadTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInterface.Designer.cs">
+      <DependentUpon>FormInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormROIJog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormROIJog.Designer.cs">
+      <DependentUpon>FormROIJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSelectUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSelectUnit.Designer.cs">
+      <DependentUpon>FormSelectUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_BeadPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_BeadPath.designer.cs">
+      <DependentUpon>Form_BeadPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection\Inspection.cs" />
+    <Compile Include="Inspection\InspectionSeq.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="Params\InspectionParameter.cs" />
+    <Compile Include="Params\OperationParameter.cs" />
+    <Compile Include="Class\TeachingPosition.cs" />
+    <Compile Include="Class\_Main_Define.cs" />
+    <Compile Include="Class_MEMO.cs" />
+    <Compile Include="Controls\CtrlCGMSDrawBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSDrawBox.Designer.cs">
+      <DependentUpon>CtrlCGMSDrawBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAkkonResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAkkonResult.Designer.cs">
+      <DependentUpon>CtrlAkkonResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAkkonViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAkkonViewer.Designer.cs">
+      <DependentUpon>CtrlAkkonViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignResult.Designer.cs">
+      <DependentUpon>CtrlAlignResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignViewer.Designer.cs">
+      <DependentUpon>CtrlAlignViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAuthority.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAuthority.Designer.cs">
+      <DependentUpon>CtrlAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSResult.Designer.cs">
+      <DependentUpon>CtrlCGMSResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSNavigator.Designer.cs">
+      <DependentUpon>CtrlCGMSNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlCGMSViewer.Designer.cs">
+      <DependentUpon>CtrlCGMSViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Bar.Designer.cs">
+      <DependentUpon>CtrlGraph_Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Circle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Circle.Designer.cs">
+      <DependentUpon>CtrlGraph_Circle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlGraph_Line.Designer.cs">
+      <DependentUpon>CtrlGraph_Line.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlLiveViewDrawBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlLiveViewDrawBox.Designer.cs">
+      <DependentUpon>CtrlLiveViewDrawBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlLogViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlLogViewer.Designer.cs">
+      <DependentUpon>CtrlLogViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionOperation.Designer.cs">
+      <DependentUpon>CtrlMotionOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachAkkon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachAkkon.Designer.cs">
+      <DependentUpon>CtrlTeachAkkon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachAlign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachAlign.Designer.cs">
+      <DependentUpon>CtrlTeachAlign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachLineScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachLineScan.Designer.cs">
+      <DependentUpon>CtrlTeachLineScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachMeasure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachMeasure.Designer.cs">
+      <DependentUpon>CtrlTeachMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionParameter.Designer.cs">
+      <DependentUpon>CtrlMotionParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachROIJog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachROIJog.designer.cs">
+      <DependentUpon>CtrlTeachROIJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachMark.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachMark.Designer.cs">
+      <DependentUpon>CtrlTeachMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionFunction.Designer.cs">
+      <DependentUpon>CtrlMotionFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionRepeat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlMotionRepeat.Designer.cs">
+      <DependentUpon>CtrlMotionRepeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlHistory.Designer.cs">
+      <DependentUpon>CtrlHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlPCUsage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlPCUsage.Designer.cs">
+      <DependentUpon>CtrlPCUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlPreAlignViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlPreAlignViewer.Designer.cs">
+      <DependentUpon>CtrlPreAlignViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlSystemInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlSystemInformation.designer.cs">
+      <DependentUpon>CtrlSystemInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTabButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTabButton.Designer.cs">
+      <DependentUpon>CtrlTabButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlTeachPosition.Designer.cs">
+      <DependentUpon>CtrlTeachPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignTrend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlAlignTrend.Designer.cs">
+      <DependentUpon>CtrlAlignTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlUPHViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlUPHViewer.Designer.cs">
+      <DependentUpon>CtrlUPHViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Control\Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Control\Display.designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormAuthority.Designer.cs">
+      <DependentUpon>FormAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCGMSEnlargedImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCGMSEnlargedImagePopup.Designer.cs">
+      <DependentUpon>FormCGMSEnlargedImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormInspectionSimulationForEngineer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInspectionSimulationForEngineer.Designer.cs">
+      <DependentUpon>FormInspectionSimulationForEngineer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMotionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMotionPopup.Designer.cs">
+      <DependentUpon>FormMotionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMotionTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMotionTeach.Designer.cs">
+      <DependentUpon>FormMotionTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormRecipe.Designer.cs">
+      <DependentUpon>FormRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormRecipeCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormRecipeCopy.Designer.cs">
+      <DependentUpon>FormRecipeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSystem.Designer.cs">
+      <DependentUpon>FormSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormUserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormUserLogin.Designer.cs">
+      <DependentUpon>FormUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSelectTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSelectTeaching.Designer.cs">
+      <DependentUpon>FormSelectTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTrend.Designer.cs">
+      <DependentUpon>FormTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormUPHViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormUPHViewer.Designer.cs">
+      <DependentUpon>FormUPHViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormVisionTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormVisionTeach.Designer.cs">
+      <DependentUpon>FormVisionTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_AkkonTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_AkkonTeaching.designer.cs">
+      <DependentUpon>Form_AkkonTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_CCLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CCLink.Designer.cs">
+      <DependentUpon>Form_CCLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Mask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Mask.Designer.cs">
+      <DependentUpon>Form_Mask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Motion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Motion.Designer.cs">
+      <DependentUpon>Form_Motion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_RCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_RCS.Designer.cs">
+      <DependentUpon>Form_RCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Melsec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Melsec.Designer.cs">
+      <DependentUpon>Form_Melsec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_NGMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_NGMonitor.designer.cs">
+      <DependentUpon>Form_NGMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_PatternTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_PatternTeach.Designer.cs">
+      <DependentUpon>Form_PatternTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_PatternSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_PatternSelect.Designer.cs">
+      <DependentUpon>Form_PatternSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Main.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Form\Form_KeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_KeyPad.Designer.cs">
+      <DependentUpon>Form_KeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_KeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_KeyBoard.Designer.cs">
+      <DependentUpon>Form_KeyBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Project.Designer.cs">
+      <DependentUpon>Form_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Main_AlignUnitTag_.cs" />
+    <Compile Include="Class\Main_PatternTag_.cs" />
+    <Compile Include="Class\LOG_CAL_LOAD_SAVE\Main_DrawTag.cs" />
+    <Compile Include="Form\Form_CalDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CalDisplay.Designer.cs">
+      <DependentUpon>Form_CalDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\LOG_CAL_LOAD_SAVE\Main_Log_Img_Save_Del.cs" />
+    <Compile Include="Form\Form_ManualSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ManualSet.Designer.cs">
+      <DependentUpon>Form_ManualSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_CameraSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CameraSet.Designer.cs">
+      <DependentUpon>Form_CameraSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_LiveView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_LiveView.Designer.cs">
+      <DependentUpon>Form_LiveView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormFlyingVisionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormFlyingVisionView.Designer.cs">
+      <DependentUpon>FormFlyingVisionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_ToolTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ToolTeach.Designer.cs">
+      <DependentUpon>Form_ToolTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ProgressBar.Designer.cs">
+      <DependentUpon>Form_ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_LogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_LogView.Designer.cs">
+      <DependentUpon>Form_LogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_ProgressBar_Sub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ProgressBar_Sub.Designer.cs">
+      <DependentUpon>Form_ProgressBar_Sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Main_Thread.cs" />
+    <Compile Include="Form\Form_Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Message.Designer.cs">
+      <DependentUpon>Form_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\LOG_CAL_LOAD_SAVE\Main_Calibration.cs" />
+    <Compile Include="Form\Form_CalMatix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CalMatix.Designer.cs">
+      <DependentUpon>Form_CalMatix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_LightSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_LightSet.Designer.cs">
+      <DependentUpon>Form_LightSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Main_AlignUnitTag_-Define.cs" />
+    <Compile Include="Class\Main_PatternTag_-Define.cs" />
+    <Compile Include="Form\Form_TrayDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TrayDataView.Designer.cs">
+      <DependentUpon>Form_TrayDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_PMMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_PMMode.Designer.cs">
+      <DependentUpon>Form_PMMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_UVW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_UVW.Designer.cs">
+      <DependentUpon>Form_UVW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Password.Designer.cs">
+      <DependentUpon>Form_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_PatternTagSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_PatternTagSelect.Designer.cs">
+      <DependentUpon>Form_PatternTagSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Chart.Designer.cs">
+      <DependentUpon>Form_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserControls\UserControl_ComInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\UserControls\UserControl_ComInfo.Designer.cs" />
+    <Compile Include="Form\Form_CMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CMD.Designer.cs">
+      <DependentUpon>Form_CMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_PatternMask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_PatternMask.Designer.cs">
+      <DependentUpon>Form_PatternMask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Main_Camera.cs" />
+    <Compile Include="Params\RecipeParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\COM\COM_Light_Control.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Controls\CtrlATTRecipe.resx">
+      <DependentUpon>CtrlATTRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSDrawBox.resx">
+      <DependentUpon>CtrlCGMSDrawBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAkkonResult.resx">
+      <DependentUpon>CtrlAkkonResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAkkonViewer.resx">
+      <DependentUpon>CtrlAkkonViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAlignResult.resx">
+      <DependentUpon>CtrlAlignResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAlignViewer.resx">
+      <DependentUpon>CtrlAlignViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAuthority.resx">
+      <DependentUpon>CtrlAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSHistory.resx">
+      <DependentUpon>CtrlCGMSHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSPreAlignViewer.resx">
+      <DependentUpon>CtrlCGMSPreAlignViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSRecipe.resx">
+      <DependentUpon>CtrlCGMSRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSResult.resx">
+      <DependentUpon>CtrlCGMSResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSNavigator.resx">
+      <DependentUpon>CtrlCGMSNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCGMSViewer.resx">
+      <DependentUpon>CtrlCGMSViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlDefectTrend.resx">
+      <DependentUpon>CtrlDefectTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlGraph_Bar.resx">
+      <DependentUpon>CtrlGraph_Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlGraph_Circle.resx">
+      <DependentUpon>CtrlGraph_Circle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlGraph_Line.resx">
+      <DependentUpon>CtrlGraph_Line.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlImageLoad.resx">
+      <DependentUpon>CtrlImageLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlInspectionItem.resx">
+      <DependentUpon>CtrlInspectionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlInterfaceCCLink.resx">
+      <DependentUpon>CtrlInterfaceCCLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlInterfaceMelsecAddress.resx">
+      <DependentUpon>CtrlInterfaceMelsecAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlLiveViewDrawBox.resx">
+      <DependentUpon>CtrlLiveViewDrawBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlLogViewer.resx">
+      <DependentUpon>CtrlLogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlInterfaceMelsec.resx">
+      <DependentUpon>CtrlInterfaceMelsec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionParameterCommon.resx">
+      <DependentUpon>CtrlMotionParameterCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionOperation.resx">
+      <DependentUpon>CtrlMotionOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlInterfaceCCLinkAddress.resx">
+      <DependentUpon>CtrlInterfaceCCLinkAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionParameterVariable.resx">
+      <DependentUpon>CtrlMotionParameterVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachAkkon.resx">
+      <DependentUpon>CtrlTeachAkkon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachAlign.resx">
+      <DependentUpon>CtrlTeachAlign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachLineScan.resx">
+      <DependentUpon>CtrlTeachLineScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachShort.resx">
+      <DependentUpon>CtrlTeachShort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachParticle.resx">
+      <DependentUpon>CtrlTeachParticle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachMeasure.resx">
+      <DependentUpon>CtrlTeachMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionParameter.resx">
+      <DependentUpon>CtrlMotionParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachROIJog.resx">
+      <DependentUpon>CtrlTeachROIJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachMark.resx">
+      <DependentUpon>CtrlTeachMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionFunction.resx">
+      <DependentUpon>CtrlMotionFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlMotionRepeat.resx">
+      <DependentUpon>CtrlMotionRepeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlHistory.resx">
+      <DependentUpon>CtrlHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlPreAlignViewer.resx">
+      <DependentUpon>CtrlPreAlignViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlSystemInformation.resx">
+      <DependentUpon>CtrlSystemInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTabButton.resx">
+      <DependentUpon>CtrlTabButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlTeachPosition.resx">
+      <DependentUpon>CtrlTeachPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAlignTrend.resx">
+      <DependentUpon>CtrlAlignTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlUPHViewer.resx">
+      <DependentUpon>CtrlUPHViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Control\Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAuthority.resx">
+      <DependentUpon>FormAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormBeadTool.resx">
+      <DependentUpon>FormBeadTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCGMSEnlargedImagePopup.resx">
+      <DependentUpon>FormCGMSEnlargedImagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormInspectionSimulationForEngineer.resx">
+      <DependentUpon>FormInspectionSimulationForEngineer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormInterface.resx">
+      <DependentUpon>FormInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMotionPopup.resx">
+      <DependentUpon>FormMotionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMotionTeach.resx">
+      <DependentUpon>FormMotionTeach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormRecipe.resx">
+      <DependentUpon>FormRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormRecipeCopy.resx">
+      <DependentUpon>FormRecipeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormROIJog.resx">
+      <DependentUpon>FormROIJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSelectUnit.resx">
+      <DependentUpon>FormSelectUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSystem.resx">
+      <DependentUpon>FormSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormUserLogin.resx">
+      <DependentUpon>FormUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSelectTeaching.resx">
+      <DependentUpon>FormSelectTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTrend.resx">
+      <DependentUpon>FormTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormUPHViewer.resx">
+      <DependentUpon>FormUPHViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormVisionTeach.resx">
+      <DependentUpon>FormVisionTeach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_AkkonTeaching.resx">
+      <DependentUpon>Form_AkkonTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_BeadPath.resx">
+      <DependentUpon>Form_BeadPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CalMatix.resx">
+      <DependentUpon>Form_CalMatix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Chart.resx">
+      <DependentUpon>Form_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_KeyPad.resx">
+      <DependentUpon>Form_KeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_LightSet.resx">
+      <DependentUpon>Form_LightSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CCLink.resx">
+      <DependentUpon>Form_CCLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Mask.resx">
+      <DependentUpon>Form_Mask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Motion.resx">
+      <DependentUpon>Form_Motion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_RCS.resx">
+      <DependentUpon>Form_RCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Melsec.resx">
+      <DependentUpon>Form_Melsec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_NGMonitor.resx">
+      <DependentUpon>Form_NGMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Password.resx">
+      <DependentUpon>Form_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_PatternSelect.resx">
+      <DependentUpon>Form_PatternSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_PatternTagSelect.resx">
+      <DependentUpon>Form_PatternTagSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_PatternTeach.resx">
+      <DependentUpon>Form_PatternTeach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ProgressBar_Sub.resx">
+      <DependentUpon>Form_ProgressBar_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormFlyingVisionView.resx">
+      <DependentUpon>FormFlyingVisionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ToolTeach.resx">
+      <DependentUpon>Form_ToolTeach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_KeyBoard.resx">
+      <DependentUpon>Form_KeyBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Project.resx">
+      <DependentUpon>Form_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CalDisplay.resx">
+      <DependentUpon>Form_CalDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ManualSet.resx">
+      <DependentUpon>Form_ManualSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CameraSet.resx">
+      <DependentUpon>Form_CameraSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_LiveView.resx">
+      <DependentUpon>Form_LiveView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ProgressBar.resx">
+      <DependentUpon>Form_ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_LogView.resx">
+      <DependentUpon>Form_LogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Message.resx">
+      <DependentUpon>Form_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_TrayDataView.resx">
+      <DependentUpon>Form_TrayDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_PMMode.resx">
+      <DependentUpon>Form_PMMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_UVW.resx">
+      <DependentUpon>Form_UVW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserControls\UserControl_ComInfo.resx" />
+    <EmbeddedResource Include="Form\Form_CMD.resx">
+      <DependentUpon>Form_CMD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_PatternMask.resx">
+      <DependentUpon>Form_PatternMask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CALIBRATION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Phone.ico" />
+    <None Include="Resources\SAVE1.png" />
+    <None Include="Resources\START.png" />
+    <None Include="Resources\STOP_RESIZE.png" />
+    <None Include="Resources\UP_RESIZE.png" />
+    <None Include="Resources\STOP.png" />
+    <None Include="Resources\SDBIO.png" />
+    <None Include="Resources\samsung.bmp" />
+    <None Include="Resources\LEFT.png" />
+    <None Include="Resources\LEFT_RESIZE.png" />
+    <None Include="Resources\RIGHT_RESIZE.png" />
+    <None Include="Resources\DOWN_RESIZE.png" />
+    <None Include="Resources\RESIZE_STOP2.png" />
+    <None Include="Resources\ATT_Recipe.png" />
+    <Content Include="Resources\SAMSUNG.png" />
+    <None Include="Resources\SAMSUNG_DISPLAY2.png" />
+    <None Include="Resources\CGMS_Recipe.png" />
+    <None Include="Resources\Operator.png" />
+    <None Include="Resources\Maker.png" />
+    <None Include="Resources\Engineer.png" />
+    <None Include="Resources\Operator.bmp" />
+    <None Include="Resources\Maker.bmp" />
+    <None Include="Resources\Engineer.bmp" />
+    <None Include="Resources\RIGHT.bmp" />
+    <None Include="Resources\LEFT.bmp" />
+    <None Include="Resources\RIGHT1.png" />
+    <None Include="Resources\LEFT2.png" />
+    <None Include="Resources\Cross_Custom.png" />
+    <None Include="Resources\PLCX.bmp" />
+    <None Include="Resources\PLC.bmp" />
+    <None Include="Resources\PCX.bmp" />
+    <None Include="Resources\PC.bmp" />
+    <None Include="Resources\L2X.bmp" />
+    <None Include="Resources\L2.bmp" />
+    <None Include="Resources\L1X.bmp" />
+    <None Include="Resources\L1.bmp" />
+    <None Include="Resources\1.bmp" />
+    <None Include="Resources\1X.bmp" />
+    <None Include="Resources\2.bmp" />
+    <None Include="Resources\2X.bmp" />
+    <None Include="Resources\3.bmp" />
+    <None Include="Resources\3X.bmp" />
+    <None Include="Resources\4.bmp" />
+    <None Include="Resources\4X.bmp" />
+    <None Include="Resources\5.bmp" />
+    <None Include="Resources\5X.bmp" />
+    <None Include="Resources\6.bmp" />
+    <None Include="Resources\6X.bmp" />
+    <None Include="Resources\7.bmp" />
+    <None Include="Resources\7X.bmp" />
+    <None Include="Resources\8.bmp" />
+    <None Include="Resources\8X.bmp" />
+    <Content Include="Resources\Arc_24.png" />
+    <None Include="Resources\caldata40.png" />
+    <None Include="Resources\setup40.png" />
+    <None Include="Resources\recipe40.png" />
+    <None Include="Resources\project40.png" />
+    <None Include="Resources\interface40.png" />
+    <None Include="Resources\log40.png" />
+    <None Include="Resources\SAMSUNG_DISPLAY.png" />
+    <None Include="Resources\Focus.ico" />
+    <None Include="Resources\Circle3_16.ico" />
+    <None Include="Resources\Circle2_16.ico" />
+    <None Include="Resources\angle3_20.ico" />
+    <None Include="Resources\square1_24.png" />
+    <None Include="Resources\arrows_24.png" />
+    <None Include="Resources\Line_20.ico" />
+    <None Include="Resources\Corss22_20.ico" />
+    <None Include="Resources\undo3_16.ico" />
+    <None Include="Resources\delete_16.ico" />
+    <None Include="Resources\touch_16.ico" />
+    <None Include="Resources\Fit2_16.ico" />
+    <None Include="Resources\open3_16.ico" />
+    <None Include="Resources\Cal_Image.bmp" />
+    <None Include="Resources\새 비트맵 이미지.bmp" />
+    <None Include="Resources\TRAY_ALIGN2.PNG" />
+    <None Include="Resources\TRAY_ALIGN.PNG" />
+    <None Include="Resources\TRAY_CAL.png" />
+    <None Include="Resources\EXIT1.png" />
+    <None Include="Resources\visionox.jpg" />
+    <None Include="Resources\GVO.png" />
+    <None Include="Resources\CSOT1.png" />
+    <None Include="Resources\UNITEDKING.jpg" />
+    <None Include="Resources\VIETNAM.jpg" />
+    <None Include="Resources\CHINA.jpg" />
+    <None Include="Resources\KOREA.jpg" />
+    <None Include="Resources\FPC_PITCH.PNG" />
+    <None Include="Resources\Picker4.PNG" />
+    <None Include="Resources\Picker3.PNG" />
+    <None Include="Resources\TRAY.PNG" />
+    <None Include="Resources\TRAY.JPG" />
+    <None Include="Resources\DIS.JPG" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\inspection.jpg" />
+    <None Include="Resources\Map.JPG" />
+    <None Include="Resources\UP1.png" />
+    <None Include="Resources\DOWN1.png" />
+    <None Include="Resources\합착기.jpg" />
+    <None Include="Resources\도포기.jpg" />
+    <None Include="Resources\그림1.jpg" />
+    <None Include="Resources\그림2.jpg" />
+    <None Include="Resources\EXIT.png" />
+    <None Include="Resources\1453278410_ruler_sticker.png" />
+    <None Include="Resources\Check_1_48.png" />
+    <None Include="Resources\Check48.png" />
+    <None Include="Resources\Finde48.png" />
+    <None Include="Resources\Find.png" />
+    <None Include="Resources\CAL.png" />
+    <None Include="Resources\Setting.png" />
+    <None Include="Resources\VIEW1.png" />
+    <None Include="Resources\CAMSETTING1.png" />
+    <None Include="Resources\network.png" />
+    <None Include="Resources\h1_samsungdisplay.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Teach\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp4.runtime.win.4.1.0.20190416\build\net\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp4.runtime.win.4.1.0.20190416\build\net\OpenCvSharp4.runtime.win.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(SolutionDir)Dll\Macron\FrameWork\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\Macron\Debug\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\Macron\Release\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\Cognex\9.6\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\CCLink\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\ACS\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\Matrox\*.*" "$(TargetDir)" /d /e /h /c /y /i
+xcopy "$(SolutionDir)Dll\JAS\*.*" "$(TargetDir)" /d /e /h /c /y /i</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
