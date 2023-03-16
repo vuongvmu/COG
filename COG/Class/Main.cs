@@ -82,6 +82,8 @@ namespace COG
             public const string ERROR_DATADIR = "Error_Data\\";
             public const string INTERFACE_DATADIR = "Interface\\";
             public const string SYS_DATADIR = "D:\\Systemdata_" + PROGRAM_TYPE + "\\";
+            public const string CELLLOG_CSVDIR = "CSV\\Cell Data\\";
+            public const string INSPECTIONLOG_CSVDIR = "CSV\\Inspection Data\\";
 
             public const string PASSWORD_DIR = "Software\\JAStech"; //Regedit : HKEY_CURRENT_USER-> SOFTWARE-> JASTECHJAS_DAWIN
             public const string LANGUAGE_DIR = "Software\\JAStechLan"; //Regedit : HKEY_CURRENT_USER-> SOFTWARE-> JASTECHJAS_DAWIN

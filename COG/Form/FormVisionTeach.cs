@@ -477,6 +477,7 @@ namespace COG
                         dStart[nTabNo] = dEnd[nTabNo - 1] + Main.recipe.m_PatternToPatternYDistance; //각 Grab 시작 위치
                     dEnd[nTabNo] = dStart[nTabNo] + dTabLength;
                 }
+                TabCnt = Main.recipe.m_nTabCount;
                 Main.MilFrameGrabber.UpdateScanGrabParamsManual(0, Scanid, TabCnt, dStart, dEnd, ref Main.AlignUnit[0].PAT, true);
             }
         }
@@ -486,7 +487,7 @@ namespace COG
             _grabTimer = new System.Threading.Timer(AreaGrab, null, 100, 100);
         }
 
-        private void StopGrabTimer()
+        public void StopGrabTimer()
         {
             if (_grabTimer != null)
                 _grabTimer.Dispose();

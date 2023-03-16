@@ -2868,7 +2868,7 @@ namespace COG
             }
             public void SetLightCtrl_232(int LightControl, int Channel, int Value)
             {
-                if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
+               // if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
                 try
                 {
                     string m_sendData = "";
