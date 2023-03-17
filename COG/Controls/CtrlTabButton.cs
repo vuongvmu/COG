@@ -24,8 +24,8 @@ namespace COG.Controls
         private void InitializeUI(int index)
         {
             chkTabButton.BackColor = Color.DarkGray;
-            this.chkTabButton.Text = "Tab " + (index + 1).ToString();
-            this.chkTabButton.Font = new Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTabButton.Text = "TAB " + (index + 1).ToString();
+            this.chkTabButton.Font = new Font("맑은 고딕", 14F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
         }
 
         public delegate void SetTabNumberDelegate(bool selected, int tabNumber);

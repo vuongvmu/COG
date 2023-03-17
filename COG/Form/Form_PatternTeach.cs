@@ -1031,40 +1031,42 @@ namespace COG
         }
         private void UpdateATTParameter()
         {
-            #region ATT Parameter
-            for (int i = 0; i < Main.AlignUnit[CamNo].m_AlignPatMax[StageNo]; i++)
-            {
-                //strParaName = "PATTERN SCORE";
-                //CheckChangedParams(CamNo, i, strParaName, Main.AlignUnit[CamNo].PAT[StageNo, i].m_ACCeptScore, PT_AcceptScore[i]);
-                PT_AcceptScore[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].ATTMarkScore;
-                PT_AcceptScore[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.ATTMarkScore;
-                for (int j = 0; j < Main.DEFINE.SUBPATTERNMAX; j++)
-                {
-                    //압흔검사 Mark Data
-                    if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j] != null)
-                        PT_AkkonPara[TapNo].LeftPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j];
-                    if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j] != null)
-                    PT_AkkonPara[TapNo].RightPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j];
+            // Akkon 배열 정리_S
+            //#region ATT Parameter
+            //for (int i = 0; i < Main.AlignUnit[CamNo].m_AlignPatMax[StageNo]; i++)
+            //{
+            //    //strParaName = "PATTERN SCORE";
+            //    //CheckChangedParams(CamNo, i, strParaName, Main.AlignUnit[CamNo].PAT[StageNo, i].m_ACCeptScore, PT_AcceptScore[i]);
+            //    PT_AcceptScore[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].ATTMarkScore;
+            //    PT_AcceptScore[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.ATTMarkScore;
+            //    for (int j = 0; j < Main.DEFINE.SUBPATTERNMAX; j++)
+            //    {
+            //        //압흔검사 Mark Data
+            //        if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j] != null)
+            //            PT_AkkonPara[TapNo].LeftPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j];
+            //        if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j] != null)
+            //        PT_AkkonPara[TapNo].RightPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j];
 
-                    //얼라인검사 Mark Data
-                    if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j] != null)
-                        PT_AlignPara[TapNo].LeftPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j];
-                    if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j] != null)
-                        PT_AlignPara[TapNo].RightPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j];
-                }
-            }
-            for (int i = 0; i < (int)Main.AlignTagData.eDefaultParam.DEF_INSP_POS; i++)//Tab의 Left, Right
-            {
-                for (int j = 0; j < (int)Main.AlignTagData.eDefaultParam.DEF_TARGET_POS; j++)//FPC, Panel
-                {
-                    if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperX[i, j] != null)
-                        PT_AlignPara[TapNo].AlignCaliperX[i, j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperX[i, j];
-                    if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperY[i, j] != null)
-                        PT_AlignPara[TapNo].AlignCaliperY[i, j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperY[i, j];
-                }
-            }
-            PT_AlignPara[TapNo].LeadCount = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeadCount;
-            #endregion
+            //        //얼라인검사 Mark Data
+            //        if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j] != null)
+            //            PT_AlignPara[TapNo].LeftPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j];
+            //        if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j] != null)
+            //            PT_AlignPara[TapNo].RightPattern[j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j];
+            //    }
+            //}
+            //for (int i = 0; i < (int)Main.AlignTagData.eDefaultParam.DEF_INSP_POS; i++)//Tab의 Left, Right
+            //{
+            //    for (int j = 0; j < (int)Main.AlignTagData.eDefaultParam.DEF_TARGET_POS; j++)//FPC, Panel
+            //    {
+            //        if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperX[i, j] != null)
+            //            PT_AlignPara[TapNo].AlignCaliperX[i, j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperX[i, j];
+            //        if(Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperY[i, j] != null)
+            //            PT_AlignPara[TapNo].AlignCaliperY[i, j] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.AlignCaliperY[i, j];
+            //    }
+            //}
+            //PT_AlignPara[TapNo].LeadCount = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeadCount;
+            //#endregion
+            // Akkon 배열 정리_E
         }
         private void Form_PatternTeach_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -1818,28 +1820,29 @@ namespace COG
             //}
 
             #region 압흔 및 얼라인 검사 
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonBumpROIList = PT_AkkonPara[TapNo].AkkonBumpROIList;
+            //Main.AlignUnit[CamNo].PAT[StageNo, 0].LeadGroupInfo = LeadGroupInfo;
 
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonBumpROIList = PT_AkkonPara[TapNo].AkkonBumpROIList;
-            Main.AlignUnit[CamNo].PAT[StageNo, 0].LeadGroupInfo = LeadGroupInfo;
 
+            //for (int i = 0; i < Main.AlignUnit[CamNo].m_AlignPatMax[StageNo]; i++)
+            //{
+            //    //strParaName = "PATTERN SCORE";
+            //    //CheckChangedParams(CamNo, i, strParaName, Main.AlignUnit[CamNo].PAT[StageNo, i].m_ACCeptScore, PT_AcceptScore[i]);
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].ATTMarkScore = PT_AcceptScore[i];
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.ATTMarkScore = PT_AcceptScore[i];
+            //    for (int j = 0; j < Main.DEFINE.SUBPATTERNMAX; j++)
+            //    {
+            //        //압흔검사 Mark Data
+            //        Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j] = PT_AkkonPara[TapNo].LeftPattern[j];
+            //        Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j] = PT_AkkonPara[TapNo].RightPattern[j];
 
-            for (int i = 0; i < Main.AlignUnit[CamNo].m_AlignPatMax[StageNo]; i++)
-            {
-                //strParaName = "PATTERN SCORE";
-                //CheckChangedParams(CamNo, i, strParaName, Main.AlignUnit[CamNo].PAT[StageNo, i].m_ACCeptScore, PT_AcceptScore[i]);
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].ATTMarkScore = PT_AcceptScore[i];
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.ATTMarkScore = PT_AcceptScore[i];
-                for (int j = 0; j < Main.DEFINE.SUBPATTERNMAX; j++)
-                {
-                    //압흔검사 Mark Data
-                    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[j] = PT_AkkonPara[TapNo].LeftPattern[j];
-                    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[j] = PT_AkkonPara[TapNo].RightPattern[j];
-
-                    //얼라인검사 Mark Data
-                    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j] = PT_AlignPara[TapNo].LeftPattern[j];
-                    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j] = PT_AlignPara[TapNo].RightPattern[j];
-                }
-            }
+            //        //얼라인검사 Mark Data
+            //        Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.LeftPattern[j] = PT_AlignPara[TapNo].LeftPattern[j];
+            //        Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AlignPara.RightPattern[j] = PT_AlignPara[TapNo].RightPattern[j];
+            //    }
+            //}
+            // Akkon 배열 정리_E
             for (int i = 0; i < (int)Main.AlignTagData.eDefaultParam.DEF_INSP_POS; i++)//Tab의 Left, Right
             {
                 for (int j = 0; j < (int)Main.AlignTagData.eDefaultParam.DEF_TARGET_POS; j++)//FPC, Panel
@@ -4329,11 +4332,11 @@ namespace COG
                 }
 
                 // 0 COF, 1 COG, 2 FOG
-                if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[0].AkkonInspectionParameter.s_nPanelInfo == 0)
+                if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara.AkkonInspectionParameter.s_nPanelInfo == 0)
                     Main.DEFINE.ImageResizeRatio = (float)0.5;
-                else if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[0].AkkonInspectionParameter.s_nPanelInfo == 1)
+                else if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara.AkkonInspectionParameter.s_nPanelInfo == 1)
                     Main.DEFINE.ImageResizeRatio = (float)1.0;
-                else if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[0].AkkonInspectionParameter.s_nPanelInfo == 2)
+                else if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara.AkkonInspectionParameter.s_nPanelInfo == 2)
                     Main.DEFINE.ImageResizeRatio = (float)0.6;
 
                 //2022 1004 YSH
@@ -4492,21 +4495,23 @@ namespace COG
 
 
                 // ATT RUN
-                bool bReady = Main.ATT_ReadyToInsp(CamNo, StageNo, TapNo, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[0]);
+                bool bReady = Main.ATT_ReadyToInsp(CamNo, StageNo, TapNo, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara);
 
-                // 자동 계산 overlap 확인
-                LB_ATT_SLICE_OVERLAP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nOverlap.ToString();
+                // Akkon 배열 정리_S
+                //// 자동 계산 overlap 확인
+                //LB_ATT_SLICE_OVERLAP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nOverlap.ToString();
 
-                if (bReady)
-                {
-                    Main.isFormTeaching = true;
-                    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonResult[0].AkkonResultArray = null;
-                    Main.ATT_InspectByTap(CamNo, StageNo, TapNo);
-                }
+                //if (bReady)
+                //{
+                //    Main.isFormTeaching = true;
+                //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonResult[0].AkkonResultArray = null;
+                //    Main.ATT_InspectByTap(CamNo, StageNo, TapNo);
+                //}
+                // Akkon 배열 정리_E
 
             }
-            
-    
+
+
             //LABEL_MESSAGE(LB_MESSAGE, strLog, System.Drawing.Color.Green);
 
             //if (PT_CaliperTools[TapNo, m_SelectCaliper].Results != null && PT_CaliperTools[TapNo, m_SelectCaliper].Results.Count > 0 && PT_CaliPara[TapNo, m_SelectCaliper].m_UseCheck)
@@ -6180,69 +6185,70 @@ namespace COG
             //YSH
             //링크 되어있어, 객체 전체를 넘겨주진 못함... 해당부분 수정 하려면 DLL도 수정 필요..추후 개선 예정(Main_ATT.cs)
             //필요한 객체만 Set 진행
-            Main.ATTInspParam = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter;
-            Main.ATTInspOption = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption;
-            Main.ATTInspFilter = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter;
-            Main.ATTDrawOption = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonDrawOption;
-            PT_AkkonPara[TapNo].AkkonBumpROIList = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonBumpROIList;
-            PT_AkkonPara[TapNo].LeadGroupCount = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeadGroupCount;
-            if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].LeadGroupInfo[m_SelectAkkon] != null)
-                LeadGroupInfo = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].LeadGroupInfo;
-            for (int i = 0; i < Main.DEFINE.SUBPATTERNMAX; i++)
-            {
-                if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[i] != null)
-                    PT_AkkonPara[TapNo].LeftPattern[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[i];
+            // Akkon 배열 정리_S
+            //Main.ATTInspParam = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter;
+            //Main.ATTInspOption = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption;
+            //Main.ATTInspFilter = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter;
+            //Main.ATTDrawOption = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonDrawOption;
+            //PT_AkkonPara[TapNo].AkkonBumpROIList = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonBumpROIList;
+            //PT_AkkonPara[TapNo].LeadGroupCount = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeadGroupCount;
+            //if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].LeadGroupInfo[m_SelectAkkon] != null)
+            //    LeadGroupInfo = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].LeadGroupInfo;
+            //for (int i = 0; i < Main.DEFINE.SUBPATTERNMAX; i++)
+            //{
+            //    if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[i] != null)
+            //        PT_AkkonPara[TapNo].LeftPattern[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].LeftPattern[i];
 
-                if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[i] != null)
-                    PT_AkkonPara[TapNo].RightPattern[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[i];
-            }
+            //    if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[i] != null)
+            //        PT_AkkonPara[TapNo].RightPattern[i] = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].RightPattern[i];
+            //}
 
-            CB_ATT_INSP_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nInspType;
-            CB_ATT_PANEL_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nIsFlexible;
-            CB_ATT_TARGET_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nPanelInfo;
-            CB_ATT_FILTER_TYPE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eFilterType;
-            CB_ATT_FILTER_DIR.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nFilterDir;
-            CB_ATT_THRES_MODE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eThMode;
-            CB_ATT_SHADOW_DIR.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eShadowDir;
-            CB_ATT_PEAK_PROP.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_ePeakProp;
-            CB_ATT_STREN_BASE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eStrengthBase;
+            //CB_ATT_INSP_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nInspType;
+            //CB_ATT_PANEL_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nIsFlexible;
+            //CB_ATT_TARGET_TYPE.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nPanelInfo;
+            //CB_ATT_FILTER_TYPE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eFilterType;
+            //CB_ATT_FILTER_DIR.SelectedIndex = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nFilterDir;
+            //CB_ATT_THRES_MODE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eThMode;
+            //CB_ATT_SHADOW_DIR.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eShadowDir;
+            //CB_ATT_PEAK_PROP.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_ePeakProp;
+            //CB_ATT_STREN_BASE.SelectedIndex = (int)Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eStrengthBase;
 
-            if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace == true)
-                CB_ATT_USE_LOG_TRACE.Checked = true;
-            else
-                CB_ATT_USE_LOG_TRACE.Checked = false;
+            //if (Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace == true)
+            //    CB_ATT_USE_LOG_TRACE.Checked = true;
+            //else
+            //    CB_ATT_USE_LOG_TRACE.Checked = false;
 
-            if (CB_ATT_TARGET_TYPE.SelectedIndex == 1)  //COG
-            {
-                label65.Visible = true;
-                LB_ATT_EXTRE_LEAD_DISP.Visible = true;
-            }
-            else
-            {
-                label65.Visible = false;
-                LB_ATT_EXTRE_LEAD_DISP.Visible = false;
-            }
+            //if (CB_ATT_TARGET_TYPE.SelectedIndex == 1)  //COG
+            //{
+            //    label65.Visible = true;
+            //    LB_ATT_EXTRE_LEAD_DISP.Visible = true;
+            //}
+            //else
+            //{
+            //    label65.Visible = false;
+            //    LB_ATT_EXTRE_LEAD_DISP.Visible = false;
+            //}
 
-            LB_ATT_SLICE_OVERLAP.Enabled = false;
-            label67.Visible = true;
-            LB_ATT_MOVE_PIXEL_COUNT.Visible = true;
-            LB_ATT_THRES_WEIGHT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight.ToString("0.00");
-            LB_ATT_PEAK_THRES.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak.ToString();
-            LB_ATT_STREN_SCALE_FACTOR.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor.ToString("0.00");
-            LB_ATT_SLICE_OVERLAP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nOverlap.ToString("");
-            LB_ATT_STD_DEV.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge.ToString("0.00");
-            LB_ATT_MIN_SZ_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize.ToString("0.00");
-            LB_ATT_MAX_SZ_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize.ToString("0.00");
-            LB_ATT_GRP_DIST.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance.ToString("0.00");
-            LB_ATT_STRN_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold.ToString("0.00");
-            LB_ATT_WIDTH_CUT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut.ToString();
-            LB_ATT_HEIGHT_CUT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeightCut.ToString();
-            LB_ATT_BW_RATIO.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio.ToString("0.00");
-            LB_ATT_EXTRE_LEAD_DISP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead.ToString("");
-            LB_ATT_MOVE_PIXEL_COUNT.Text = nMovePixelCount.ToString();
-            LB_ATT_COUNT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount.ToString();
-            LB_ATT_LENGTH.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength.ToString();
-
+            //LB_ATT_SLICE_OVERLAP.Enabled = false;
+            //label67.Visible = true;
+            //LB_ATT_MOVE_PIXEL_COUNT.Visible = true;
+            //LB_ATT_THRES_WEIGHT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight.ToString("0.00");
+            //LB_ATT_PEAK_THRES.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak.ToString();
+            //LB_ATT_STREN_SCALE_FACTOR.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor.ToString("0.00");
+            //LB_ATT_SLICE_OVERLAP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nOverlap.ToString("");
+            //LB_ATT_STD_DEV.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge.ToString("0.00");
+            //LB_ATT_MIN_SZ_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize.ToString("0.00");
+            //LB_ATT_MAX_SZ_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize.ToString("0.00");
+            //LB_ATT_GRP_DIST.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance.ToString("0.00");
+            //LB_ATT_STRN_FILTER.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold.ToString("0.00");
+            //LB_ATT_WIDTH_CUT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut.ToString();
+            //LB_ATT_HEIGHT_CUT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeightCut.ToString();
+            //LB_ATT_BW_RATIO.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio.ToString("0.00");
+            //LB_ATT_EXTRE_LEAD_DISP.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead.ToString("");
+            //LB_ATT_MOVE_PIXEL_COUNT.Text = nMovePixelCount.ToString();
+            //LB_ATT_COUNT.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount.ToString();
+            //LB_ATT_LENGTH.Text = Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength.ToString();
+            // Akkon 배열 정리_E
             m_PatchangeFlag = false;
             if (PT_DISPLAY_CONTROL.CrossLineChecked) CrossLine();
         }
@@ -8037,15 +8043,15 @@ namespace COG
             {
                 DisplayClear();
                 DG_AKKON_RESULT.Rows.Clear();
-                DG_AKKON_RESULT.RowCount = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo].Length;
+                DG_AKKON_RESULT.RowCount = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo].Length;
 
-                for (int i = 0; i < Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo].Length; i++)
+                for (int i = 0; i < Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo].Length; i++)
                 {
                     DG_AKKON_RESULT[0, i].Value = (i + 1).ToString();
-                    DG_AKKON_RESULT[1, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo][i].s_nNumBlobs.ToString();
-                    DG_AKKON_RESULT[2, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo][i].s_fLength.ToString("0.000");
-                    DG_AKKON_RESULT[3, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo][i].s_fAvgStrength.ToString("0.000");
-                    DG_AKKON_RESULT[4, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult[0].AkkonResultArray[TapNo][i].s_bJudgement.ToString();
+                    DG_AKKON_RESULT[1, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo][i].s_nNumBlobs.ToString();
+                    DG_AKKON_RESULT[2, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo][i].s_fLength.ToString("0.000");
+                    DG_AKKON_RESULT[3, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo][i].s_fAvgStrength.ToString("0.000");
+                    DG_AKKON_RESULT[4, i].Value = Main.AlignUnit[CamNo].PAT[0, TapNo].AkkonResult.AkkonResultArray[TapNo][i].s_bJudgement.ToString();
                 }
 
                 TAB_ATT_LIST.SelectedIndex = 1;
@@ -8155,7 +8161,7 @@ namespace COG
                 }
                 sr.Close();
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[0].AkkonBumpROIList = PT_AkkonPara[TapNo].AkkonBumpROIList;
+                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara.AkkonBumpROIList = PT_AkkonPara[TapNo].AkkonBumpROIList;
 
                 TAB_ATT_LIST.SelectedIndex = 0;
 
@@ -8227,7 +8233,7 @@ namespace COG
                     //DLL에서 검사결과 받아옴
                     Main.ATT_GetResult(nCamNo, nStageNo, nTapNo);
 
-                    WriteLeadInfo(nStageNo, nTapNo, Main.AlignUnit[nStageNo].PAT[0, nTapNo].AkkonResult[0].AkkonResultArray.Length, Main.AlignUnit[nStageNo].PAT[0, nTapNo].AkkonResult[0].AkkonResultArray);
+                    WriteLeadInfo(nStageNo, nTapNo, Main.AlignUnit[nStageNo].PAT[0, nTapNo].AkkonResult.AkkonResultArray.Length, Main.AlignUnit[nStageNo].PAT[0, nTapNo].AkkonResult.AkkonResultArray);
                     //String strPath;
                     //strPath = String.Format("D:\\CS ATT_Result_Image.bmp");
                     //Cv2.ImWrite(strPath, Main.AlignUnit[nStageNo].PAT[0, nTapNo].m_imgOverlay);
@@ -8309,120 +8315,130 @@ namespace COG
 
         private void CB_ATT_INSP_TYPE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nInspType = CB_ATT_INSP_TYPE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_nInspType = CB_ATT_INSP_TYPE.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_PANEL_TYPE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nIsFlexible = CB_ATT_PANEL_TYPE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nIsFlexible = CB_ATT_PANEL_TYPE.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_TARGET_TYPE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nPanelInfo = CB_ATT_TARGET_TYPE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nPanelInfo = CB_ATT_TARGET_TYPE.SelectedIndex;
 
-            // default parameter 변경
-            if (CB_ATT_TARGET_TYPE.SelectedIndex == 0) // COF
-            {
-                CB_ATT_FILTER_TYPE.SelectedIndex = 3;
-                CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
+            //// default parameter 변경
+            //if (CB_ATT_TARGET_TYPE.SelectedIndex == 0) // COF
+            //{
+            //    CB_ATT_FILTER_TYPE.SelectedIndex = 3;
+            //    CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
 
-                CB_ATT_PEAK_PROP.SelectedIndex = 0;
-                CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
+            //    CB_ATT_PEAK_PROP.SelectedIndex = 0;
+            //    CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 2;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = 1;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 2;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = 1;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)2.5;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 15;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 3;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)0.45;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)2.5;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 15;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 3;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)0.45;
 
-                CB_ATT_STREN_BASE.SelectedIndex = 0;
-                CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
-            }
-            else if (CB_ATT_TARGET_TYPE.SelectedIndex == 1) // COG
-            {
-                CB_ATT_FILTER_TYPE.SelectedIndex = 4;
-                CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
+            //    CB_ATT_STREN_BASE.SelectedIndex = 0;
+            //    CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
+            //}
+            //else if (CB_ATT_TARGET_TYPE.SelectedIndex == 1) // COG
+            //{
+            //    CB_ATT_FILTER_TYPE.SelectedIndex = 4;
+            //    CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
 
-                CB_ATT_PEAK_PROP.SelectedIndex = 1;
-                CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
+            //    CB_ATT_PEAK_PROP.SelectedIndex = 1;
+            //    CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 1.5;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)0.2;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 1.5;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)0.2;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = 0;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 100;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 2;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = -100;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = 0;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 100;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 2;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = -100;
 
-                CB_ATT_STREN_BASE.SelectedIndex = 1;
-                CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
-            }
-            else // FOG
-            {
-                CB_ATT_FILTER_TYPE.SelectedIndex = 0;
-                CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
+            //    CB_ATT_STREN_BASE.SelectedIndex = 1;
+            //    CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
+            //}
+            //else // FOG
+            //{
+            //    CB_ATT_FILTER_TYPE.SelectedIndex = 0;
+            //    CB_ATT_FILTER_TYPE_SelectionChangeCommitted(null, null);
 
-                CB_ATT_PEAK_PROP.SelectedIndex = 1;
-                CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
+            //    CB_ATT_PEAK_PROP.SelectedIndex = 1;
+            //    CB_ATT_PEAK_PROP_SelectionChangeCommitted(null, null);
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 4;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)0.5;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = 4;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = 50;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)0.5;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = 70;
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)2.5;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 30;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 5;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)0.45;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)2.5;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = 30;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = 5;
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)0.45;
 
-                CB_ATT_STREN_BASE.SelectedIndex = 1;
-                CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
-            }
+            //    CB_ATT_STREN_BASE.SelectedIndex = 1;
+            //    CB_ATT_STREN_BASE_SelectionChangeCommitted(null, null);
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void CB_ATT_FILTER_TYPE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eFilterType = (EN_MVFILTERTYPE_WRAP)CB_ATT_FILTER_TYPE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eFilterType = (EN_MVFILTERTYPE_WRAP)CB_ATT_FILTER_TYPE.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_FILTER_DIR_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nFilterDir = CB_ATT_FILTER_DIR.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nFilterDir = CB_ATT_FILTER_DIR.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_THRES_MODE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eThMode = (EN_THMODE_WRAP)CB_ATT_THRES_MODE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eThMode = (EN_THMODE_WRAP)CB_ATT_THRES_MODE.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_SHADOW_DIR_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eShadowDir = (EN_SHADOWDIR_WRAP)CB_ATT_SHADOW_DIR.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eShadowDir = (EN_SHADOWDIR_WRAP)CB_ATT_SHADOW_DIR.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_PEAK_PROP_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_ePeakProp = (EN_PEAK_PROP_WRAP)CB_ATT_PEAK_PROP.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_ePeakProp = (EN_PEAK_PROP_WRAP)CB_ATT_PEAK_PROP.SelectedIndex;
             Akkon_Change();
         }
 
         private void CB_ATT_STREN_BASE_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eStrengthBase = (EN_STRENGTH_BASE_WRAP)CB_ATT_STREN_BASE.SelectedIndex;
+            // Akkon 배열 정리_S
+            //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_eStrengthBase = (EN_STRENGTH_BASE_WRAP)CB_ATT_STREN_BASE.SelectedIndex;
             Akkon_Change();
         }
 
@@ -8431,7 +8447,8 @@ namespace COG
             if (CB_ATT_USE_LOG_TRACE.Checked)
             {
                 CB_ATT_USE_LOG_TRACE.BackColor = System.Drawing.Color.LawnGreen;
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = true;
+                // Akkon 배열 정리_S
+                //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = true;
             }
             else
             {
@@ -8444,42 +8461,50 @@ namespace COG
         {
             if (CB_ATT_USE_LOG_TRACE.Checked)
             {
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = true;
+                // Akkon 배열 정리_S
+                //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = true;
             }
             else
             {
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = false;
+                // Akkon 배열 정리_S
+                //Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionOption.s_bLogTrace = false;
             }
             Akkon_Change();
         }
 
         private void LB_ATT_THRES_WEIGHT_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 10, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight, "THRESHOLD WEIGHT", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 10, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight, "THRESHOLD WEIGHT", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fThWeight = form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_PEAK_THRES_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 255, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak, "PEAK THRESHOLD", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = (int)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 255, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak, "PEAK THRESHOLD", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nThPeak = (int)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_STREN_SCALE_FACTOR_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor, "STRENGTH SCALE FACTOR", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor, "STRENGTH SCALE FACTOR", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
@@ -8490,91 +8515,109 @@ namespace COG
 
         private void LB_ATT_STD_DEV_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 10, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge, "LEAD JUDGE STANDARD DEVIATION", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 10, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge, "LEAD JUDGE STANDARD DEVIATION", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStdDevLeadJudge = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_MIN_SZ_FILTER_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize, "AKKON MIN SIZE FILTER (um)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize, "AKKON MIN SIZE FILTER (um)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMinSize = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_MAX_SZ_FILTER_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize, "AKKON MAX SIZE FILTER (um)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize, "AKKON MAX SIZE FILTER (um)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fMaxSize = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_GRP_DIST_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance, "AKKON GROUP DISTANCE (pixel)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance, "AKKON GROUP DISTANCE (pixel)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fGroupingDistance = form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_STRN_FILTER_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold, "STRENGTH FILTER (%)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold, "STRENGTH FILTER (%)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_fStrengthThreshold = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_WIDTH_CUT_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut, "AKKON WIDTH CUT (pixel)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut = (int)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut, "AKKON WIDTH CUT (pixel)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nWidthCut = (int)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_HEIGHT_CUT_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeight, "AKKON HEIGHT CUT (pixel)", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeightCut = (int)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeight, "AKKON HEIGHT CUT (pixel)", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_nHeightCut = (int)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_BW_RATIO_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(-100, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio, "AKKON BW RATIO", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(-100, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio, "AKKON BW RATIO", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionFilter.s_fBWRatio = (float)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_EXTRE_LEAD_DISP_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead, "EXTRA LEAD DISPLAY", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead = (int)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead, "EXTRA LEAD DISPLAY", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].AkkonInspectionParameter.s_nExtraLead = (int)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
@@ -9814,21 +9857,25 @@ namespace COG
 
         private void LB_ATT_COUNT_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount, "AKKON COUNT", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount = (int)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 100, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount, "AKKON COUNT", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeCount = (int)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
 
         private void LB_ATT_LENGTH_Click(object sender, EventArgs e)
         {
-            using (Form_KeyPad form_keypad = new Form_KeyPad(0, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength, "AKKON LENGTH", 1))
-            {
-                form_keypad.ShowDialog();
-                Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength = (double)form_keypad.m_data;
-            }
+            // Akkon 배열 정리_S
+            //using (Form_KeyPad form_keypad = new Form_KeyPad(0, 1000, Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength, "AKKON LENGTH", 1))
+            //{
+            //    form_keypad.ShowDialog();
+            //    Main.AlignUnit[CamNo].PAT[StageNo, TapNo].AkkonPara[m_SelectAkkon].JudgeLength = (double)form_keypad.m_data;
+            //}
+            // Akkon 배열 정리_E
             Akkon_Change();
         }
     }

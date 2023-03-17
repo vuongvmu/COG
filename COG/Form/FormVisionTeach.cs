@@ -268,7 +268,7 @@ namespace COG
                         if (!Settings.Instance().Operation.UseAlign)
                             break;
 
-                        this.tlpTeachingType.Controls.Add(InspecionItemControl, 0, (int)inspectionItem);
+                        this.tlpTeachingItem.Controls.Add(InspecionItemControl, 0, (int)inspectionItem);
                         break;
 
                     case eTeachingItem.Akkon:
@@ -283,7 +283,7 @@ namespace COG
                         if (!Settings.Instance().Operation.UseAkkon)
                             break;
 
-                        this.tlpTeachingType.Controls.Add(InspecionItemControl, 0, (int)inspectionItem);
+                        this.tlpTeachingItem.Controls.Add(InspecionItemControl, 0, (int)inspectionItem);
                         break;
 #endif
 
@@ -370,11 +370,12 @@ namespace COG
                     panel.Visible = false;
             }
 
+#if CGMS
             if (inspectionItem == eTeachingItem.Measure)
                 TeachMeasureControl.DisplayEvent(true);
             else
                 TeachMeasureControl.DisplayEvent(false);
-
+#endif
             if (inspectionItem == eTeachingItem.LineScan)
             {
                 cogDisplayThumbnail.Visible = false;
@@ -382,6 +383,7 @@ namespace COG
 
                 chkShowROIJog.Enabled = false;
                 chkShowROIJog.Checked = false;
+                chkShowROIJog.Visible = false;
             }
             else
             {
@@ -389,12 +391,13 @@ namespace COG
                 cogDisplayThumbnail.Visible = true;
 
                 chkShowROIJog.Enabled = true;
+                chkShowROIJog.Visible = true;
 
                 Main.VieworksLineScanCamera.SetSensorMode(0);
             }
         }
 
-        #region GRAB
+#region GRAB
         private void Grab()
         {
             if (TeachLineScanControl._grabMode == CtrlTeachLineScan.eGrabMode.AreaMode)
@@ -515,9 +518,9 @@ namespace COG
         { 
             TeachDisplay.Image = Main.AlignUnit[0].PAT[nScan, scene].m_CogLineScanBuf;
         }
-        #endregion
+#endregion
 
-        #region Event functions related to the thumbnail function
+#region Event functions related to the thumbnail function
         private bool _isThumbnailMove = false;
         private void cogDisplayThumbnail_MouseDown(object sender, MouseEventArgs e)
         {
@@ -566,9 +569,9 @@ namespace COG
             panPointX = (TeachDisplay.Image.Width / 2) - panPointX;
             TeachDisplay.PanX = panPointX;
         }
-        #endregion
+#endregion
 
-        #region Renewing...
+#region Renewing...
         private void btnGrabStart_Click(object sender, EventArgs e)
         {
             Grab();
@@ -622,9 +625,9 @@ namespace COG
             Main.DisplayRefresh(TeachDisplay);
 			TeachParticleControl.OriginImage =(CogImage8Grey) TeachDisplay.Image;
         }
-        #endregion
+#endregion
 
-        #region Histogram
+#region Histogram
         private void chkHistogram_CheckedChanged(object sender, EventArgs e)
         {
             ExecuteHistogram(chkHistogram.Checked);
@@ -693,7 +696,7 @@ namespace COG
                 chartHistogram.Series[0].Points.AddXY(i, HistogramImage.GetPixel((int)CenterRect.X, i));    // 그래프에 x, y축 데이터 저장
             }
         }
-        #endregion
+#endregion
 		
 		public void DrawLabel(CogRecordDisplay cogDisplay, string resultText, int index = 0)
         {
@@ -729,7 +732,7 @@ namespace COG
             cogDisplay.StaticGraphics.Add(cogLabel as ICogGraphic, "Result Text");
         }
 
-        #region ROI Jog
+#region ROI Jog
         private void chkShowROIJog_CheckedChanged(object sender, EventArgs e)
         {
             ShowROIJog(sender);
@@ -953,7 +956,7 @@ namespace COG
 //            //if (button.Name.ToString().Contains("SizeDecreaseLeftRight"))
 //            //    SizeROIJog(eSizeDirection.DecreaseLeftRight);
 //        }
-        #endregion
+#endregion
 
         private void btnMotionPopup_Click(object sender, EventArgs e)
         {
@@ -986,7 +989,7 @@ namespace COG
                 case eTeachingItem.Mark:
                     TeachMarkControl.Save();
                     break;
-
+#if CGMS
                 case eTeachingItem.Particle:
                     TeachParticleControl.Save();
                     break;
@@ -998,7 +1001,16 @@ namespace COG
                 case eTeachingItem.Short:
                     TeachShortControl.Save();
                     break;
+#endif
+#if ATT
+                case eTeachingItem.Align:
+                    TeachAlignControl.Save();
+                    break;
 
+                case eTeachingItem.Akkon:
+                    TeachAkkonControl.Save();
+                    break;
+#endif
                 default:
                     break;
             }

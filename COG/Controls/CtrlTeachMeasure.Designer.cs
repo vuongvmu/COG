@@ -112,7 +112,7 @@
             this.tlpTeachMeasure.Name = "tlpTeachMeasure";
             this.tlpTeachMeasure.RowCount = 7;
             this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tlpTeachMeasure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -133,8 +133,8 @@
             this.tlpMeasureType.Name = "tlpMeasureType";
             this.tlpMeasureType.RowCount = 2;
             this.tlpMeasureType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpMeasureType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpMeasureType.Size = new System.Drawing.Size(800, 60);
+            this.tlpMeasureType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpMeasureType.Size = new System.Drawing.Size(800, 90);
             this.tlpMeasureType.TabIndex = 0;
             // 
             // lblMeasureType
@@ -163,8 +163,8 @@
             this.tlpSearchType.Name = "tlpSearchType";
             this.tlpSearchType.RowCount = 1;
             this.tlpSearchType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSearchType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpSearchType.Size = new System.Drawing.Size(800, 30);
+            this.tlpSearchType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpSearchType.Size = new System.Drawing.Size(800, 60);
             this.tlpSearchType.TabIndex = 142;
             // 
             // rdoMeasureCircle
@@ -177,7 +177,7 @@
             this.rdoMeasureCircle.Location = new System.Drawing.Point(400, 0);
             this.rdoMeasureCircle.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMeasureCircle.Name = "rdoMeasureCircle";
-            this.rdoMeasureCircle.Size = new System.Drawing.Size(400, 30);
+            this.rdoMeasureCircle.Size = new System.Drawing.Size(400, 60);
             this.rdoMeasureCircle.TabIndex = 8;
             this.rdoMeasureCircle.TabStop = true;
             this.rdoMeasureCircle.Tag = "2";
@@ -196,7 +196,7 @@
             this.rdoMeasureLine.Location = new System.Drawing.Point(0, 0);
             this.rdoMeasureLine.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMeasureLine.Name = "rdoMeasureLine";
-            this.rdoMeasureLine.Size = new System.Drawing.Size(400, 30);
+            this.rdoMeasureLine.Size = new System.Drawing.Size(400, 60);
             this.rdoMeasureLine.TabIndex = 7;
             this.rdoMeasureLine.TabStop = true;
             this.rdoMeasureLine.Tag = "2";
@@ -210,10 +210,10 @@
             this.pnlMeasureParameter.Controls.Add(this.pnlMeasureCircle);
             this.pnlMeasureParameter.Controls.Add(this.pnlMeasureLine);
             this.pnlMeasureParameter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMeasureParameter.Location = new System.Drawing.Point(0, 120);
+            this.pnlMeasureParameter.Location = new System.Drawing.Point(0, 150);
             this.pnlMeasureParameter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMeasureParameter.Name = "pnlMeasureParameter";
-            this.pnlMeasureParameter.Size = new System.Drawing.Size(800, 612);
+            this.pnlMeasureParameter.Size = new System.Drawing.Size(800, 586);
             this.pnlMeasureParameter.TabIndex = 292;
             // 
             // pnlMeasureCircle
@@ -648,10 +648,10 @@
             this.chkCircleMeasureROITracking.AutoSize = true;
             this.chkCircleMeasureROITracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkCircleMeasureROITracking.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.chkCircleMeasureROITracking.Location = new System.Drawing.Point(94, 421);
-            this.chkCircleMeasureROITracking.Margin = new System.Windows.Forms.Padding(0);
+            this.chkCircleMeasureROITracking.Location = new System.Drawing.Point(100, 421);
+            this.chkCircleMeasureROITracking.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.chkCircleMeasureROITracking.Name = "chkCircleMeasureROITracking";
-            this.chkCircleMeasureROITracking.Size = new System.Drawing.Size(94, 60);
+            this.chkCircleMeasureROITracking.Size = new System.Drawing.Size(88, 60);
             this.chkCircleMeasureROITracking.TabIndex = 299;
             this.chkCircleMeasureROITracking.Text = "ROI Tracking";
             this.chkCircleMeasureROITracking.UseVisualStyleBackColor = true;
@@ -1054,10 +1054,10 @@
             this.chkLineMeasureROITracking.AutoSize = true;
             this.chkLineMeasureROITracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkLineMeasureROITracking.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.chkLineMeasureROITracking.Location = new System.Drawing.Point(94, 421);
-            this.chkLineMeasureROITracking.Margin = new System.Windows.Forms.Padding(0);
+            this.chkLineMeasureROITracking.Location = new System.Drawing.Point(100, 421);
+            this.chkLineMeasureROITracking.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.chkLineMeasureROITracking.Name = "chkLineMeasureROITracking";
-            this.chkLineMeasureROITracking.Size = new System.Drawing.Size(94, 60);
+            this.chkLineMeasureROITracking.Size = new System.Drawing.Size(88, 60);
             this.chkLineMeasureROITracking.TabIndex = 298;
             this.chkLineMeasureROITracking.Text = "ROI Tracking";
             this.chkLineMeasureROITracking.UseVisualStyleBackColor = true;

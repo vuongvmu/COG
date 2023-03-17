@@ -274,16 +274,16 @@ namespace COG
                             AlignUnit[i].PAT[jj, j].CornerResults[k].m_PatNum = j;
                         }
 
-                        for (int k = 0; k < DEFINE.AKKON_MAX; k++)
-                        {
-                            AlignUnit[i].PAT[jj, j].AkkonPara[k] = new AkkonTagData();
+                        //for (int k = 0; k < DEFINE.AKKON_MAX; k++)
+                        //{
+                            AlignUnit[i].PAT[jj, j].AkkonPara = new AkkonTagData();
                             AlignUnit[i].PAT[jj, j].AlignPara = new AlignTagData();
 
                             for (int l = 0; l < DEFINE.M_TOOLMAXCOUNT; l++)
-                                AlignUnit[i].PAT[jj, j].AkkonPara[k].TargetToCenter[l] = new DoublePoint();
+                                AlignUnit[i].PAT[jj, j].AkkonPara.TargetToCenter[l] = new DoublePoint();
 
-                            AlignUnit[i].PAT[jj, j].AkkonResult[k] = new AkkonInspectionResult();
-                        }
+                            AlignUnit[i].PAT[jj, j].AkkonResult = new AkkonInspectionResult();
+                        //}
 
                         for (int k = 0; k < 20; k++)
                             AlignUnit[i].PAT[jj, j].LeadGroupInfo[k] = new LeadGroupInfo();
@@ -356,16 +356,16 @@ namespace COG
                     {
                         AlignUnit[i].PAT[jj, j] = new PatternTag();
 
-                        for (int k = 0; k < DEFINE.AKKON_MAX; k++)
-                        {
-                            AlignUnit[i].PAT[jj, j].AkkonPara[k] = new AkkonTagData();
+                        //for (int k = 0; k < DEFINE.AKKON_MAX; k++)
+                        //{
+                            AlignUnit[i].PAT[jj, j].AkkonPara = new AkkonTagData();
                             AlignUnit[i].PAT[jj, j].AlignPara = new AlignTagData();
 
                             for (int l = 0; l < DEFINE.M_TOOLMAXCOUNT; l++)
-                                AlignUnit[i].PAT[jj, j].AkkonPara[k].TargetToCenter[l] = new DoublePoint();
+                                AlignUnit[i].PAT[jj, j].AkkonPara.TargetToCenter[l] = new DoublePoint();
 
-                            AlignUnit[i].PAT[jj, j].AkkonResult[k] = new AkkonInspectionResult();
-                        }
+                            AlignUnit[i].PAT[jj, j].AkkonResult = new AkkonInspectionResult();
+                        //}
 
                         for (int k = 0; k < 20; k++)
                             AlignUnit[i].PAT[jj, j].LeadGroupInfo[k] = new LeadGroupInfo();

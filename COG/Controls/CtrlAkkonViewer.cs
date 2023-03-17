@@ -129,15 +129,15 @@ namespace COG.Controls
         /// <param name="TabNo"></param>
         private void DrawThumbnailNgLine(int TabNo)
         {
-            if (Main.AlignUnit[0].PAT[0, TabNo].AkkonResult[0].AkkonResultArray.Length == 0)
+            if (Main.AlignUnit[0].PAT[0, TabNo].AkkonResult.AkkonResultArray.Length == 0)
                 return;
 
             cogDisplayAkkonScale.StaticGraphics.Clear();
             cogDisplayAkkonScale.InteractiveGraphics.Clear();
             int Count = 0;
-            for (int i = 1; i < Main.AlignUnit[0].PAT[0, TabNo].AkkonResult[0].AkkonResultArray[0].Length; ++i)
+            for (int i = 1; i < Main.AlignUnit[0].PAT[0, TabNo].AkkonResult.AkkonResultArray[0].Length; ++i)
             {
-                if(Main.AlignUnit[0].PAT[0, TabNo].AkkonResult[0].AkkonResultArray[0][i].s_bJudgement == false)
+                if(Main.AlignUnit[0].PAT[0, TabNo].AkkonResult.AkkonResultArray[0][i].s_bJudgement == false)
                 {
                     double ratio = cogDisplayAkkonScale.ClientSize.Width / Main.AlignUnit[0].PAT[0, _tabNumber].m_imgOverlay.Width;
                     int pointX = 0;//Main.AlignUnit[0].PAT[0, TabNo].AkkonResult[0].m_AkkonResult[0][i]. //NG났던 lead의 위치좌표

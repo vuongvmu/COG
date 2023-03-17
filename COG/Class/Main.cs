@@ -1171,11 +1171,8 @@ namespace COG
             public double ATTMarkScore { get; set; } = 0.90;
             public int LeadGroupCount { get; set; } = 0;
             public double LeadPitch { get; set; } = 0;
-
             public double LeadWidth { get; set; } = 0.0;
-
             public double LeadHeight { get; set; } = 0.0;
-       
             public int JudgeCount { get; set; } = 0;
             public double JudgeLength { get; set; } = 0;
             public double JudgeGray { get; set; } = 0;
@@ -1185,6 +1182,7 @@ namespace COG
             {
                 if (param == null)
                     param = new AkkonTagData();
+
                 this.UseCheckAkkonInspection = param.UseCheckAkkonInspection;
                 this.TargetToCenter = param.TargetToCenter;
                 this.AkkonBumpROIList = param.AkkonBumpROIList;
@@ -1219,7 +1217,6 @@ namespace COG
                 param.AkkonDrawOption = this.AkkonDrawOption;
                 param.LeftPattern = this.LeftPattern;
                 param.RightPattern = this.RightPattern;
-                //param.PMAlignResult = this.PMAlignResult;
                 param.ATTMarkScore = this.ATTMarkScore;
                 param.LeadGroupCount = this.LeadGroupCount;
                 param.JudgeCount = this.JudgeCount;
@@ -1229,6 +1226,7 @@ namespace COG
                 param.LeadPitch = this.LeadPitch;
                 param.LeadWidth = this.LeadWidth;
                 param.LeadHeight = this.LeadHeight;
+
                 return param;
             }
         }

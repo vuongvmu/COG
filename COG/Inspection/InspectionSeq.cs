@@ -370,14 +370,14 @@ namespace COG
                 double dScore;
                 double dResultScore, dResultAngle;
                 //BACK LIGHT
-                CogPMAlignTool InspLeftPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AkkonPara[0].LeftPattern[0];
-                double dLScore = Main.AlignUnit[0].PAT[0, 0].AkkonPara[0].ATTMarkScore;
-                CogPMAlignTool InspRightPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AkkonPara[0].RightPattern[0];
+                CogPMAlignTool InspLeftPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AkkonPara.LeftPattern[0];
+                double dLScore = Main.AlignUnit[0].PAT[0, 0].AkkonPara.ATTMarkScore;
+                CogPMAlignTool InspRightPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AkkonPara.RightPattern[0];
                 // SPOT 
                 if (Main.machine.UseBlob == true)
                 {
                     InspLeftPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AlignPara.LeftPattern[0];
-                    dLScore = Main.AlignUnit[0].PAT[0, 0].AkkonPara[0].ATTMarkScore;
+                    dLScore = Main.AlignUnit[0].PAT[0, 0].AkkonPara.ATTMarkScore;
                     InspRightPMAlignTool = Main.AlignUnit[0].PAT[0, 0].AlignPara.RightPattern[0];
                     //Step1 Get Origin Data 
                     Get_OriginData(InspLeftPMAlignTool, InspRightPMAlignTool, out LeftOring, out RightOrigin);

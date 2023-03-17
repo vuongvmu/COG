@@ -859,6 +859,7 @@ namespace COG.Controls
             if (cmb != null)
             {
                 e.DrawBackground();
+                cmb.ItemHeight = lblBeadCount.Height - 7;
 
                 if (e.Index >= 0)
                 {

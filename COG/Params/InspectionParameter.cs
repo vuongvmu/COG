@@ -46,21 +46,26 @@ namespace COG
             Right,
         }
 
-#if CGMS
+
+        //public enum eTargetObject
+        //{
+        //    BackLight,
+        //    Coaxial,
+        //}
+
+        //private eTargetObject _targetObject = eTargetObject.FPC;
         public enum eTargetObject
         {
-            BackLight,
-            Coaxial,
-        }
-#endif
 #if ATT
-        private eTargetObject _targetObject = eTargetObject.FPC;
-        public enum eTargetObject
-        {
             FPC,
             PANEL,
-        }
 #endif
+#if CGMS
+            BackLight,
+            Coaxial,
+#endif
+        }
+
 
         public BlobParameter BlobItem;
         public List<BlobParameter> BlobParams;

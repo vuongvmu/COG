@@ -228,10 +228,10 @@
             this.chkROITracking.AutoSize = true;
             this.chkROITracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkROITracking.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.chkROITracking.Location = new System.Drawing.Point(200, 165);
-            this.chkROITracking.Margin = new System.Windows.Forms.Padding(0);
+            this.chkROITracking.Location = new System.Drawing.Point(206, 165);
+            this.chkROITracking.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.chkROITracking.Name = "chkROITracking";
-            this.chkROITracking.Size = new System.Drawing.Size(200, 66);
+            this.chkROITracking.Size = new System.Drawing.Size(194, 66);
             this.chkROITracking.TabIndex = 209;
             this.chkROITracking.Text = "ROI Tracking";
             this.chkROITracking.UseVisualStyleBackColor = true;

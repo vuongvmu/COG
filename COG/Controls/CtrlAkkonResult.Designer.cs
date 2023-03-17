@@ -84,6 +84,7 @@
             this.dgvAkkonHistory.Name = "dgvAkkonHistory";
             this.dgvAkkonHistory.ReadOnly = true;
             this.dgvAkkonHistory.RowHeadersVisible = false;
+            this.dgvAkkonHistory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvAkkonHistory.RowTemplate.Height = 23;
             this.dgvAkkonHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvAkkonHistory.Size = new System.Drawing.Size(400, 300);
@@ -159,14 +160,14 @@
             this.colLenght.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colLenght.Width = 70;
             // 
-            // CtrlAkkonHistory
+            // CtrlAkkonResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.dgvAkkonHistory);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "CtrlAkkonHistory";
+            this.Name = "CtrlAkkonResult";
             this.Size = new System.Drawing.Size(400, 300);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAkkonHistory)).EndInit();
             this.ResumeLayout(false);

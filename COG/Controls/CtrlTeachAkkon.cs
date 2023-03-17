@@ -49,6 +49,7 @@ namespace COG.Controls
             BUMP,
             ENGINEER_PARAMETER,
             MAKER_PARAMETER,
+            OPTION,
         }
 
         private eCopyDirection _copyDirection = eCopyDirection.Horizontal;
@@ -144,6 +145,7 @@ namespace COG.Controls
             this.pnlGroup.Dock = DockStyle.Fill;
             this.pnlEngineerParameter.Dock = DockStyle.Fill;
             this.pnlMakerParameter.Dock = DockStyle.Fill;
+            this.pnlOption.Dock = DockStyle.Fill;
 
             // Inspection Type
             foreach (MakerParameter.eInspectionType item in Enum.GetValues(typeof(MakerParameter.eInspectionType)))
@@ -534,6 +536,10 @@ namespace COG.Controls
                         ShowMakerParameter();
                         break;
 
+                    case eParameterType.OPTION:
+                        ShowOption();
+                        break;
+
                     default:
                         break;
                 }
@@ -546,16 +552,18 @@ namespace COG.Controls
 
         private void ShowGroup()
         {
+            pnlGroup.Visible = true;
             pnlEngineerParameter.Visible = false;
             pnlMakerParameter.Visible = false;
-            pnlGroup.Visible = true;
+            pnlOption.Visible = false;
         }
 
         private void ShowParameter()
         {
             pnlGroup.Visible = false;
-            pnlMakerParameter.Visible = false;
             pnlEngineerParameter.Visible = true;
+            pnlMakerParameter.Visible = false;
+            pnlOption.Visible = false;
         }
 
         private void ShowMakerParameter()
@@ -563,6 +571,15 @@ namespace COG.Controls
             pnlGroup.Visible = false;
             pnlEngineerParameter.Visible = false;
             pnlMakerParameter.Visible = true;
+            pnlOption.Visible = false;
+        }
+
+        private void ShowOption()
+        {
+            pnlGroup.Visible = false;
+            pnlEngineerParameter.Visible = false;
+            pnlMakerParameter.Visible = false;
+            pnlOption.Visible = true;
         }
 
         private void InitializeGrouping()
@@ -675,6 +692,15 @@ namespace COG.Controls
             lblStandardDeviationValue.Text = _akkonTagData[_tabNo].AkkonInspectionParameter.s_fStdDevLeadJudge.ToString();
             lblStrengthScaleFactorValue.Text = _akkonTagData[_tabNo].AkkonInspectionParameter.s_fStrengthScaleFactor.ToString("F2");
             lblSliceOverlapValue.Text = _akkonTagData[_tabNo].AkkonInspectionOption.s_nOverlap.ToString("F2");
+
+            // Option
+            chkUseDimple.Checked = true;
+            lblDimpleNGCountValue.Text = "0";
+            lblDimpleThresholdValue.Text = "0";
+
+            chkUseAlarm.Checked = true;
+            lblAlarmCapacityValue.Text = "0";
+            lblAlarmNGCountValue.Text = "0";
         }
 
         private void SetAkkonProperty()
@@ -685,7 +711,7 @@ namespace COG.Controls
             for (int tabCount = 0; tabCount < Main.DEFINE.TAP_UNIT_MAX; tabCount++)
             {
                 _akkonTagData[tabCount] = new Main.AkkonTagData();
-                _akkonTagData[tabCount].SetParam(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara[0]);
+                _akkonTagData[tabCount].SetParam(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara);
             }
         }
 
@@ -1470,25 +1496,24 @@ namespace COG.Controls
             SetCheckChanged(sender);
         }
 
+        private void chkUseAlarm_CheckedChanged(object sender, EventArgs e)
+        {
+            SetCheckChanged(sender);
+        }
+
         private void SetCheckChanged(object sender)
         {
-            //CheckBox chk = sender as CheckBox;
+            CheckBox chk = sender as CheckBox;
 
             //if (chk.Checked)
             //    chk.BackColor = Color.LimeGreen;
             //else
             //    chk.BackColor = Color.DarkGray;
 
-            if (chkUseDimple.Checked)
-            {
-                chkUseDimple.BackColor = Color.LimeGreen;
-                chkUseDimple.Text = "ON";
-            }
+            if (chk.Checked)
+                chk.BackColor = Color.LimeGreen;
             else
-            {
-                chkUseDimple.BackColor = Color.DarkGray;
-                chkUseDimple.Text = "OFF";
-            }
+                chk.BackColor = Color.DarkGray;
 
             _akkonTagData[_tabNo].JudgeCount = Convert.ToInt32(chkUseDimple.Checked);
         }
@@ -2160,7 +2185,7 @@ namespace COG.Controls
                 {
                     Main.isFormTeaching = true;
                     Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].bResulteTime = false;
-                    Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray = null;
+                    Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray = null;
                     Main.ATT_InspectByTap((int)_camNo, (int)_stageNo, _tabNo);
                 }
 
@@ -2170,19 +2195,19 @@ namespace COG.Controls
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Save();
+            //Save();
         }
 
-        private void Save()
+        public void Save()
         {
-            for (int tabCount = 0; tabCount < DEFINE.TAP_UNIT_MAX; tabCount++)
-            {
+            //for (int tabNumber = 0; tabNumber < DEFINE.TAP_UNIT_MAX; tabNumber++)
+            //{
                 for (int groupCount = 0; groupCount < _akkonTagData[_tabNo].LeadGroupCount; groupCount++)
-                    Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].LeadGroupInfo[groupCount] = _leadGroupInfo[groupCount].Copy();
+                    Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].LeadGroupInfo[groupCount] = _leadGroupInfo[groupCount].Copy();
 
-                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara[0] = _akkonTagData[tabCount].Copy();
-                Main.AlignUnit[(int)_camNo].Save_ATT((int)_stageNo, tabCount);//2022 1014 YSH Tab별 Save        }
-            }
+                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonPara = _akkonTagData[_tabNo].Copy();
+                Main.AlignUnit[(int)_camNo].Save_ATT((int)_stageNo, _tabNo);//2022 1014 YSH Tab별 Save        }
+            //}
         }
 
         private void btnROIShow_Click(object sender, EventArgs e)
@@ -2242,15 +2267,15 @@ namespace COG.Controls
                 ClearGraphic();
 
                 dgvAkkonResult.Rows.Clear();
-                dgvAkkonResult.RowCount = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo].Length;
+                dgvAkkonResult.RowCount = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo].Length;
 
-                for (int i = 0; i < Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo].Length; i++)
+                for (int i = 0; i < Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo].Length; i++)
                 {
                     dgvAkkonResult[0, i].Value = (i + 1).ToString();
-                    dgvAkkonResult[1, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo][i].s_nNumBlobs.ToString();
-                    dgvAkkonResult[2, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo][i].s_fLength.ToString("0.000");
-                    dgvAkkonResult[3, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo][i].s_fAvgStrength.ToString("0.000");
-                    dgvAkkonResult[4, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult[0].AkkonResultArray[_tabNo][i].s_bJudgement.ToString();
+                    dgvAkkonResult[1, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo][i].s_nNumBlobs.ToString();
+                    dgvAkkonResult[2, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo][i].s_fLength.ToString("0.000");
+                    dgvAkkonResult[3, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo][i].s_fAvgStrength.ToString("0.000");
+                    dgvAkkonResult[4, i].Value = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].AkkonResult.AkkonResultArray[_tabNo][i].s_bJudgement.ToString();
                 }
 
                 tabAkkonData.SelectedIndex = 1;
@@ -2354,6 +2379,7 @@ namespace COG.Controls
             if (cmb != null)
             {
                 e.DrawBackground();
+                cmb.ItemHeight = lblGroupNumber.Height - 7;
 
                 if (e.Index >= 0)
                 {
@@ -2370,6 +2396,8 @@ namespace COG.Controls
                 }
             }
         }
+
+        
     }
 
 

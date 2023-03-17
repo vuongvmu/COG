@@ -29,6 +29,9 @@ namespace COG.Controls
             // 동작 안되네...
             dgvCGMSHistory.CurrentCell = null;
             dgvCGMSHistory.ClearSelection();
+
+            //dgvCGMSHistory.EnableHeadersVisualStyles = false;
+            //dgvCGMSHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
         }
 
         private delegate void UpdateCGMSInspectionHistoryDelegate(List<CGMSInspectionResult> cgmsHistory, bool isUpdate);

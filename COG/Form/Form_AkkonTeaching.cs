@@ -2044,7 +2044,7 @@ namespace COG
         private void cog_Display_Thumbnail_MouseUp(object sender, MouseEventArgs e)
         {
             Thumbnail_MoveFlag = false;
-            //akkonParam[0] = AlignUnit[0].PAT[0, 0].AkkonPara[0];
+            //akkonParam[0] = AlignUnit[0].PAT[0, 0].AkkonPara;
             //_akkonParam[0] = akkonParam[0].Copy();
         }
         private Main.LeadGroupInfo[] mLeadGroupInfo;
@@ -2070,7 +2070,7 @@ namespace COG
             for (int nTabCnt = 0; nTabCnt < Main.DEFINE.TAP_UNIT_MAX; nTabCnt++)
             {
                 akkonParam[nTabCnt] = new Main.AkkonTagData();
-                akkonParam[nTabCnt].SetParam(Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, nTabCnt].AkkonPara[0]);
+                akkonParam[nTabCnt].SetParam(Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, nTabCnt].AkkonPara);
             }
         }
         private void Lead_SetProperty()
@@ -2123,7 +2123,7 @@ namespace COG
                 }
                 sr.Close();
 
-                Main.AlignUnit[m_nTabNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].AkkonBumpROIList = akkonParam[m_nTabNo].AkkonBumpROIList;
+                Main.AlignUnit[m_nTabNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.AkkonBumpROIList = akkonParam[m_nTabNo].AkkonBumpROIList;
 
                 TAB_ATT_LIST.SelectedIndex = 0;
 
@@ -2652,7 +2652,7 @@ namespace COG
                     {
                         Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, TabCnt].LeadGroupInfo[GropCnt] = mLeadGroupInfo[GropCnt].Copy();
                     }
-                    Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, TabCnt].AkkonPara[0] = akkonParam[TabCnt].Copy();
+                    Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, TabCnt].AkkonPara = akkonParam[TabCnt].Copy();
                     Main.AlignUnit[m_nCamNo].Save_ATT(m_nStageNo, TabCnt);//2022 1014 YSH Tab별 Save        }
                 }
             }
@@ -2981,7 +2981,7 @@ namespace COG
                 {
                     Main.isFormTeaching = true;
                     Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].bResulteTime = false;
-                    Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray = null;
+                    Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray = null;
                     Main.ATT_InspectByTap(m_nCamNo, m_nStageNo, m_nTabNo);
                 }
 
@@ -3014,15 +3014,15 @@ namespace COG
             PT_Display01.InteractiveGraphics.Clear();
             PT_Display01.StaticGraphics.Clear();
             DG_AKKON_RESULT.Rows.Clear();
-            DG_AKKON_RESULT.RowCount = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0].Length;
+            DG_AKKON_RESULT.RowCount = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0].Length;
 
-            for (int i = 0; i < Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0].Length; i++)
+            for (int i = 0; i < Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0].Length; i++)
             {
                 DG_AKKON_RESULT[0, i].Value = (i + 1).ToString();
-                DG_AKKON_RESULT[1, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0][i].s_nNumBlobs.ToString();
-                DG_AKKON_RESULT[2, i].Value = (Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0][i].s_fLength / 1000).ToString("0.000");
-                DG_AKKON_RESULT[3, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0][i].s_fAvgStrength.ToString("0.000");
-                DG_AKKON_RESULT[4, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult[0].AkkonResultArray[0][i].s_bJudgement.ToString();
+                DG_AKKON_RESULT[1, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0][i].s_nNumBlobs.ToString();
+                DG_AKKON_RESULT[2, i].Value = (Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0][i].s_fLength / 1000).ToString("0.000");
+                DG_AKKON_RESULT[3, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0][i].s_fAvgStrength.ToString("0.000");
+                DG_AKKON_RESULT[4, i].Value = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonResult.AkkonResultArray[0][i].s_bJudgement.ToString();
             }
 
             TAB_ATT_LIST.SelectedIndex = 1;
@@ -3735,8 +3735,8 @@ namespace COG
                 {
                     if (i == 0)
                     {
-                        TmepLeftMarkTool[i] = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].LeftPattern[0];
-                        TmepRightMarkTool[i] = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].RightPattern[0];
+                        TmepLeftMarkTool[i] = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.LeftPattern[0];
+                        TmepRightMarkTool[i] = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.RightPattern[0];
                     }
                     else
                     {
@@ -3781,10 +3781,10 @@ namespace COG
             double[] dRotT = new double[2];
            
        
-            double dPanelOriginLX = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].LeftPattern[0].Pattern.Origin.TranslationX;
-            double dPanelOriginLY = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].LeftPattern[0].Pattern.Origin.TranslationY;
-            double dPanelOriginRX = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].RightPattern[0].Pattern.Origin.TranslationX;
-            double dPanelOriginRY = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara[0].RightPattern[0].Pattern.Origin.TranslationY;
+            double dPanelOriginLX = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.LeftPattern[0].Pattern.Origin.TranslationX;
+            double dPanelOriginLY = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.LeftPattern[0].Pattern.Origin.TranslationY;
+            double dPanelOriginRX = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.RightPattern[0].Pattern.Origin.TranslationX;
+            double dPanelOriginRY = Main.AlignUnit[m_nCamNo].PAT[m_nStageNo, m_nTabNo].AkkonPara.RightPattern[0].Pattern.Origin.TranslationY;
             //추후 Score 기능 추가 예정 - YSH        
             double dPanelX = (dTranslationRX[0] + dTranslationLX[0]) / 2 - (dPanelOriginRX + dPanelOriginLX) / 2;
             double dPanelY = (dTranslationRY[0] + dTranslationLY[0]) / 2 - (dPanelOriginRY + dPanelOriginLY) / 2;

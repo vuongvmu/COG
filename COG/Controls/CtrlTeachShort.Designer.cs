@@ -179,8 +179,8 @@
             this.tlpBeadParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpBeadParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpBeadParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpBeadParameter.Controls.Add(this.btnBeadTest, 3, 8);
-            this.tlpBeadParameter.Controls.Add(this.btnApply, 0, 8);
+            this.tlpBeadParameter.Controls.Add(this.btnBeadTest, 3, 9);
+            this.tlpBeadParameter.Controls.Add(this.btnApply, 0, 9);
             this.tlpBeadParameter.Controls.Add(this.btnFindPath, 0, 7);
             this.tlpBeadParameter.Controls.Add(this.chkAutoCompute, 0, 0);
             this.tlpBeadParameter.Controls.Add(this.tlpBeadWidth, 1, 0);
@@ -216,7 +216,7 @@
             this.tlpBeadParameter.Location = new System.Drawing.Point(0, 120);
             this.tlpBeadParameter.Margin = new System.Windows.Forms.Padding(0);
             this.tlpBeadParameter.Name = "tlpBeadParameter";
-            this.tlpBeadParameter.RowCount = 9;
+            this.tlpBeadParameter.RowCount = 10;
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -225,8 +225,8 @@
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpBeadParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpBeadParameter.Size = new System.Drawing.Size(800, 612);
             this.tlpBeadParameter.TabIndex = 291;
             // 
@@ -236,10 +236,10 @@
             this.btnBeadTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBeadTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBeadTest.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnBeadTest.Location = new System.Drawing.Point(600, 549);
+            this.btnBeadTest.Location = new System.Drawing.Point(600, 552);
             this.btnBeadTest.Margin = new System.Windows.Forms.Padding(0);
             this.btnBeadTest.Name = "btnBeadTest";
-            this.btnBeadTest.Size = new System.Drawing.Size(200, 63);
+            this.btnBeadTest.Size = new System.Drawing.Size(200, 60);
             this.btnBeadTest.TabIndex = 198;
             this.btnBeadTest.Text = "BEAD TEST";
             this.btnBeadTest.UseVisualStyleBackColor = false;
@@ -251,10 +251,10 @@
             this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnApply.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnApply.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnApply.Location = new System.Drawing.Point(0, 549);
+            this.btnApply.Location = new System.Drawing.Point(0, 552);
             this.btnApply.Margin = new System.Windows.Forms.Padding(0);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(200, 63);
+            this.btnApply.Size = new System.Drawing.Size(200, 60);
             this.btnApply.TabIndex = 198;
             this.btnApply.Text = "APPLY";
             this.btnApply.UseVisualStyleBackColor = false;
@@ -266,10 +266,10 @@
             this.btnFindPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFindPath.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFindPath.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnFindPath.Location = new System.Drawing.Point(0, 488);
+            this.btnFindPath.Location = new System.Drawing.Point(0, 464);
             this.btnFindPath.Margin = new System.Windows.Forms.Padding(0);
             this.btnFindPath.Name = "btnFindPath";
-            this.btnFindPath.Size = new System.Drawing.Size(200, 61);
+            this.btnFindPath.Size = new System.Drawing.Size(200, 58);
             this.btnFindPath.TabIndex = 212;
             this.btnFindPath.Text = "FIND PATH";
             this.btnFindPath.UseVisualStyleBackColor = false;
@@ -285,7 +285,7 @@
             this.chkAutoCompute.Location = new System.Drawing.Point(0, 0);
             this.chkAutoCompute.Margin = new System.Windows.Forms.Padding(0);
             this.chkAutoCompute.Name = "chkAutoCompute";
-            this.chkAutoCompute.Size = new System.Drawing.Size(200, 122);
+            this.chkAutoCompute.Size = new System.Drawing.Size(200, 116);
             this.chkAutoCompute.TabIndex = 209;
             this.chkAutoCompute.Text = "AUTO COMPUTE";
             this.chkAutoCompute.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,7 +305,7 @@
             this.tlpBeadWidth.RowCount = 2;
             this.tlpBeadWidth.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBeadWidth.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBeadWidth.Size = new System.Drawing.Size(200, 122);
+            this.tlpBeadWidth.Size = new System.Drawing.Size(200, 116);
             this.tlpBeadWidth.TabIndex = 210;
             // 
             // lblBeadWidth
@@ -318,7 +318,7 @@
             this.lblBeadWidth.Location = new System.Drawing.Point(0, 0);
             this.lblBeadWidth.Margin = new System.Windows.Forms.Padding(0);
             this.lblBeadWidth.Name = "lblBeadWidth";
-            this.lblBeadWidth.Size = new System.Drawing.Size(200, 61);
+            this.lblBeadWidth.Size = new System.Drawing.Size(200, 58);
             this.lblBeadWidth.TabIndex = 201;
             this.lblBeadWidth.Text = "BEAD WIDTH";
             this.lblBeadWidth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,10 +330,10 @@
             this.lblBeadWidthValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblBeadWidthValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBeadWidthValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblBeadWidthValue.Location = new System.Drawing.Point(0, 61);
+            this.lblBeadWidthValue.Location = new System.Drawing.Point(0, 58);
             this.lblBeadWidthValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblBeadWidthValue.Name = "lblBeadWidthValue";
-            this.lblBeadWidthValue.Size = new System.Drawing.Size(200, 61);
+            this.lblBeadWidthValue.Size = new System.Drawing.Size(200, 58);
             this.lblBeadWidthValue.TabIndex = 9;
             this.lblBeadWidthValue.Text = "0";
             this.lblBeadWidthValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,10 +346,10 @@
             this.lblWidthValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblWidthValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblWidthValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblWidthValue.Location = new System.Drawing.Point(600, 366);
+            this.lblWidthValue.Location = new System.Drawing.Point(600, 348);
             this.lblWidthValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblWidthValue.Name = "lblWidthValue";
-            this.lblWidthValue.Size = new System.Drawing.Size(200, 61);
+            this.lblWidthValue.Size = new System.Drawing.Size(200, 58);
             this.lblWidthValue.TabIndex = 9;
             this.lblWidthValue.Text = "0";
             this.lblWidthValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -368,7 +368,7 @@
             this.tlpContrastThreshold.RowCount = 2;
             this.tlpContrastThreshold.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpContrastThreshold.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpContrastThreshold.Size = new System.Drawing.Size(200, 122);
+            this.tlpContrastThreshold.Size = new System.Drawing.Size(200, 116);
             this.tlpContrastThreshold.TabIndex = 210;
             // 
             // lblTrainContrastThreshold
@@ -381,7 +381,7 @@
             this.lblTrainContrastThreshold.Location = new System.Drawing.Point(0, 0);
             this.lblTrainContrastThreshold.Margin = new System.Windows.Forms.Padding(0);
             this.lblTrainContrastThreshold.Name = "lblTrainContrastThreshold";
-            this.lblTrainContrastThreshold.Size = new System.Drawing.Size(200, 61);
+            this.lblTrainContrastThreshold.Size = new System.Drawing.Size(200, 58);
             this.lblTrainContrastThreshold.TabIndex = 201;
             this.lblTrainContrastThreshold.Text = "CONTRAST THRESHOLD";
             this.lblTrainContrastThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -393,10 +393,10 @@
             this.lblTrainContrastThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTrainContrastThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTrainContrastThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblTrainContrastThresholdValue.Location = new System.Drawing.Point(0, 61);
+            this.lblTrainContrastThresholdValue.Location = new System.Drawing.Point(0, 58);
             this.lblTrainContrastThresholdValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblTrainContrastThresholdValue.Name = "lblTrainContrastThresholdValue";
-            this.lblTrainContrastThresholdValue.Size = new System.Drawing.Size(200, 61);
+            this.lblTrainContrastThresholdValue.Size = new System.Drawing.Size(200, 58);
             this.lblTrainContrastThresholdValue.TabIndex = 9;
             this.lblTrainContrastThresholdValue.Text = "0";
             this.lblTrainContrastThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,10 +408,10 @@
             this.btnFind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFind.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFind.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnFind.Location = new System.Drawing.Point(200, 427);
+            this.btnFind.Location = new System.Drawing.Point(200, 406);
             this.btnFind.Margin = new System.Windows.Forms.Padding(0);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(200, 61);
+            this.btnFind.Size = new System.Drawing.Size(200, 58);
             this.btnFind.TabIndex = 211;
             this.btnFind.Text = "FIND";
             this.btnFind.UseVisualStyleBackColor = false;
@@ -430,7 +430,7 @@
             this.tlpBeadPolarity.RowCount = 2;
             this.tlpBeadPolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBeadPolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBeadPolarity.Size = new System.Drawing.Size(200, 122);
+            this.tlpBeadPolarity.Size = new System.Drawing.Size(200, 116);
             this.tlpBeadPolarity.TabIndex = 210;
             // 
             // lblPolarity
@@ -443,7 +443,7 @@
             this.lblPolarity.Location = new System.Drawing.Point(0, 0);
             this.lblPolarity.Margin = new System.Windows.Forms.Padding(0);
             this.lblPolarity.Name = "lblPolarity";
-            this.lblPolarity.Size = new System.Drawing.Size(200, 61);
+            this.lblPolarity.Size = new System.Drawing.Size(200, 58);
             this.lblPolarity.TabIndex = 201;
             this.lblPolarity.Text = "POLARITY";
             this.lblPolarity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -456,12 +456,12 @@
             this.tlpPolarity.Controls.Add(this.rdoBeadLight, 0, 0);
             this.tlpPolarity.Controls.Add(this.rdoBeadDark, 0, 0);
             this.tlpPolarity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpPolarity.Location = new System.Drawing.Point(0, 61);
+            this.tlpPolarity.Location = new System.Drawing.Point(0, 58);
             this.tlpPolarity.Margin = new System.Windows.Forms.Padding(0);
             this.tlpPolarity.Name = "tlpPolarity";
             this.tlpPolarity.RowCount = 1;
             this.tlpPolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPolarity.Size = new System.Drawing.Size(200, 61);
+            this.tlpPolarity.Size = new System.Drawing.Size(200, 58);
             this.tlpPolarity.TabIndex = 208;
             // 
             // rdoBeadLight
@@ -474,7 +474,7 @@
             this.rdoBeadLight.Location = new System.Drawing.Point(100, 0);
             this.rdoBeadLight.Margin = new System.Windows.Forms.Padding(0);
             this.rdoBeadLight.Name = "rdoBeadLight";
-            this.rdoBeadLight.Size = new System.Drawing.Size(100, 61);
+            this.rdoBeadLight.Size = new System.Drawing.Size(100, 58);
             this.rdoBeadLight.TabIndex = 143;
             this.rdoBeadLight.Tag = "0";
             this.rdoBeadLight.Text = "LIGHT";
@@ -492,7 +492,7 @@
             this.rdoBeadDark.Location = new System.Drawing.Point(0, 0);
             this.rdoBeadDark.Margin = new System.Windows.Forms.Padding(0);
             this.rdoBeadDark.Name = "rdoBeadDark";
-            this.rdoBeadDark.Size = new System.Drawing.Size(100, 61);
+            this.rdoBeadDark.Size = new System.Drawing.Size(100, 58);
             this.rdoBeadDark.TabIndex = 142;
             this.rdoBeadDark.Tag = "0";
             this.rdoBeadDark.Text = "DARK";
@@ -506,10 +506,10 @@
             this.btnSearchTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearchTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSearchTest.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSearchTest.Location = new System.Drawing.Point(400, 488);
+            this.btnSearchTest.Location = new System.Drawing.Point(400, 464);
             this.btnSearchTest.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearchTest.Name = "btnSearchTest";
-            this.btnSearchTest.Size = new System.Drawing.Size(200, 61);
+            this.btnSearchTest.Size = new System.Drawing.Size(200, 58);
             this.btnSearchTest.TabIndex = 214;
             this.btnSearchTest.Text = "SEARCH TEST";
             this.btnSearchTest.UseVisualStyleBackColor = false;
@@ -522,10 +522,10 @@
             this.lblContrastThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContrastThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblContrastThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblContrastThresholdValue.Location = new System.Drawing.Point(600, 122);
+            this.lblContrastThresholdValue.Location = new System.Drawing.Point(600, 116);
             this.lblContrastThresholdValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblContrastThresholdValue.Name = "lblContrastThresholdValue";
-            this.lblContrastThresholdValue.Size = new System.Drawing.Size(200, 61);
+            this.lblContrastThresholdValue.Size = new System.Drawing.Size(200, 58);
             this.lblContrastThresholdValue.TabIndex = 9;
             this.lblContrastThresholdValue.Text = "0";
             this.lblContrastThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,10 +538,10 @@
             this.lblContrastThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContrastThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblContrastThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblContrastThreshold.Location = new System.Drawing.Point(400, 122);
+            this.lblContrastThreshold.Location = new System.Drawing.Point(400, 116);
             this.lblContrastThreshold.Margin = new System.Windows.Forms.Padding(0);
             this.lblContrastThreshold.Name = "lblContrastThreshold";
-            this.lblContrastThreshold.Size = new System.Drawing.Size(200, 61);
+            this.lblContrastThreshold.Size = new System.Drawing.Size(200, 58);
             this.lblContrastThreshold.TabIndex = 201;
             this.lblContrastThreshold.Text = "CONTRAST THRESHOLD";
             this.lblContrastThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -553,10 +553,10 @@
             this.lblMaxResultValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxResultValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxResultValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxResultValue.Location = new System.Drawing.Point(200, 122);
+            this.lblMaxResultValue.Location = new System.Drawing.Point(200, 116);
             this.lblMaxResultValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxResultValue.Name = "lblMaxResultValue";
-            this.lblMaxResultValue.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxResultValue.Size = new System.Drawing.Size(200, 58);
             this.lblMaxResultValue.TabIndex = 9;
             this.lblMaxResultValue.Text = "0";
             this.lblMaxResultValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -569,10 +569,10 @@
             this.lblMaxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxResult.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxResult.Location = new System.Drawing.Point(0, 122);
+            this.lblMaxResult.Location = new System.Drawing.Point(0, 116);
             this.lblMaxResult.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxResult.Name = "lblMaxResult";
-            this.lblMaxResult.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxResult.Size = new System.Drawing.Size(200, 58);
             this.lblMaxResult.TabIndex = 201;
             this.lblMaxResult.Text = "MAX RESULT";
             this.lblMaxResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -583,10 +583,10 @@
             this.btnTrainROI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnTrainROI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTrainROI.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnTrainROI.Location = new System.Drawing.Point(0, 427);
+            this.btnTrainROI.Location = new System.Drawing.Point(0, 406);
             this.btnTrainROI.Margin = new System.Windows.Forms.Padding(0);
             this.btnTrainROI.Name = "btnTrainROI";
-            this.btnTrainROI.Size = new System.Drawing.Size(200, 61);
+            this.btnTrainROI.Size = new System.Drawing.Size(200, 58);
             this.btnTrainROI.TabIndex = 198;
             this.btnTrainROI.Text = "TRAIN ROI";
             this.btnTrainROI.UseVisualStyleBackColor = false;
@@ -599,10 +599,10 @@
             this.lblMaxWidthDeviation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxWidthDeviation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxWidthDeviation.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxWidthDeviation.Location = new System.Drawing.Point(0, 183);
+            this.lblMaxWidthDeviation.Location = new System.Drawing.Point(0, 174);
             this.lblMaxWidthDeviation.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxWidthDeviation.Name = "lblMaxWidthDeviation";
-            this.lblMaxWidthDeviation.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxWidthDeviation.Size = new System.Drawing.Size(200, 58);
             this.lblMaxWidthDeviation.TabIndex = 201;
             this.lblMaxWidthDeviation.Text = "MAX WIDTH DEVIATION";
             this.lblMaxWidthDeviation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -613,10 +613,10 @@
             this.btnTrain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnTrain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTrain.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.btnTrain.Location = new System.Drawing.Point(200, 488);
+            this.btnTrain.Location = new System.Drawing.Point(200, 464);
             this.btnTrain.Margin = new System.Windows.Forms.Padding(0);
             this.btnTrain.Name = "btnTrain";
-            this.btnTrain.Size = new System.Drawing.Size(200, 61);
+            this.btnTrain.Size = new System.Drawing.Size(200, 58);
             this.btnTrain.TabIndex = 213;
             this.btnTrain.Text = "TRAIN";
             this.btnTrain.UseVisualStyleBackColor = false;
@@ -629,10 +629,10 @@
             this.lblMaxSkipCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxSkipCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxSkipCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxSkipCount.Location = new System.Drawing.Point(0, 244);
+            this.lblMaxSkipCount.Location = new System.Drawing.Point(0, 232);
             this.lblMaxSkipCount.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxSkipCount.Name = "lblMaxSkipCount";
-            this.lblMaxSkipCount.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxSkipCount.Size = new System.Drawing.Size(200, 58);
             this.lblMaxSkipCount.TabIndex = 201;
             this.lblMaxSkipCount.Text = "MAX SKP COUNT";
             this.lblMaxSkipCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -644,10 +644,10 @@
             this.lblMaxWidthDeviationValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxWidthDeviationValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxWidthDeviationValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxWidthDeviationValue.Location = new System.Drawing.Point(200, 183);
+            this.lblMaxWidthDeviationValue.Location = new System.Drawing.Point(200, 174);
             this.lblMaxWidthDeviationValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxWidthDeviationValue.Name = "lblMaxWidthDeviationValue";
-            this.lblMaxWidthDeviationValue.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxWidthDeviationValue.Size = new System.Drawing.Size(200, 58);
             this.lblMaxWidthDeviationValue.TabIndex = 9;
             this.lblMaxWidthDeviationValue.Text = "0";
             this.lblMaxWidthDeviationValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,10 +660,10 @@
             this.lblStepThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblStepThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStepThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblStepThreshold.Location = new System.Drawing.Point(400, 427);
+            this.lblStepThreshold.Location = new System.Drawing.Point(400, 406);
             this.lblStepThreshold.Margin = new System.Windows.Forms.Padding(0);
             this.lblStepThreshold.Name = "lblStepThreshold";
-            this.lblStepThreshold.Size = new System.Drawing.Size(200, 61);
+            this.lblStepThreshold.Size = new System.Drawing.Size(200, 58);
             this.lblStepThreshold.TabIndex = 201;
             this.lblStepThreshold.Text = "STEP THRESHOLD";
             this.lblStepThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -675,10 +675,10 @@
             this.lblMaxSkipCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaxSkipCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaxSkipCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMaxSkipCountValue.Location = new System.Drawing.Point(200, 244);
+            this.lblMaxSkipCountValue.Location = new System.Drawing.Point(200, 232);
             this.lblMaxSkipCountValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblMaxSkipCountValue.Name = "lblMaxSkipCountValue";
-            this.lblMaxSkipCountValue.Size = new System.Drawing.Size(200, 61);
+            this.lblMaxSkipCountValue.Size = new System.Drawing.Size(200, 58);
             this.lblMaxSkipCountValue.TabIndex = 9;
             this.lblMaxSkipCountValue.Text = "0";
             this.lblMaxSkipCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -691,10 +691,10 @@
             this.lblStepThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblStepThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStepThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblStepThresholdValue.Location = new System.Drawing.Point(600, 427);
+            this.lblStepThresholdValue.Location = new System.Drawing.Point(600, 406);
             this.lblStepThresholdValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblStepThresholdValue.Name = "lblStepThresholdValue";
-            this.lblStepThresholdValue.Size = new System.Drawing.Size(200, 61);
+            this.lblStepThresholdValue.Size = new System.Drawing.Size(200, 58);
             this.lblStepThresholdValue.TabIndex = 9;
             this.lblStepThresholdValue.Text = "0";
             this.lblStepThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,10 +707,10 @@
             this.lblAbsoluteDistance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAbsoluteDistance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAbsoluteDistance.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAbsoluteDistance.Location = new System.Drawing.Point(400, 183);
+            this.lblAbsoluteDistance.Location = new System.Drawing.Point(400, 174);
             this.lblAbsoluteDistance.Margin = new System.Windows.Forms.Padding(0);
             this.lblAbsoluteDistance.Name = "lblAbsoluteDistance";
-            this.lblAbsoluteDistance.Size = new System.Drawing.Size(200, 61);
+            this.lblAbsoluteDistance.Size = new System.Drawing.Size(200, 58);
             this.lblAbsoluteDistance.TabIndex = 201;
             this.lblAbsoluteDistance.Text = "ABSOLUTE DISTANCE";
             this.lblAbsoluteDistance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -722,10 +722,10 @@
             this.lblWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblWidth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblWidth.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblWidth.Location = new System.Drawing.Point(400, 366);
+            this.lblWidth.Location = new System.Drawing.Point(400, 348);
             this.lblWidth.Margin = new System.Windows.Forms.Padding(0);
             this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(200, 61);
+            this.lblWidth.Size = new System.Drawing.Size(200, 58);
             this.lblWidth.TabIndex = 201;
             this.lblWidth.Text = "WIDTH";
             this.lblWidth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -737,10 +737,10 @@
             this.lblSmoothingFactorValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSmoothingFactorValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSmoothingFactorValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSmoothingFactorValue.Location = new System.Drawing.Point(200, 366);
+            this.lblSmoothingFactorValue.Location = new System.Drawing.Point(200, 348);
             this.lblSmoothingFactorValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblSmoothingFactorValue.Name = "lblSmoothingFactorValue";
-            this.lblSmoothingFactorValue.Size = new System.Drawing.Size(200, 61);
+            this.lblSmoothingFactorValue.Size = new System.Drawing.Size(200, 58);
             this.lblSmoothingFactorValue.TabIndex = 9;
             this.lblSmoothingFactorValue.Text = "0";
             this.lblSmoothingFactorValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -753,10 +753,10 @@
             this.lblConsecutiveFallingCaliperValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblConsecutiveFallingCaliperValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblConsecutiveFallingCaliperValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblConsecutiveFallingCaliperValue.Location = new System.Drawing.Point(600, 244);
+            this.lblConsecutiveFallingCaliperValue.Location = new System.Drawing.Point(600, 232);
             this.lblConsecutiveFallingCaliperValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblConsecutiveFallingCaliperValue.Name = "lblConsecutiveFallingCaliperValue";
-            this.lblConsecutiveFallingCaliperValue.Size = new System.Drawing.Size(200, 61);
+            this.lblConsecutiveFallingCaliperValue.Size = new System.Drawing.Size(200, 58);
             this.lblConsecutiveFallingCaliperValue.TabIndex = 9;
             this.lblConsecutiveFallingCaliperValue.Text = "0";
             this.lblConsecutiveFallingCaliperValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -769,10 +769,10 @@
             this.lblConsecutiveFallingCaliper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblConsecutiveFallingCaliper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblConsecutiveFallingCaliper.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblConsecutiveFallingCaliper.Location = new System.Drawing.Point(400, 244);
+            this.lblConsecutiveFallingCaliper.Location = new System.Drawing.Point(400, 232);
             this.lblConsecutiveFallingCaliper.Margin = new System.Windows.Forms.Padding(0);
             this.lblConsecutiveFallingCaliper.Name = "lblConsecutiveFallingCaliper";
-            this.lblConsecutiveFallingCaliper.Size = new System.Drawing.Size(200, 61);
+            this.lblConsecutiveFallingCaliper.Size = new System.Drawing.Size(200, 58);
             this.lblConsecutiveFallingCaliper.TabIndex = 201;
             this.lblConsecutiveFallingCaliper.Text = "CONSECUTIVE FALLING CALIPER";
             this.lblConsecutiveFallingCaliper.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -784,10 +784,10 @@
             this.lblCaliperSpacing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCaliperSpacing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCaliperSpacing.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblCaliperSpacing.Location = new System.Drawing.Point(0, 305);
+            this.lblCaliperSpacing.Location = new System.Drawing.Point(0, 290);
             this.lblCaliperSpacing.Margin = new System.Windows.Forms.Padding(0);
             this.lblCaliperSpacing.Name = "lblCaliperSpacing";
-            this.lblCaliperSpacing.Size = new System.Drawing.Size(200, 61);
+            this.lblCaliperSpacing.Size = new System.Drawing.Size(200, 58);
             this.lblCaliperSpacing.TabIndex = 201;
             this.lblCaliperSpacing.Text = "CALIPER SPACING";
             this.lblCaliperSpacing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -799,10 +799,10 @@
             this.lblSmoothingFactor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSmoothingFactor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSmoothingFactor.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSmoothingFactor.Location = new System.Drawing.Point(0, 366);
+            this.lblSmoothingFactor.Location = new System.Drawing.Point(0, 348);
             this.lblSmoothingFactor.Margin = new System.Windows.Forms.Padding(0);
             this.lblSmoothingFactor.Name = "lblSmoothingFactor";
-            this.lblSmoothingFactor.Size = new System.Drawing.Size(200, 61);
+            this.lblSmoothingFactor.Size = new System.Drawing.Size(200, 58);
             this.lblSmoothingFactor.TabIndex = 201;
             this.lblSmoothingFactor.Text = "SMOOTING FACTOR";
             this.lblSmoothingFactor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -814,10 +814,10 @@
             this.lblCaliperSpacingValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCaliperSpacingValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCaliperSpacingValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblCaliperSpacingValue.Location = new System.Drawing.Point(200, 305);
+            this.lblCaliperSpacingValue.Location = new System.Drawing.Point(200, 290);
             this.lblCaliperSpacingValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblCaliperSpacingValue.Name = "lblCaliperSpacingValue";
-            this.lblCaliperSpacingValue.Size = new System.Drawing.Size(200, 61);
+            this.lblCaliperSpacingValue.Size = new System.Drawing.Size(200, 58);
             this.lblCaliperSpacingValue.TabIndex = 9;
             this.lblCaliperSpacingValue.Text = "0";
             this.lblCaliperSpacingValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -830,10 +830,10 @@
             this.lblCoverageValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCoverageValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCoverageValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblCoverageValue.Location = new System.Drawing.Point(600, 305);
+            this.lblCoverageValue.Location = new System.Drawing.Point(600, 290);
             this.lblCoverageValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblCoverageValue.Name = "lblCoverageValue";
-            this.lblCoverageValue.Size = new System.Drawing.Size(200, 61);
+            this.lblCoverageValue.Size = new System.Drawing.Size(200, 58);
             this.lblCoverageValue.TabIndex = 9;
             this.lblCoverageValue.Text = "0";
             this.lblCoverageValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -846,10 +846,10 @@
             this.lblCoverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCoverage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCoverage.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblCoverage.Location = new System.Drawing.Point(400, 305);
+            this.lblCoverage.Location = new System.Drawing.Point(400, 290);
             this.lblCoverage.Margin = new System.Windows.Forms.Padding(0);
             this.lblCoverage.Name = "lblCoverage";
-            this.lblCoverage.Size = new System.Drawing.Size(200, 61);
+            this.lblCoverage.Size = new System.Drawing.Size(200, 58);
             this.lblCoverage.TabIndex = 201;
             this.lblCoverage.Text = "CONVERAGE";
             this.lblCoverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -861,10 +861,10 @@
             this.lblAbsoluteDistanceValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAbsoluteDistanceValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAbsoluteDistanceValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAbsoluteDistanceValue.Location = new System.Drawing.Point(600, 183);
+            this.lblAbsoluteDistanceValue.Location = new System.Drawing.Point(600, 174);
             this.lblAbsoluteDistanceValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblAbsoluteDistanceValue.Name = "lblAbsoluteDistanceValue";
-            this.lblAbsoluteDistanceValue.Size = new System.Drawing.Size(200, 61);
+            this.lblAbsoluteDistanceValue.Size = new System.Drawing.Size(200, 58);
             this.lblAbsoluteDistanceValue.TabIndex = 9;
             this.lblAbsoluteDistanceValue.Text = "0";
             this.lblAbsoluteDistanceValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

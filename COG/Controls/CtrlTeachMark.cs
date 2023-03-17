@@ -955,7 +955,7 @@ namespace COG.Controls
             for (int tabCount = 0; tabCount < Main.DEFINE.TAP_UNIT_MAX; tabCount++)
             {
                 _akkonTagData[tabCount] = new Main.AkkonTagData();
-                _akkonTagData[tabCount].SetParam(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara[0]);
+                _akkonTagData[tabCount].SetParam(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara);
             }
         }
 
@@ -1050,12 +1050,12 @@ namespace COG.Controls
             //if (MessageBox.Show("Save ?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
             //    return;
 #if ATT
-            for (int tabCount = 0; tabCount < DEFINE.TAP_UNIT_MAX; tabCount++)
-            {
-                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AlignPara = _alignTagData[tabCount].Copy();
-                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, tabCount].AkkonPara[0] = _akkonTagData[tabCount].Copy();
-                Main.AlignUnit[(int)_camNo].SaveMark((int)_stageNo, tabCount);
-            }
+            //for (int tabCount = 0; tabCount < DEFINE.TAP_UNIT_MAX; tabCount++)
+            //{
+                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, (int)_tabNo].AlignPara = _alignTagData[(int)_tabNo].Copy();
+                Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, (int)_tabNo].AkkonPara = _akkonTagData[(int)_tabNo].Copy();
+                Main.AlignUnit[(int)_camNo].SaveMark((int)_stageNo, (int)_tabNo);
+            //}
 #endif
             if (_markPosition == eMarkPosition.Left)
                 Main.TeachingPositionList[(int)eTeachingPosition.Stage1_PreAlign_Left].OpticParam.LightLevel = Convert.ToInt32(nudLightDimmingLevel.Text);
@@ -1322,35 +1322,6 @@ namespace COG.Controls
 
 
 #endregion
-
-        private void cmb_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            DrawComboboxCenterAlign(sender, e);
-        }
-
-        private void DrawComboboxCenterAlign(object sender, DrawItemEventArgs e)
-        {
-            ComboBox cmb = sender as ComboBox;
-
-            if (cmb != null)
-            {
-                e.DrawBackground();
-
-                if (e.Index >= 0)
-                {
-                    StringFormat sf = new StringFormat();
-                    sf.LineAlignment = StringAlignment.Center;
-                    sf.Alignment = StringAlignment.Center;
-
-                    Brush brush = new SolidBrush(cmb.ForeColor);
-
-                    if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
-                        brush = SystemBrushes.HighlightText;
-
-                    e.Graphics.DrawString(cmb.Items[e.Index].ToString(), cmb.Font, brush, e.Bounds, sf);
-                }
-            }
-        }
 
         private void trbDimmingLevelValue_Scroll(object sender, EventArgs e)
         {

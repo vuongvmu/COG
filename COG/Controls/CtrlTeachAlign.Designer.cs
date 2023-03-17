@@ -30,21 +30,20 @@
         {
             this.tlpTeachAlign = new System.Windows.Forms.TableLayoutPanel();
             this.tlpEdgeParameter = new System.Windows.Forms.TableLayoutPanel();
-            this.chkROITracking = new System.Windows.Forms.CheckBox();
+            this.btnAlignTest = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
             this.lblLeadCount = new System.Windows.Forms.Label();
             this.lblLeadCountValue = new System.Windows.Forms.Label();
-            this.btnROIShow = new System.Windows.Forms.Button();
             this.lblEdgePolarity = new System.Windows.Forms.Label();
-            this.lblEdgeThresholdValue = new System.Windows.Forms.Label();
-            this.lblEdgeThreshold = new System.Windows.Forms.Label();
-            this.lblFilterSize = new System.Windows.Forms.Label();
-            this.lblFilterSizeValue = new System.Windows.Forms.Label();
             this.tlpEdgePolarity = new System.Windows.Forms.TableLayoutPanel();
             this.rdoLightToDark = new System.Windows.Forms.RadioButton();
             this.rdoDarkToLight = new System.Windows.Forms.RadioButton();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.btnAlignTest = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.lblFilterSize = new System.Windows.Forms.Label();
+            this.lblFilterSizeValue = new System.Windows.Forms.Label();
+            this.lblEdgeThreshold = new System.Windows.Forms.Label();
+            this.lblEdgeThresholdValue = new System.Windows.Forms.Label();
+            this.btnROIShow = new System.Windows.Forms.Button();
+            this.chkROITracking = new System.Windows.Forms.CheckBox();
             this.tlpROIPosition = new System.Windows.Forms.TableLayoutPanel();
             this.tlpEdgePosition = new System.Windows.Forms.TableLayoutPanel();
             this.rdoEdgeX = new System.Windows.Forms.RadioButton();
@@ -71,44 +70,47 @@
             // 
             this.tlpTeachAlign.ColumnCount = 1;
             this.tlpTeachAlign.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTeachAlign.Controls.Add(this.tlpEdgeParameter, 0, 1);
-            this.tlpTeachAlign.Controls.Add(this.tlpROIPosition, 0, 0);
+            this.tlpTeachAlign.Controls.Add(this.tlpEdgeParameter, 0, 3);
+            this.tlpTeachAlign.Controls.Add(this.tlpROIPosition, 0, 1);
             this.tlpTeachAlign.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTeachAlign.Location = new System.Drawing.Point(0, 0);
             this.tlpTeachAlign.Margin = new System.Windows.Forms.Padding(0);
             this.tlpTeachAlign.Name = "tlpTeachAlign";
-            this.tlpTeachAlign.RowCount = 2;
-            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpTeachAlign.Size = new System.Drawing.Size(800, 700);
+            this.tlpTeachAlign.RowCount = 7;
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tlpTeachAlign.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpTeachAlign.Size = new System.Drawing.Size(800, 900);
             this.tlpTeachAlign.TabIndex = 288;
             // 
             // tlpEdgeParameter
             // 
-            this.tlpEdgeParameter.ColumnCount = 3;
-            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpEdgeParameter.Controls.Add(this.chkROITracking, 0, 1);
-            this.tlpEdgeParameter.Controls.Add(this.lblLeadCount, 0, 2);
-            this.tlpEdgeParameter.Controls.Add(this.lblLeadCountValue, 1, 2);
-            this.tlpEdgeParameter.Controls.Add(this.btnROIShow, 1, 7);
-            this.tlpEdgeParameter.Controls.Add(this.lblEdgePolarity, 0, 3);
-            this.tlpEdgeParameter.Controls.Add(this.lblEdgeThresholdValue, 1, 5);
-            this.tlpEdgeParameter.Controls.Add(this.lblEdgeThreshold, 0, 5);
-            this.tlpEdgeParameter.Controls.Add(this.lblFilterSize, 0, 4);
-            this.tlpEdgeParameter.Controls.Add(this.lblFilterSizeValue, 1, 4);
-            this.tlpEdgeParameter.Controls.Add(this.tlpEdgePolarity, 1, 3);
-            this.tlpEdgeParameter.Controls.Add(this.btnApply, 1, 8);
-            this.tlpEdgeParameter.Controls.Add(this.btnAlignTest, 2, 7);
-            this.tlpEdgeParameter.Controls.Add(this.btnSave, 2, 8);
+            this.tlpEdgeParameter.ColumnCount = 4;
+            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpEdgeParameter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpEdgeParameter.Controls.Add(this.btnAlignTest, 3, 8);
+            this.tlpEdgeParameter.Controls.Add(this.btnApply, 0, 8);
+            this.tlpEdgeParameter.Controls.Add(this.lblLeadCount, 0, 1);
+            this.tlpEdgeParameter.Controls.Add(this.lblLeadCountValue, 1, 1);
+            this.tlpEdgeParameter.Controls.Add(this.lblEdgePolarity, 0, 2);
+            this.tlpEdgeParameter.Controls.Add(this.tlpEdgePolarity, 1, 2);
+            this.tlpEdgeParameter.Controls.Add(this.lblFilterSize, 0, 3);
+            this.tlpEdgeParameter.Controls.Add(this.lblFilterSizeValue, 1, 3);
+            this.tlpEdgeParameter.Controls.Add(this.lblEdgeThreshold, 0, 4);
+            this.tlpEdgeParameter.Controls.Add(this.lblEdgeThresholdValue, 1, 4);
+            this.tlpEdgeParameter.Controls.Add(this.btnROIShow, 0, 5);
+            this.tlpEdgeParameter.Controls.Add(this.chkROITracking, 1, 5);
             this.tlpEdgeParameter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEdgeParameter.Location = new System.Drawing.Point(0, 210);
+            this.tlpEdgeParameter.Location = new System.Drawing.Point(0, 150);
             this.tlpEdgeParameter.Margin = new System.Windows.Forms.Padding(0);
             this.tlpEdgeParameter.Name = "tlpEdgeParameter";
             this.tlpEdgeParameter.RowCount = 9;
-            this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -117,32 +119,51 @@
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpEdgeParameter.Size = new System.Drawing.Size(800, 490);
+            this.tlpEdgeParameter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpEdgeParameter.Size = new System.Drawing.Size(800, 586);
             this.tlpEdgeParameter.TabIndex = 0;
             // 
-            // chkROITracking
+            // btnAlignTest
             // 
-            this.chkROITracking.AutoSize = true;
-            this.chkROITracking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkROITracking.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.chkROITracking.Location = new System.Drawing.Point(5, 52);
-            this.chkROITracking.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.chkROITracking.Name = "chkROITracking";
-            this.chkROITracking.Size = new System.Drawing.Size(312, 43);
-            this.chkROITracking.TabIndex = 1;
-            this.chkROITracking.Text = "Use ROI Tracking";
-            this.chkROITracking.UseVisualStyleBackColor = true;
+            this.btnAlignTest.BackColor = System.Drawing.Color.DarkGray;
+            this.btnAlignTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAlignTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAlignTest.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAlignTest.Location = new System.Drawing.Point(600, 523);
+            this.btnAlignTest.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAlignTest.Name = "btnAlignTest";
+            this.btnAlignTest.Size = new System.Drawing.Size(200, 63);
+            this.btnAlignTest.TabIndex = 198;
+            this.btnAlignTest.Text = "ALIGN TEST";
+            this.btnAlignTest.UseVisualStyleBackColor = false;
+            this.btnAlignTest.Click += new System.EventHandler(this.btnAlignTest_Click);
+            // 
+            // btnApply
+            // 
+            this.btnApply.BackColor = System.Drawing.Color.DarkGray;
+            this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnApply.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnApply.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnApply.Location = new System.Drawing.Point(0, 523);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(0);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(200, 63);
+            this.btnApply.TabIndex = 198;
+            this.btnApply.Text = "APPLY";
+            this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // lblLeadCount
             // 
             this.lblLeadCount.AutoSize = true;
+            this.lblLeadCount.BackColor = System.Drawing.Color.DarkGray;
             this.lblLeadCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeadCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLeadCount.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblLeadCount.Location = new System.Drawing.Point(9, 101);
-            this.lblLeadCount.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.lblLeadCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblLeadCount.Location = new System.Drawing.Point(0, 58);
+            this.lblLeadCount.Margin = new System.Windows.Forms.Padding(0);
             this.lblLeadCount.Name = "lblLeadCount";
-            this.lblLeadCount.Size = new System.Drawing.Size(302, 43);
+            this.lblLeadCount.Size = new System.Drawing.Size(200, 58);
             this.lblLeadCount.TabIndex = 0;
             this.lblLeadCount.Text = "LEAD COUNT";
             this.lblLeadCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,104 +174,30 @@
             this.lblLeadCountValue.BackColor = System.Drawing.Color.White;
             this.lblLeadCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeadCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLeadCountValue.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLeadCountValue.Location = new System.Drawing.Point(329, 101);
-            this.lblLeadCountValue.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.lblLeadCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblLeadCountValue.Location = new System.Drawing.Point(200, 58);
+            this.lblLeadCountValue.Margin = new System.Windows.Forms.Padding(0);
             this.lblLeadCountValue.Name = "lblLeadCountValue";
-            this.lblLeadCountValue.Size = new System.Drawing.Size(222, 43);
+            this.lblLeadCountValue.Size = new System.Drawing.Size(200, 58);
             this.lblLeadCountValue.TabIndex = 7;
             this.lblLeadCountValue.Text = "0";
             this.lblLeadCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLeadCountValue.Click += new System.EventHandler(this.lblLeadCountValue_Click);
             // 
-            // btnROIShow
-            // 
-            this.btnROIShow.BackColor = System.Drawing.Color.DarkGray;
-            this.btnROIShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnROIShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnROIShow.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.btnROIShow.Location = new System.Drawing.Point(323, 395);
-            this.btnROIShow.Name = "btnROIShow";
-            this.btnROIShow.Size = new System.Drawing.Size(234, 43);
-            this.btnROIShow.TabIndex = 198;
-            this.btnROIShow.Text = "SHOW ROI";
-            this.btnROIShow.UseVisualStyleBackColor = false;
-            this.btnROIShow.Click += new System.EventHandler(this.btnROIShow_Click);
-            // 
             // lblEdgePolarity
             // 
             this.lblEdgePolarity.AutoSize = true;
+            this.lblEdgePolarity.BackColor = System.Drawing.Color.DarkGray;
             this.lblEdgePolarity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblEdgePolarity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEdgePolarity.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEdgePolarity.Location = new System.Drawing.Point(9, 150);
-            this.lblEdgePolarity.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.lblEdgePolarity.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblEdgePolarity.Location = new System.Drawing.Point(0, 116);
+            this.lblEdgePolarity.Margin = new System.Windows.Forms.Padding(0);
             this.lblEdgePolarity.Name = "lblEdgePolarity";
-            this.lblEdgePolarity.Size = new System.Drawing.Size(302, 92);
+            this.lblEdgePolarity.Size = new System.Drawing.Size(200, 117);
             this.lblEdgePolarity.TabIndex = 4;
             this.lblEdgePolarity.Text = "EDGE POLARITY";
             this.lblEdgePolarity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEdgeThresholdValue
-            // 
-            this.lblEdgeThresholdValue.AutoSize = true;
-            this.lblEdgeThresholdValue.BackColor = System.Drawing.Color.White;
-            this.lblEdgeThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblEdgeThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEdgeThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEdgeThresholdValue.Location = new System.Drawing.Point(329, 297);
-            this.lblEdgeThresholdValue.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
-            this.lblEdgeThresholdValue.Name = "lblEdgeThresholdValue";
-            this.lblEdgeThresholdValue.Size = new System.Drawing.Size(222, 43);
-            this.lblEdgeThresholdValue.TabIndex = 9;
-            this.lblEdgeThresholdValue.Text = "0";
-            this.lblEdgeThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEdgeThresholdValue.Click += new System.EventHandler(this.lblEdgeThresholdValue_Click);
-            // 
-            // lblEdgeThreshold
-            // 
-            this.lblEdgeThreshold.AutoSize = true;
-            this.lblEdgeThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblEdgeThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEdgeThreshold.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEdgeThreshold.Location = new System.Drawing.Point(9, 297);
-            this.lblEdgeThreshold.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
-            this.lblEdgeThreshold.Name = "lblEdgeThreshold";
-            this.lblEdgeThreshold.Size = new System.Drawing.Size(302, 43);
-            this.lblEdgeThreshold.TabIndex = 3;
-            this.lblEdgeThreshold.Text = "EDGE THRESHOLD";
-            this.lblEdgeThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFilterSize
-            // 
-            this.lblFilterSize.AutoSize = true;
-            this.lblFilterSize.BackColor = System.Drawing.Color.Silver;
-            this.lblFilterSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFilterSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilterSize.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblFilterSize.Location = new System.Drawing.Point(9, 248);
-            this.lblFilterSize.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
-            this.lblFilterSize.Name = "lblFilterSize";
-            this.lblFilterSize.Size = new System.Drawing.Size(302, 43);
-            this.lblFilterSize.TabIndex = 2;
-            this.lblFilterSize.Text = "FILTER SIZE";
-            this.lblFilterSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFilterSizeValue
-            // 
-            this.lblFilterSizeValue.AutoSize = true;
-            this.lblFilterSizeValue.BackColor = System.Drawing.Color.White;
-            this.lblFilterSizeValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFilterSizeValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilterSizeValue.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFilterSizeValue.Location = new System.Drawing.Point(329, 248);
-            this.lblFilterSizeValue.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
-            this.lblFilterSizeValue.Name = "lblFilterSizeValue";
-            this.lblFilterSizeValue.Size = new System.Drawing.Size(222, 43);
-            this.lblFilterSizeValue.TabIndex = 8;
-            this.lblFilterSizeValue.Text = "0";
-            this.lblFilterSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFilterSizeValue.Click += new System.EventHandler(this.lblFilterSizeValue_Click);
             // 
             // tlpEdgePolarity
             // 
@@ -259,14 +206,14 @@
             this.tlpEdgePolarity.Controls.Add(this.rdoLightToDark, 0, 1);
             this.tlpEdgePolarity.Controls.Add(this.rdoDarkToLight, 0, 0);
             this.tlpEdgePolarity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEdgePolarity.Location = new System.Drawing.Point(320, 147);
+            this.tlpEdgePolarity.Location = new System.Drawing.Point(200, 116);
             this.tlpEdgePolarity.Margin = new System.Windows.Forms.Padding(0);
             this.tlpEdgePolarity.Name = "tlpEdgePolarity";
             this.tlpEdgePolarity.RowCount = 2;
             this.tlpEdgePolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpEdgePolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpEdgePolarity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpEdgePolarity.Size = new System.Drawing.Size(240, 98);
+            this.tlpEdgePolarity.Size = new System.Drawing.Size(200, 117);
             this.tlpEdgePolarity.TabIndex = 199;
             // 
             // rdoLightToDark
@@ -275,10 +222,11 @@
             this.rdoLightToDark.AutoSize = true;
             this.rdoLightToDark.BackColor = System.Drawing.Color.DarkGray;
             this.rdoLightToDark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoLightToDark.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdoLightToDark.Location = new System.Drawing.Point(3, 52);
+            this.rdoLightToDark.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.rdoLightToDark.Location = new System.Drawing.Point(0, 58);
+            this.rdoLightToDark.Margin = new System.Windows.Forms.Padding(0);
             this.rdoLightToDark.Name = "rdoLightToDark";
-            this.rdoLightToDark.Size = new System.Drawing.Size(234, 43);
+            this.rdoLightToDark.Size = new System.Drawing.Size(200, 59);
             this.rdoLightToDark.TabIndex = 6;
             this.rdoLightToDark.TabStop = true;
             this.rdoLightToDark.Tag = "";
@@ -293,10 +241,11 @@
             this.rdoDarkToLight.AutoSize = true;
             this.rdoDarkToLight.BackColor = System.Drawing.Color.DarkGray;
             this.rdoDarkToLight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoDarkToLight.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdoDarkToLight.Location = new System.Drawing.Point(3, 3);
+            this.rdoDarkToLight.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.rdoDarkToLight.Location = new System.Drawing.Point(0, 0);
+            this.rdoDarkToLight.Margin = new System.Windows.Forms.Padding(0);
             this.rdoDarkToLight.Name = "rdoDarkToLight";
-            this.rdoDarkToLight.Size = new System.Drawing.Size(234, 43);
+            this.rdoDarkToLight.Size = new System.Drawing.Size(200, 58);
             this.rdoDarkToLight.TabIndex = 5;
             this.rdoDarkToLight.TabStop = true;
             this.rdoDarkToLight.Tag = "";
@@ -305,47 +254,95 @@
             this.rdoDarkToLight.UseVisualStyleBackColor = false;
             this.rdoDarkToLight.CheckedChanged += new System.EventHandler(this.rdoSetEdgePolarity_CheckedChanged);
             // 
-            // btnApply
+            // lblFilterSize
             // 
-            this.btnApply.BackColor = System.Drawing.Color.DarkGray;
-            this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnApply.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnApply.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.btnApply.Location = new System.Drawing.Point(323, 444);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(234, 43);
-            this.btnApply.TabIndex = 198;
-            this.btnApply.Text = "APPLY";
-            this.btnApply.UseVisualStyleBackColor = false;
-            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            this.lblFilterSize.AutoSize = true;
+            this.lblFilterSize.BackColor = System.Drawing.Color.DarkGray;
+            this.lblFilterSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFilterSize.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilterSize.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblFilterSize.Location = new System.Drawing.Point(0, 233);
+            this.lblFilterSize.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFilterSize.Name = "lblFilterSize";
+            this.lblFilterSize.Size = new System.Drawing.Size(200, 58);
+            this.lblFilterSize.TabIndex = 2;
+            this.lblFilterSize.Text = "FILTER SIZE";
+            this.lblFilterSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAlignTest
+            // lblFilterSizeValue
             // 
-            this.btnAlignTest.BackColor = System.Drawing.Color.DarkGray;
-            this.btnAlignTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAlignTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAlignTest.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAlignTest.Location = new System.Drawing.Point(563, 395);
-            this.btnAlignTest.Name = "btnAlignTest";
-            this.btnAlignTest.Size = new System.Drawing.Size(234, 43);
-            this.btnAlignTest.TabIndex = 198;
-            this.btnAlignTest.Text = "ALIGN TEST";
-            this.btnAlignTest.UseVisualStyleBackColor = false;
-            this.btnAlignTest.Click += new System.EventHandler(this.btnAlignTest_Click);
+            this.lblFilterSizeValue.AutoSize = true;
+            this.lblFilterSizeValue.BackColor = System.Drawing.Color.White;
+            this.lblFilterSizeValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFilterSizeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilterSizeValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblFilterSizeValue.Location = new System.Drawing.Point(200, 233);
+            this.lblFilterSizeValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFilterSizeValue.Name = "lblFilterSizeValue";
+            this.lblFilterSizeValue.Size = new System.Drawing.Size(200, 58);
+            this.lblFilterSizeValue.TabIndex = 8;
+            this.lblFilterSizeValue.Text = "0";
+            this.lblFilterSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFilterSizeValue.Click += new System.EventHandler(this.lblFilterSizeValue_Click);
             // 
-            // btnSave
+            // lblEdgeThreshold
             // 
-            this.btnSave.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSave.Location = new System.Drawing.Point(563, 444);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(234, 43);
-            this.btnSave.TabIndex = 198;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.lblEdgeThreshold.AutoSize = true;
+            this.lblEdgeThreshold.BackColor = System.Drawing.Color.DarkGray;
+            this.lblEdgeThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEdgeThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEdgeThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblEdgeThreshold.Location = new System.Drawing.Point(0, 291);
+            this.lblEdgeThreshold.Margin = new System.Windows.Forms.Padding(0);
+            this.lblEdgeThreshold.Name = "lblEdgeThreshold";
+            this.lblEdgeThreshold.Size = new System.Drawing.Size(200, 58);
+            this.lblEdgeThreshold.TabIndex = 3;
+            this.lblEdgeThreshold.Text = "EDGE THRESHOLD";
+            this.lblEdgeThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEdgeThresholdValue
+            // 
+            this.lblEdgeThresholdValue.AutoSize = true;
+            this.lblEdgeThresholdValue.BackColor = System.Drawing.Color.White;
+            this.lblEdgeThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEdgeThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEdgeThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblEdgeThresholdValue.Location = new System.Drawing.Point(200, 291);
+            this.lblEdgeThresholdValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblEdgeThresholdValue.Name = "lblEdgeThresholdValue";
+            this.lblEdgeThresholdValue.Size = new System.Drawing.Size(200, 58);
+            this.lblEdgeThresholdValue.TabIndex = 9;
+            this.lblEdgeThresholdValue.Text = "0";
+            this.lblEdgeThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEdgeThresholdValue.Click += new System.EventHandler(this.lblEdgeThresholdValue_Click);
+            // 
+            // btnROIShow
+            // 
+            this.btnROIShow.BackColor = System.Drawing.Color.DarkGray;
+            this.btnROIShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnROIShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnROIShow.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.btnROIShow.Location = new System.Drawing.Point(0, 349);
+            this.btnROIShow.Margin = new System.Windows.Forms.Padding(0);
+            this.btnROIShow.Name = "btnROIShow";
+            this.btnROIShow.Size = new System.Drawing.Size(200, 58);
+            this.btnROIShow.TabIndex = 198;
+            this.btnROIShow.Text = "SHOW ROI";
+            this.btnROIShow.UseVisualStyleBackColor = false;
+            this.btnROIShow.Click += new System.EventHandler(this.btnROIShow_Click);
+            // 
+            // chkROITracking
+            // 
+            this.chkROITracking.AutoSize = true;
+            this.chkROITracking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkROITracking.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.chkROITracking.Location = new System.Drawing.Point(206, 349);
+            this.chkROITracking.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.chkROITracking.Name = "chkROITracking";
+            this.chkROITracking.Size = new System.Drawing.Size(194, 58);
+            this.chkROITracking.TabIndex = 1;
+            this.chkROITracking.Text = "Use ROI Tracking";
+            this.chkROITracking.UseVisualStyleBackColor = true;
             // 
             // tlpROIPosition
             // 
@@ -360,13 +357,13 @@
             this.tlpROIPosition.Controls.Add(this.lblTargetObject, 1, 0);
             this.tlpROIPosition.Controls.Add(this.lblEdgePosition, 2, 0);
             this.tlpROIPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpROIPosition.Location = new System.Drawing.Point(0, 0);
+            this.tlpROIPosition.Location = new System.Drawing.Point(0, 30);
             this.tlpROIPosition.Margin = new System.Windows.Forms.Padding(0);
             this.tlpROIPosition.Name = "tlpROIPosition";
             this.tlpROIPosition.RowCount = 2;
-            this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tlpROIPosition.Size = new System.Drawing.Size(800, 210);
+            this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpROIPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpROIPosition.Size = new System.Drawing.Size(800, 90);
             this.tlpROIPosition.TabIndex = 0;
             // 
             // tlpEdgePosition
@@ -377,12 +374,12 @@
             this.tlpEdgePosition.Controls.Add(this.rdoEdgeX, 0, 0);
             this.tlpEdgePosition.Controls.Add(this.rdoEdgeY, 1, 0);
             this.tlpEdgePosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEdgePosition.Location = new System.Drawing.Point(532, 84);
+            this.tlpEdgePosition.Location = new System.Drawing.Point(532, 30);
             this.tlpEdgePosition.Margin = new System.Windows.Forms.Padding(0);
             this.tlpEdgePosition.Name = "tlpEdgePosition";
             this.tlpEdgePosition.RowCount = 1;
             this.tlpEdgePosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpEdgePosition.Size = new System.Drawing.Size(268, 126);
+            this.tlpEdgePosition.Size = new System.Drawing.Size(268, 60);
             this.tlpEdgePosition.TabIndex = 151;
             // 
             // rdoEdgeX
@@ -390,11 +387,12 @@
             this.rdoEdgeX.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoEdgeX.BackColor = System.Drawing.Color.DarkGray;
             this.rdoEdgeX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoEdgeX.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.rdoEdgeX.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.rdoEdgeX.ForeColor = System.Drawing.Color.Black;
-            this.rdoEdgeX.Location = new System.Drawing.Point(3, 3);
+            this.rdoEdgeX.Location = new System.Drawing.Point(0, 0);
+            this.rdoEdgeX.Margin = new System.Windows.Forms.Padding(0);
             this.rdoEdgeX.Name = "rdoEdgeX";
-            this.rdoEdgeX.Size = new System.Drawing.Size(128, 120);
+            this.rdoEdgeX.Size = new System.Drawing.Size(134, 60);
             this.rdoEdgeX.TabIndex = 0;
             this.rdoEdgeX.TabStop = true;
             this.rdoEdgeX.Text = "X";
@@ -407,10 +405,11 @@
             this.rdoEdgeY.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoEdgeY.BackColor = System.Drawing.Color.DarkGray;
             this.rdoEdgeY.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoEdgeY.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
-            this.rdoEdgeY.Location = new System.Drawing.Point(137, 3);
+            this.rdoEdgeY.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.rdoEdgeY.Location = new System.Drawing.Point(134, 0);
+            this.rdoEdgeY.Margin = new System.Windows.Forms.Padding(0);
             this.rdoEdgeY.Name = "rdoEdgeY";
-            this.rdoEdgeY.Size = new System.Drawing.Size(128, 120);
+            this.rdoEdgeY.Size = new System.Drawing.Size(134, 60);
             this.rdoEdgeY.TabIndex = 1;
             this.rdoEdgeY.TabStop = true;
             this.rdoEdgeY.Text = "Y";
@@ -426,12 +425,12 @@
             this.tlpAlignPosition.Controls.Add(this.rdoAlignRight, 0, 0);
             this.tlpAlignPosition.Controls.Add(this.rdoAlignLeft, 0, 0);
             this.tlpAlignPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpAlignPosition.Location = new System.Drawing.Point(0, 84);
+            this.tlpAlignPosition.Location = new System.Drawing.Point(0, 30);
             this.tlpAlignPosition.Margin = new System.Windows.Forms.Padding(0);
             this.tlpAlignPosition.Name = "tlpAlignPosition";
             this.tlpAlignPosition.RowCount = 1;
             this.tlpAlignPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAlignPosition.Size = new System.Drawing.Size(266, 126);
+            this.tlpAlignPosition.Size = new System.Drawing.Size(266, 60);
             this.tlpAlignPosition.TabIndex = 0;
             // 
             // rdoAlignRight
@@ -439,11 +438,12 @@
             this.rdoAlignRight.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoAlignRight.BackColor = System.Drawing.Color.DarkGray;
             this.rdoAlignRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoAlignRight.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.rdoAlignRight.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.rdoAlignRight.ForeColor = System.Drawing.Color.Black;
-            this.rdoAlignRight.Location = new System.Drawing.Point(136, 3);
+            this.rdoAlignRight.Location = new System.Drawing.Point(133, 0);
+            this.rdoAlignRight.Margin = new System.Windows.Forms.Padding(0);
             this.rdoAlignRight.Name = "rdoAlignRight";
-            this.rdoAlignRight.Size = new System.Drawing.Size(127, 120);
+            this.rdoAlignRight.Size = new System.Drawing.Size(133, 60);
             this.rdoAlignRight.TabIndex = 142;
             this.rdoAlignRight.Tag = "0";
             this.rdoAlignRight.Text = "RIGHT";
@@ -456,11 +456,12 @@
             this.rdoAlignLeft.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoAlignLeft.BackColor = System.Drawing.Color.DarkGray;
             this.rdoAlignLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoAlignLeft.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.rdoAlignLeft.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.rdoAlignLeft.ForeColor = System.Drawing.Color.Black;
-            this.rdoAlignLeft.Location = new System.Drawing.Point(3, 3);
+            this.rdoAlignLeft.Location = new System.Drawing.Point(0, 0);
+            this.rdoAlignLeft.Margin = new System.Windows.Forms.Padding(0);
             this.rdoAlignLeft.Name = "rdoAlignLeft";
-            this.rdoAlignLeft.Size = new System.Drawing.Size(127, 120);
+            this.rdoAlignLeft.Size = new System.Drawing.Size(133, 60);
             this.rdoAlignLeft.TabIndex = 141;
             this.rdoAlignLeft.Tag = "0";
             this.rdoAlignLeft.Text = "LEFT";
@@ -476,13 +477,13 @@
             this.tlpTargetObject.Controls.Add(this.rdoPanel, 0, 0);
             this.tlpTargetObject.Controls.Add(this.rdoFPC, 0, 0);
             this.tlpTargetObject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpTargetObject.Location = new System.Drawing.Point(266, 84);
+            this.tlpTargetObject.Location = new System.Drawing.Point(266, 30);
             this.tlpTargetObject.Margin = new System.Windows.Forms.Padding(0);
             this.tlpTargetObject.Name = "tlpTargetObject";
             this.tlpTargetObject.RowCount = 1;
             this.tlpTargetObject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTargetObject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tlpTargetObject.Size = new System.Drawing.Size(266, 126);
+            this.tlpTargetObject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpTargetObject.Size = new System.Drawing.Size(266, 60);
             this.tlpTargetObject.TabIndex = 1;
             // 
             // rdoPanel
@@ -490,11 +491,12 @@
             this.rdoPanel.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoPanel.BackColor = System.Drawing.Color.DarkGray;
             this.rdoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoPanel.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.rdoPanel.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.rdoPanel.ForeColor = System.Drawing.Color.Black;
-            this.rdoPanel.Location = new System.Drawing.Point(136, 3);
+            this.rdoPanel.Location = new System.Drawing.Point(133, 0);
+            this.rdoPanel.Margin = new System.Windows.Forms.Padding(0);
             this.rdoPanel.Name = "rdoPanel";
-            this.rdoPanel.Size = new System.Drawing.Size(127, 120);
+            this.rdoPanel.Size = new System.Drawing.Size(133, 60);
             this.rdoPanel.TabIndex = 143;
             this.rdoPanel.Tag = "0";
             this.rdoPanel.Text = "PANEL";
@@ -507,11 +509,12 @@
             this.rdoFPC.Appearance = System.Windows.Forms.Appearance.Button;
             this.rdoFPC.BackColor = System.Drawing.Color.DarkGray;
             this.rdoFPC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoFPC.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.rdoFPC.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.rdoFPC.ForeColor = System.Drawing.Color.Black;
-            this.rdoFPC.Location = new System.Drawing.Point(3, 3);
+            this.rdoFPC.Location = new System.Drawing.Point(0, 0);
+            this.rdoFPC.Margin = new System.Windows.Forms.Padding(0);
             this.rdoFPC.Name = "rdoFPC";
-            this.rdoFPC.Size = new System.Drawing.Size(127, 120);
+            this.rdoFPC.Size = new System.Drawing.Size(133, 60);
             this.rdoFPC.TabIndex = 142;
             this.rdoFPC.Tag = "0";
             this.rdoFPC.Text = "FPC";
@@ -523,11 +526,11 @@
             // 
             this.lblAlignPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAlignPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlignPosition.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblAlignPosition.Location = new System.Drawing.Point(6, 3);
-            this.lblAlignPosition.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.lblAlignPosition.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.lblAlignPosition.Location = new System.Drawing.Point(0, 0);
+            this.lblAlignPosition.Margin = new System.Windows.Forms.Padding(0);
             this.lblAlignPosition.Name = "lblAlignPosition";
-            this.lblAlignPosition.Size = new System.Drawing.Size(254, 78);
+            this.lblAlignPosition.Size = new System.Drawing.Size(266, 30);
             this.lblAlignPosition.TabIndex = 140;
             this.lblAlignPosition.Text = "ALIGN POSITION";
             this.lblAlignPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -536,11 +539,11 @@
             // 
             this.lblTargetObject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTargetObject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTargetObject.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblTargetObject.Location = new System.Drawing.Point(272, 3);
-            this.lblTargetObject.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.lblTargetObject.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTargetObject.Location = new System.Drawing.Point(266, 0);
+            this.lblTargetObject.Margin = new System.Windows.Forms.Padding(0);
             this.lblTargetObject.Name = "lblTargetObject";
-            this.lblTargetObject.Size = new System.Drawing.Size(254, 78);
+            this.lblTargetObject.Size = new System.Drawing.Size(266, 30);
             this.lblTargetObject.TabIndex = 149;
             this.lblTargetObject.Text = "TARGET OBJECT";
             this.lblTargetObject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -550,11 +553,11 @@
             this.lblEdgePosition.AutoSize = true;
             this.lblEdgePosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblEdgePosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEdgePosition.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblEdgePosition.Location = new System.Drawing.Point(538, 3);
-            this.lblEdgePosition.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.lblEdgePosition.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold);
+            this.lblEdgePosition.Location = new System.Drawing.Point(532, 0);
+            this.lblEdgePosition.Margin = new System.Windows.Forms.Padding(0);
             this.lblEdgePosition.Name = "lblEdgePosition";
-            this.lblEdgePosition.Size = new System.Drawing.Size(256, 78);
+            this.lblEdgePosition.Size = new System.Drawing.Size(268, 30);
             this.lblEdgePosition.TabIndex = 150;
             this.lblEdgePosition.Text = "EDGE POSITION";
             this.lblEdgePosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -566,7 +569,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.tlpTeachAlign);
             this.Name = "CtrlTeachAlign";
-            this.Size = new System.Drawing.Size(800, 700);
+            this.Size = new System.Drawing.Size(800, 900);
             this.Load += new System.EventHandler(this.CtrlTeachAlign_Load);
             this.tlpTeachAlign.ResumeLayout(false);
             this.tlpEdgeParameter.ResumeLayout(false);
@@ -611,7 +614,6 @@
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Button btnROIShow;
         private System.Windows.Forms.Button btnAlignTest;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TableLayoutPanel tlpEdgePolarity;
     }
 }

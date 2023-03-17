@@ -1197,84 +1197,84 @@ namespace COG
                 ////ModelFile.SetData(m_AlignName, "SliceWidth", );
                 ////ModelFile.SetData(m_AlignName, "SliceHeight", );
 
-                //ModelFile.SetData(m_AlignName, "SliceOverlap", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspOption.s_nOverlap);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter Type", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_eFilterType);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter Direction", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nFilterDir);
-                //ModelFile.SetData(m_AlignName, "Akkon Threshold Mode", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_eThMode);
-                //ModelFile.SetData(m_AlignName, "Akkon Thres Weight", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fThWeight);
-                //ModelFile.SetData(m_AlignName, "Shadow Detection Offset", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nShadowOffset);
-                //ModelFile.SetData(m_AlignName, "Akkon Shadow Direction", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_eShadowDir);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fStrengthThreshold);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Base", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_eStrengthBase);
-                //ModelFile.SetData(m_AlignName, "Akkon Peak Property", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_ePeakProp);
-                //ModelFile.SetData(m_AlignName, "Akkon Threshold Peak", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nThPeak);
-                //ModelFile.SetData(m_AlignName, "Akkon Extra Lead", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nExtraLead);
-                //ModelFile.SetData(m_AlignName, "Akkon Min Shadow Width", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nMinShadowWidth);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Scale Factor", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fStrengthScaleFactor);
-                //ModelFile.SetData(m_AlignName, "Akkon Inflate Lead Size", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nInflateLeadSize);
-                //ModelFile.SetData(m_AlignName, "Akkon Position Tolerance", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fPosTolerance);
-                ////ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].);
-                ////ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].);
+                //ModelFile.SetData(m_AlignName, "SliceOverlap", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspOption.s_nOverlap);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter Type", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_eFilterType);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter Direction", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nFilterDir);
+                //ModelFile.SetData(m_AlignName, "Akkon Threshold Mode", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_eThMode);
+                //ModelFile.SetData(m_AlignName, "Akkon Thres Weight", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fThWeight);
+                //ModelFile.SetData(m_AlignName, "Shadow Detection Offset", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nShadowOffset);
+                //ModelFile.SetData(m_AlignName, "Akkon Shadow Direction", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_eShadowDir);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fStrengthThreshold);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Base", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_eStrengthBase);
+                //ModelFile.SetData(m_AlignName, "Akkon Peak Property", (int)Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_ePeakProp);
+                //ModelFile.SetData(m_AlignName, "Akkon Threshold Peak", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nThPeak);
+                //ModelFile.SetData(m_AlignName, "Akkon Extra Lead", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nExtraLead);
+                //ModelFile.SetData(m_AlignName, "Akkon Min Shadow Width", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nMinShadowWidth);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Scale Factor", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fStrengthScaleFactor);
+                //ModelFile.SetData(m_AlignName, "Akkon Inflate Lead Size", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nInflateLeadSize);
+                //ModelFile.SetData(m_AlignName, "Akkon Position Tolerance", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fPosTolerance);
+                ////ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.);
+                ////ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.);
 
 
 
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fMinStrength);
-                //ModelFile.SetData(m_AlignName, "Akkon Min Heigtht Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nMinHeight);
-                //ModelFile.SetData(m_AlignName, "Akkon Min Width Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nMinWidth);
-                //ModelFile.SetData(m_AlignName, "Akkon Min Size Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fMinSize);
-                //ModelFile.SetData(m_AlignName, "Akkon Max Size Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fMaxSize);
-                //ModelFile.SetData(m_AlignName, "Akkon Grouping Distance Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fGroupingDistance);
-                //ModelFile.SetData(m_AlignName, "Akkon Min Boundary Overlap", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nMinBoundaryOverlap);
-                //ModelFile.SetData(m_AlignName, "Akkon Use Edge False Alarm Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_bUseEdgeFARemove);
-                //ModelFile.SetData(m_AlignName, "Akkon FAR WH Ratio", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fWHRatio);
-                //ModelFile.SetData(m_AlignName, "Akkon FAR Edge Range", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nEdgeRange);
-                //ModelFile.SetData(m_AlignName, "Akkon FAR Strength Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fEdgeStrengthCut);
-                //ModelFile.SetData(m_AlignName, "Akkon FAR Size Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fEdgeSizeCut);
-                //ModelFile.SetData(m_AlignName, "Akkon BW Peak Ratiot", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fBWRatio);
-                //ModelFile.SetData(m_AlignName, "Akkon ROI Division Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nROIDiv);
-                //ModelFile.SetData(m_AlignName, "Akkon In ROI Line Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nAkkonInLine);
-                //ModelFile.SetData(m_AlignName, "Akkon In ROI Line Area", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fAkkonInArea);
-                //ModelFile.SetData(m_AlignName, "Akkon BW Ratio Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fBWRatioMax);
-                //ModelFile.SetData(m_AlignName, "Akkon Enh Std Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fEnhstdcut);
-                //ModelFile.SetData(m_AlignName, "Akkon Shadow Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nShadowPeakcut);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Up Shoot Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nRawUpShootcut);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Avg Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawAvgMin);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Avg Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawAvgMax);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Std Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawStdMin);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Std Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawStdMax);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawShadowMin);
-                //ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fRawShadowMax);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fMinStrength);
+                //ModelFile.SetData(m_AlignName, "Akkon Min Heigtht Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nMinHeight);
+                //ModelFile.SetData(m_AlignName, "Akkon Min Width Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nMinWidth);
+                //ModelFile.SetData(m_AlignName, "Akkon Min Size Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fMinSize);
+                //ModelFile.SetData(m_AlignName, "Akkon Max Size Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fMaxSize);
+                //ModelFile.SetData(m_AlignName, "Akkon Grouping Distance Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fGroupingDistance);
+                //ModelFile.SetData(m_AlignName, "Akkon Min Boundary Overlap", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nMinBoundaryOverlap);
+                //ModelFile.SetData(m_AlignName, "Akkon Use Edge False Alarm Filter", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_bUseEdgeFARemove);
+                //ModelFile.SetData(m_AlignName, "Akkon FAR WH Ratio", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fWHRatio);
+                //ModelFile.SetData(m_AlignName, "Akkon FAR Edge Range", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nEdgeRange);
+                //ModelFile.SetData(m_AlignName, "Akkon FAR Strength Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fEdgeStrengthCut);
+                //ModelFile.SetData(m_AlignName, "Akkon FAR Size Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fEdgeSizeCut);
+                //ModelFile.SetData(m_AlignName, "Akkon BW Peak Ratiot", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fBWRatio);
+                //ModelFile.SetData(m_AlignName, "Akkon ROI Division Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nROIDiv);
+                //ModelFile.SetData(m_AlignName, "Akkon In ROI Line Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nAkkonInLine);
+                //ModelFile.SetData(m_AlignName, "Akkon In ROI Line Area", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fAkkonInArea);
+                //ModelFile.SetData(m_AlignName, "Akkon BW Ratio Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fBWRatioMax);
+                //ModelFile.SetData(m_AlignName, "Akkon Enh Std Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fEnhstdcut);
+                //ModelFile.SetData(m_AlignName, "Akkon Shadow Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nShadowPeakcut);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Up Shoot Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nRawUpShootcut);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Avg Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawAvgMin);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Avg Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawAvgMax);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Std Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawStdMin);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Std Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawStdMax);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Min", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawShadowMin);
+                //ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Max", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fRawShadowMax);
 
-                ////ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].);
-                ////ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.);
-                //ModelFile.SetData(m_AlignName, "Akkon Standard Deviation Lead Judge", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fStdDevLeadJudge);
-                //ModelFile.SetData(m_AlignName, "Akkon Imul Inspection", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_bImulInspection);
-                //ModelFile.SetData(m_AlignName, "Akkon Target Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nIsFlexible); // 0 : RIGID, 1 : FLEIBLE
-                //ModelFile.SetData(m_AlignName, "Akkon Inspection Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspOption.s_nInspType); // 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
-                //ModelFile.SetData(m_AlignName, "Akkon Imul Inspection Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nImulInspectionThresh);
-                //ModelFile.SetData(m_AlignName, "Akkon Imul size", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_fImulSize);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter Width Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nWidthCut);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter Heigth Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nHeightCut);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter Raw Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nRawPeakCut);
-                //ModelFile.SetData(m_AlignName, "Akkon Filter WH Raw Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspFilter.s_nWHRawPeakCut);
-                //ModelFile.SetData(m_AlignName, "Akkon Use Absolute Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_bUseAbsTh);
-                //ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold High", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nAbsoluteThHi);
-                //ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold Low", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nAbsoluteThLow);
-                //ModelFile.SetData(m_AlignName, "Akkon Panel Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nPanelInfo); // 0 COF, 1 COG, 2 FOG
-
-
-
-                //ModelFile.SetData(m_AlignName, "DL Peak Prob", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fDLPeakProb);
-                //ModelFile.SetData(m_AlignName, "DL Size Prob", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_fDLSizeProb);
-                //ModelFile.SetData(m_AlignName, "DL Sperate Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nDLSperateCut);
-                //ModelFile.SetData(m_AlignName, "DL Network Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nDLNetWorkType);
-                //ModelFile.SetData(m_AlignName, "DL Edge Flip", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_bEdgeFlip);
-                //ModelFile.SetData(m_AlignName, "DL Patch Size X", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nDLPatchSizeX);
-                //ModelFile.SetData(m_AlignName, "DL Patch Size Y", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspPara.s_nDLPatchSizeY);
+                ////ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.);
+                ////ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.);
+                //ModelFile.SetData(m_AlignName, "Akkon Standard Deviation Lead Judge", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fStdDevLeadJudge);
+                //ModelFile.SetData(m_AlignName, "Akkon Imul Inspection", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_bImulInspection);
+                //ModelFile.SetData(m_AlignName, "Akkon Target Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nIsFlexible); // 0 : RIGID, 1 : FLEIBLE
+                //ModelFile.SetData(m_AlignName, "Akkon Inspection Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspOption.s_nInspType); // 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
+                //ModelFile.SetData(m_AlignName, "Akkon Imul Inspection Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nImulInspectionThresh);
+                //ModelFile.SetData(m_AlignName, "Akkon Imul size", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_fImulSize);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter Width Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nWidthCut);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter Heigth Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nHeightCut);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter Raw Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nRawPeakCut);
+                //ModelFile.SetData(m_AlignName, "Akkon Filter WH Raw Peak Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspFilter.s_nWHRawPeakCut);
+                //ModelFile.SetData(m_AlignName, "Akkon Use Absolute Threshold", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_bUseAbsTh);
+                //ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold High", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nAbsoluteThHi);
+                //ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold Low", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nAbsoluteThLow);
+                //ModelFile.SetData(m_AlignName, "Akkon Panel Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nPanelInfo); // 0 COF, 1 COG, 2 FOG
 
 
 
-                //ModelFile.SetData(m_AlignName, "Log Trace", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonInspOption.s_bLogTrace);
+                //ModelFile.SetData(m_AlignName, "DL Peak Prob", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fDLPeakProb);
+                //ModelFile.SetData(m_AlignName, "DL Size Prob", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_fDLSizeProb);
+                //ModelFile.SetData(m_AlignName, "DL Sperate Cut", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nDLSperateCut);
+                //ModelFile.SetData(m_AlignName, "DL Network Type", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nDLNetWorkType);
+                //ModelFile.SetData(m_AlignName, "DL Edge Flip", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_bEdgeFlip);
+                //ModelFile.SetData(m_AlignName, "DL Patch Size X", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nDLPatchSizeX);
+                //ModelFile.SetData(m_AlignName, "DL Patch Size Y", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspPara.s_nDLPatchSizeY);
+
+
+
+                //ModelFile.SetData(m_AlignName, "Log Trace", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonInspOption.s_bLogTrace);
 
                 ////Align 검사 Data
                 //ModelFile.SetData(m_AlignName, "Lead Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AlignPara.m_nLeadCount);
@@ -1288,21 +1288,21 @@ namespace COG
                 //        try
                 //        {
                 //            //압흔검사 Mark Data [Panel]
-                //            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_LeftPattern[j].Pattern.Trained == true)
+                //            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_LeftPattern[j].Pattern.Trained == true)
                 //            {
-                //                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_LeftPattern[j].InputImage = null;
+                //                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_LeftPattern[j].InputImage = null;
                 //                FileName = DEFINE.SYS_DATADIR + "MODEL_" + DEFINE.MODEL_DATADIR + "\\" + ProjectName + m_AlignName + "_ATT_LEFTMARK" + j.ToString() + ".vpp";
-                //                //CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_LeftPattern[j], MarkFileName);
+                //                //CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_LeftPattern[j], MarkFileName);
 
-                //                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_LeftPattern[j], FileName,
+                //                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_LeftPattern[j], FileName,
                 //                    typeof(System.Runtime.Serialization.Formatters.Binary.BinaryFormatter), CogSerializationOptionsConstants.ExcludeDataBindings);
                 //            }
 
-                //            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_RightPattern[j].Pattern.Trained == true)
+                //            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_RightPattern[j].Pattern.Trained == true)
                 //            {
-                //                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_RightPattern[j].InputImage = null;
+                //                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_RightPattern[j].InputImage = null;
                 //                FileName = DEFINE.SYS_DATADIR + "MODEL_" + DEFINE.MODEL_DATADIR + "\\" + ProjectName + m_AlignName + "_ATT_RIGHTMARK" + j.ToString() + ".vpp";
-                //                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_RightPattern[j], FileName,
+                //                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_RightPattern[j], FileName,
                 //                    typeof(System.Runtime.Serialization.Formatters.Binary.BinaryFormatter), CogSerializationOptionsConstants.ExcludeDataBindings);
 
                 //            }
@@ -1367,29 +1367,29 @@ namespace COG
                 //using (StreamWriter outputFile = new StreamWriter(DEFINE.SYS_DATADIR + "MODEL_" + DEFINE.MODEL_DATADIR + "\\" + ProjectName + m_AlignName + "_ROIData.txt"))
                 //{
                 //    //File경로 제대로 확인
-                //    for (int i = 0; i < Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI.Count; i++)
+                //    for (int i = 0; i < Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI.Count; i++)
                 //    {
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerOriginX);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerOriginX);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerOriginY);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerOriginY);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerXX);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerXX);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerXY);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerXY);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerOppositeX);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerOppositeX);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerOppositeY);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerOppositeY);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerYX);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerYX);
                 //        outputFile.Write(" ");
-                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_AkkonBumpROI[i].CornerYY);
+                //        outputFile.Write(Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_AkkonBumpROI[i].CornerYY);
                 //        outputFile.Write(" ");
                 //        outputFile.Write("\n");
                 //    }
                 //}
                 ////Lead Group 부분
-                //ModelFile.SetData(m_AlignName, "Lead Group Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara[0].m_nLeadGroupCount);
+                //ModelFile.SetData(m_AlignName, "Lead Group Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].AkkonPara.m_nLeadGroupCount);
                 //for (int i = 0; i < Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].LeadGroupInfo.Count(); i++)
                 //{
                 //    ModelFile.SetData(m_AlignName, "Lead Group" + (i + 1) + "Lead Count", Main.AlignUnit[CamNo].PAT[m_PatTagNo, 0].LeadGroupInfo[i].m_LeadCount);
@@ -1480,31 +1480,31 @@ namespace COG
                 {
                     try
                     {
-                        if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex] != null)
+                        if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex] != null)
                         {
                             //압흔검사 Mark Data [Panel]
-                            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].Pattern.Trained == true)
+                            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].Pattern.Trained == true)
                             {
-                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].InputImage = null;
+                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].InputImage = null;
                                 FileName = DEFINE.SYS_DATADIR + DEFINE.MODEL_DATADIR + "\\" + Main.ProjectName + "\\MARK"; 
                                 if (!Directory.Exists(FileName))
                                     Directory.CreateDirectory(FileName);
                                 FileName = FileName+  "\\" + m_AlignName + "_ATT_LEFTMARK" + StageNo.ToString() + TabNo.ToString() + markIndex.ToString() + ".vpp";
-                                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex], FileName,
+                                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex], FileName,
                                     typeof(System.Runtime.Serialization.Formatters.Binary.BinaryFormatter), CogSerializationOptionsConstants.ExcludeDataBindings);
                             }
                         }
-                        if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex] != null)
+                        if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex] != null)
                         {
-                            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].Pattern.Trained == true)
+                            if (Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].Pattern.Trained == true)
                             {
-                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].InputImage = null;
+                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].InputImage = null;
 
                                 FileName = DEFINE.SYS_DATADIR + DEFINE.MODEL_DATADIR + "\\" + Main.ProjectName + "\\MARK";
                                 if (!Directory.Exists(FileName))
                                     Directory.CreateDirectory(FileName);
                                 FileName = FileName+"\\" + m_AlignName + "_ATT_RIGHTMARK" + StageNo.ToString() + TabNo.ToString() + markIndex.ToString() + ".vpp";
-                                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex], FileName,
+                                CogSerializer.SaveObjectToFile(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex], FileName,
                                     typeof(System.Runtime.Serialization.Formatters.Binary.BinaryFormatter), CogSerializationOptionsConstants.ExcludeDataBindings);
 
                             }
@@ -1589,85 +1589,85 @@ namespace COG
                 //ModelFile.SetData(m_AlignName, "JudgeDistribution", );
                 //ModelFile.SetData(m_AlignName, "SliceWidth", );
                 //ModelFile.SetData(m_AlignName, "SliceHeight", );
-                ModelFile.SetData(m_AlignName, "JudgeCount" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].JudgeCount);
-                ModelFile.SetData(m_AlignName, "JudgeLength" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].JudgeLength);
+                ModelFile.SetData(m_AlignName, "JudgeCount" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.JudgeCount);
+                ModelFile.SetData(m_AlignName, "JudgeLength" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.JudgeLength);
 
-                ModelFile.SetData(m_AlignName, "SliceOverlap" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_nOverlap);
-                ModelFile.SetData(m_AlignName, "Akkon Filter Type" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eFilterType);
-                ModelFile.SetData(m_AlignName, "Akkon Filter Direction" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nFilterDir);
-                ModelFile.SetData(m_AlignName, "Akkon Threshold Mode" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eThMode);
-                ModelFile.SetData(m_AlignName, "Akkon Thres Weight" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fThWeight);
-                ModelFile.SetData(m_AlignName, "Shadow Detection Offset" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nShadowOffset);
-                ModelFile.SetData(m_AlignName, "Akkon Shadow Direction" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eShadowDir);
-                ModelFile.SetData(m_AlignName, "Akkon Strength Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStrengthThreshold);
-                ModelFile.SetData(m_AlignName, "Akkon Strength Base" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eStrengthBase);
-                ModelFile.SetData(m_AlignName, "Akkon Peak Property" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_ePeakProp);
-                ModelFile.SetData(m_AlignName, "Akkon Threshold Peak" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nThPeak);
-                ModelFile.SetData(m_AlignName, "Akkon Extra Lead" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nExtraLead);
-                ModelFile.SetData(m_AlignName, "Akkon Min Shadow Width" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nMinShadowWidth);
-                ModelFile.SetData(m_AlignName, "Akkon Strength Scale Factor" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStrengthScaleFactor);
-                ModelFile.SetData(m_AlignName, "Akkon Inflate Lead Size" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nInflateLeadSize);
-                ModelFile.SetData(m_AlignName, "Akkon Position Tolerance" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fPosTolerance);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-
-
-                ModelFile.SetData(m_AlignName, "Akkon Strength Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMinStrength);
-                ModelFile.SetData(m_AlignName, "Akkon Min Heigtht Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinHeight);
-                ModelFile.SetData(m_AlignName, "Akkon Min Width Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinWidth);
-                ModelFile.SetData(m_AlignName, "Akkon Min Size Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMinSize);
-                ModelFile.SetData(m_AlignName, "Akkon Max Size Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMaxSize);
-                ModelFile.SetData(m_AlignName, "Akkon Grouping Distance Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fGroupingDistance);
-                ModelFile.SetData(m_AlignName, "Akkon Min Boundary Overlap" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinBoundaryOverlap);
-                ModelFile.SetData(m_AlignName, "Akkon Use Edge False Alarm Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_bUseEdgeFARemove);
-                ModelFile.SetData(m_AlignName, "Akkon FAR WH Ratio" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fWHRatio);
-                ModelFile.SetData(m_AlignName, "Akkon FAR Edge Range" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nEdgeRange);
-                ModelFile.SetData(m_AlignName, "Akkon FAR Strength Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEdgeStrengthCut);
-                ModelFile.SetData(m_AlignName, "Akkon FAR Size Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEdgeSizeCut);
-                ModelFile.SetData(m_AlignName, "Akkon BW Peak Ratiot" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fBWRatio);
-                ModelFile.SetData(m_AlignName, "Akkon ROI Division Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nROIDiv);
-                ModelFile.SetData(m_AlignName, "Akkon In ROI Line Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nAkkonInLine);
-                ModelFile.SetData(m_AlignName, "Akkon In ROI Line Area" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fAkkonInArea);
-                ModelFile.SetData(m_AlignName, "Akkon BW Ratio Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fBWRatioMax);
-                ModelFile.SetData(m_AlignName, "Akkon Enh Std Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEnhstdcut);
-                ModelFile.SetData(m_AlignName, "Akkon Shadow Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nShadowPeakcut);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Up Shoot Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nRawUpShootcut);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Avg Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawAvgMin);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Avg Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawAvgMax);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Std Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawStdMin);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Std Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawStdMax);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawShadowMin);
-                ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawShadowMax);
-
-                //ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-                //ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_AkkonInspFilter.);
-                ModelFile.SetData(m_AlignName, "Akkon Standard Deviation Lead Judge" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStdDevLeadJudge);
-                ModelFile.SetData(m_AlignName, "Akkon Imul Inspection" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bImulInspection);
-                ModelFile.SetData(m_AlignName, "Akkon Target Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nIsFlexible); // 0 : RIGID, 1 : FLEIBLE
-                ModelFile.SetData(m_AlignName, "Akkon Inspection Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_nInspType); // 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
-                ModelFile.SetData(m_AlignName, "Akkon Imul Inspection Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nImulInspectionThresh);
-                ModelFile.SetData(m_AlignName, "Akkon Imul size" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fImulSize);
-                ModelFile.SetData(m_AlignName, "Akkon Filter Width Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nWidthCut);
-                ModelFile.SetData(m_AlignName, "Akkon Filter Heigth Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nHeightCut);
-                ModelFile.SetData(m_AlignName, "Akkon Filter Raw Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nRawPeakCut);
-                ModelFile.SetData(m_AlignName, "Akkon Filter WH Raw Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nWHRawPeakCut);
-                ModelFile.SetData(m_AlignName, "Akkon Use Absolute Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bUseAbsTh);
-                ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold High" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nAbsoluteThHi);
-                ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold Low" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nAbsoluteThLow);
-                ModelFile.SetData(m_AlignName, "Akkon Panel Type", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nPanelInfo); // 0 COF, 1 COG, 2 FOG
+                ModelFile.SetData(m_AlignName, "SliceOverlap" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_nOverlap);
+                ModelFile.SetData(m_AlignName, "Akkon Filter Type" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eFilterType);
+                ModelFile.SetData(m_AlignName, "Akkon Filter Direction" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nFilterDir);
+                ModelFile.SetData(m_AlignName, "Akkon Threshold Mode" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eThMode);
+                ModelFile.SetData(m_AlignName, "Akkon Thres Weight" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fThWeight);
+                ModelFile.SetData(m_AlignName, "Shadow Detection Offset" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nShadowOffset);
+                ModelFile.SetData(m_AlignName, "Akkon Shadow Direction" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eShadowDir);
+                ModelFile.SetData(m_AlignName, "Akkon Strength Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStrengthThreshold);
+                ModelFile.SetData(m_AlignName, "Akkon Strength Base" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eStrengthBase);
+                ModelFile.SetData(m_AlignName, "Akkon Peak Property" + StageNo.ToString() + TabNo.ToString(), (int)Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_ePeakProp);
+                ModelFile.SetData(m_AlignName, "Akkon Threshold Peak" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nThPeak);
+                ModelFile.SetData(m_AlignName, "Akkon Extra Lead" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nExtraLead);
+                ModelFile.SetData(m_AlignName, "Akkon Min Shadow Width" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nMinShadowWidth);
+                ModelFile.SetData(m_AlignName, "Akkon Strength Scale Factor" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStrengthScaleFactor);
+                ModelFile.SetData(m_AlignName, "Akkon Inflate Lead Size" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nInflateLeadSize);
+                ModelFile.SetData(m_AlignName, "Akkon Position Tolerance" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fPosTolerance);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
 
 
-                ModelFile.SetData(m_AlignName, "DL Peak Prob" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fDLPeakProb);
-                ModelFile.SetData(m_AlignName, "DL Size Prob" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fDLSizeProb);
-                ModelFile.SetData(m_AlignName, "DL Sperate Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLSperateCut);
-                ModelFile.SetData(m_AlignName, "DL Network Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLNetWorkType);
-                ModelFile.SetData(m_AlignName, "DL Edge Flip" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bEdgeFlip);
-                ModelFile.SetData(m_AlignName, "DL Patch Size X" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLPatchSizeX);
-                ModelFile.SetData(m_AlignName, "DL Patch Size Y" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLPatchSizeY);
+                ModelFile.SetData(m_AlignName, "Akkon Strength Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMinStrength);
+                ModelFile.SetData(m_AlignName, "Akkon Min Heigtht Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinHeight);
+                ModelFile.SetData(m_AlignName, "Akkon Min Width Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinWidth);
+                ModelFile.SetData(m_AlignName, "Akkon Min Size Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMinSize);
+                ModelFile.SetData(m_AlignName, "Akkon Max Size Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMaxSize);
+                ModelFile.SetData(m_AlignName, "Akkon Grouping Distance Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fGroupingDistance);
+                ModelFile.SetData(m_AlignName, "Akkon Min Boundary Overlap" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinBoundaryOverlap);
+                ModelFile.SetData(m_AlignName, "Akkon Use Edge False Alarm Filter" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_bUseEdgeFARemove);
+                ModelFile.SetData(m_AlignName, "Akkon FAR WH Ratio" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fWHRatio);
+                ModelFile.SetData(m_AlignName, "Akkon FAR Edge Range" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nEdgeRange);
+                ModelFile.SetData(m_AlignName, "Akkon FAR Strength Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEdgeStrengthCut);
+                ModelFile.SetData(m_AlignName, "Akkon FAR Size Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEdgeSizeCut);
+                ModelFile.SetData(m_AlignName, "Akkon BW Peak Ratiot" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fBWRatio);
+                ModelFile.SetData(m_AlignName, "Akkon ROI Division Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nROIDiv);
+                ModelFile.SetData(m_AlignName, "Akkon In ROI Line Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nAkkonInLine);
+                ModelFile.SetData(m_AlignName, "Akkon In ROI Line Area" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fAkkonInArea);
+                ModelFile.SetData(m_AlignName, "Akkon BW Ratio Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fBWRatioMax);
+                ModelFile.SetData(m_AlignName, "Akkon Enh Std Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEnhstdcut);
+                ModelFile.SetData(m_AlignName, "Akkon Shadow Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nShadowPeakcut);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Up Shoot Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nRawUpShootcut);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Avg Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawAvgMin);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Avg Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawAvgMax);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Std Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawStdMin);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Std Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawStdMax);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Min" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawShadowMin);
+                ModelFile.SetData(m_AlignName, "Akkon Raw Shadow Max" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawShadowMax);
+
+                //ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
+                //ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_AkkonInspFilter.);
+                ModelFile.SetData(m_AlignName, "Akkon Standard Deviation Lead Judge" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStdDevLeadJudge);
+                ModelFile.SetData(m_AlignName, "Akkon Imul Inspection" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bImulInspection);
+                ModelFile.SetData(m_AlignName, "Akkon Target Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nIsFlexible); // 0 : RIGID, 1 : FLEIBLE
+                ModelFile.SetData(m_AlignName, "Akkon Inspection Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_nInspType); // 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
+                ModelFile.SetData(m_AlignName, "Akkon Imul Inspection Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nImulInspectionThresh);
+                ModelFile.SetData(m_AlignName, "Akkon Imul size" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fImulSize);
+                ModelFile.SetData(m_AlignName, "Akkon Filter Width Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nWidthCut);
+                ModelFile.SetData(m_AlignName, "Akkon Filter Heigth Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nHeightCut);
+                ModelFile.SetData(m_AlignName, "Akkon Filter Raw Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nRawPeakCut);
+                ModelFile.SetData(m_AlignName, "Akkon Filter WH Raw Peak Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nWHRawPeakCut);
+                ModelFile.SetData(m_AlignName, "Akkon Use Absolute Threshold" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bUseAbsTh);
+                ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold High" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nAbsoluteThHi);
+                ModelFile.SetData(m_AlignName, "Akkon Absolute Threshold Low" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nAbsoluteThLow);
+                ModelFile.SetData(m_AlignName, "Akkon Panel Type", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nPanelInfo); // 0 COF, 1 COG, 2 FOG
+
+
+                ModelFile.SetData(m_AlignName, "DL Peak Prob" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fDLPeakProb);
+                ModelFile.SetData(m_AlignName, "DL Size Prob" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fDLSizeProb);
+                ModelFile.SetData(m_AlignName, "DL Sperate Cut" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLSperateCut);
+                ModelFile.SetData(m_AlignName, "DL Network Type" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLNetWorkType);
+                ModelFile.SetData(m_AlignName, "DL Edge Flip" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bEdgeFlip);
+                ModelFile.SetData(m_AlignName, "DL Patch Size X" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLPatchSizeX);
+                ModelFile.SetData(m_AlignName, "DL Patch Size Y" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLPatchSizeY);
 
                 
 
-                ModelFile.SetData(m_AlignName, "Log Trace" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_bLogTrace);
+                ModelFile.SetData(m_AlignName, "Log Trace" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_bLogTrace);
 
                 //Align 검사 Data
                 ModelFile.SetData(m_AlignName, "Lead Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AlignPara.LeadCount);
@@ -1678,29 +1678,29 @@ namespace COG
                 using (StreamWriter outputFile = new StreamWriter(DEFINE.SYS_DATADIR + DEFINE.MODEL_DATADIR + "\\" + Main.ProjectName + "\\AKKON\\" + m_AlignName + StageNo.ToString() + TabNo.ToString() + "_ROIData.txt"))
                 {
                     //File경로 제대로 확인
-                    for (int i = 0; i < Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList.Count; i++)
+                    for (int i = 0; i < Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList.Count; i++)
                     {
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerOriginX);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerOriginX);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerOriginY);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerOriginY);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerXX);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerXX);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerXY);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerXY);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerOppositeX);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerOppositeX);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerOppositeY);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerOppositeY);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerYX);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerYX);
                         outputFile.Write(" ");
-                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList[i].CornerYY);
+                        outputFile.Write(Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList[i].CornerYY);
                         outputFile.Write(" ");
                         outputFile.Write("\n");
                     }
                 }
                 //Lead Group 부분
-                ModelFile.SetData(m_AlignName, "Lead Group Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeadGroupCount);
+                ModelFile.SetData(m_AlignName, "Lead Group Count" + StageNo.ToString() + TabNo.ToString(), Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeadGroupCount);
                 for (int i = 0; i < Main.AlignUnit[CamNo].PAT[StageNo, TabNo].LeadGroupInfo.Count(); i++)
                 {
                     ModelFile.SetData(m_AlignName, "Lead Group" + StageNo.ToString() + TabNo.ToString() + (i + 1).ToString() + "_Lead Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].LeadGroupInfo[i].LeadCount);
@@ -1759,12 +1759,12 @@ namespace COG
                         bExist = File.Exists(FileName);
                         if (bExist)
                         {
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex] = CogSerializer.LoadObjectFromFile(FileName) as CogPMAlignTool;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].RunParams.ZoneScale.Configuration = CogPMAlignZoneConstants.Nominal;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].RunParams.ZoneAngle.Low = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].RunParams.ZoneAngle.High = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].RunParams.TimeoutEnabled = true;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeftPattern[markIndex].RunParams.Timeout = Main.DEFINE.PATTERN_TIMEOUT;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex] = CogSerializer.LoadObjectFromFile(FileName) as CogPMAlignTool;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].RunParams.ZoneScale.Configuration = CogPMAlignZoneConstants.Nominal;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].RunParams.ZoneAngle.Low = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].RunParams.ZoneAngle.High = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].RunParams.TimeoutEnabled = true;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeftPattern[markIndex].RunParams.Timeout = Main.DEFINE.PATTERN_TIMEOUT;
                         }
 
                         FileName = DEFINE.SYS_DATADIR + DEFINE.MODEL_DATADIR + "\\" + Main.ProjectName + "\\MARK\\" + m_AlignName + "_ATT_RIGHTMARK" + StageNo.ToString() + TabNo.ToString() + markIndex.ToString() + ".vpp";
@@ -1772,12 +1772,12 @@ namespace COG
                         bExist = File.Exists(FileName);
                         if (bExist)
                         {
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex] = CogSerializer.LoadObjectFromFile(FileName) as CogPMAlignTool;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].RunParams.ZoneScale.Configuration = CogPMAlignZoneConstants.Nominal;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].RunParams.ZoneAngle.Low = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].RunParams.ZoneAngle.High = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].RunParams.TimeoutEnabled = true;
-                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].RightPattern[markIndex].RunParams.Timeout = Main.DEFINE.PATTERN_TIMEOUT;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex] = CogSerializer.LoadObjectFromFile(FileName) as CogPMAlignTool;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].RunParams.ZoneScale.Configuration = CogPMAlignZoneConstants.Nominal;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].RunParams.ZoneAngle.Low = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].RunParams.ZoneAngle.High = -(Main.DEFINE.radian * Main.DEFINE.DEFAULT_ACCEPT_ANGLE);
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].RunParams.TimeoutEnabled = true;
+                            Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.RightPattern[markIndex].RunParams.Timeout = Main.DEFINE.PATTERN_TIMEOUT;
                         }
                     }
                     catch (Exception ex)
@@ -1840,92 +1840,92 @@ namespace COG
                 //ModelFile.SetData(m_AlignName, "JudgeDistribution", );
                 //ModelFile.SetData(m_AlignName, "SliceWidth",);
                 //ModelFile.SetData(m_AlignName, "SliceHeight", );
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].JudgeCount = ModelFile.GetIData(m_AlignName, "JudgeCount" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].JudgeLength = ModelFile.GetFData(m_AlignName, "JudgeLength" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_nOverlap = ModelFile.GetIData(m_AlignName, "SliceOverlap" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eFilterType = (AW.EN_MVFILTERTYPE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Filter Type" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nFilterDir = ModelFile.GetIData(m_AlignName, "Akkon Filter Direction" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eThMode = (AW.EN_THMODE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Threshold Mode" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fThWeight = ModelFile.GetFData(m_AlignName, "Akkon Thres Weight" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nShadowOffset = ModelFile.GetIData(m_AlignName, "Shadow Detection Offset" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eShadowDir = (AW.EN_SHADOWDIR_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Shadow Direction" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStrengthThreshold = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Threshold" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_eStrengthBase = (AW.EN_STRENGTH_BASE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Strength Base" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_ePeakProp = (AW.EN_PEAK_PROP_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Peak Property" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nThPeak = ModelFile.GetIData(m_AlignName, "Akkon Threshold Peak" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nExtraLead = ModelFile.GetIData(m_AlignName, "Akkon Extra Lead" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nMinShadowWidth = ModelFile.GetIData(m_AlignName, "Akkon Min Shadow Width" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStrengthScaleFactor = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Scale Factor" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nInflateLeadSize = ModelFile.GetIData(m_AlignName, "Akkon Inflate Lead Size" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fPosTolerance = (float)ModelFile.GetFData(m_AlignName, "Akkon Position Tolerance" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.JudgeCount = ModelFile.GetIData(m_AlignName, "JudgeCount" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.JudgeLength = ModelFile.GetFData(m_AlignName, "JudgeLength" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_nOverlap = ModelFile.GetIData(m_AlignName, "SliceOverlap" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eFilterType = (AW.EN_MVFILTERTYPE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Filter Type" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nFilterDir = ModelFile.GetIData(m_AlignName, "Akkon Filter Direction" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eThMode = (AW.EN_THMODE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Threshold Mode" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fThWeight = ModelFile.GetFData(m_AlignName, "Akkon Thres Weight" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nShadowOffset = ModelFile.GetIData(m_AlignName, "Shadow Detection Offset" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eShadowDir = (AW.EN_SHADOWDIR_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Shadow Direction" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStrengthThreshold = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Threshold" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_eStrengthBase = (AW.EN_STRENGTH_BASE_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Strength Base" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_ePeakProp = (AW.EN_PEAK_PROP_WRAP)ModelFile.GetIData(m_AlignName, "Akkon Peak Property" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nThPeak = ModelFile.GetIData(m_AlignName, "Akkon Threshold Peak" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nExtraLead = ModelFile.GetIData(m_AlignName, "Akkon Extra Lead" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nMinShadowWidth = ModelFile.GetIData(m_AlignName, "Akkon Min Shadow Width" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStrengthScaleFactor = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Scale Factor" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nInflateLeadSize = ModelFile.GetIData(m_AlignName, "Akkon Inflate Lead Size" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fPosTolerance = (float)ModelFile.GetFData(m_AlignName, "Akkon Position Tolerance" + StageNo.ToString() + TabNo.ToString());
 
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-
-
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMinStrength = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinHeight = ModelFile.GetIData(m_AlignName, "Akkon Min Heigtht Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinWidth = ModelFile.GetIData(m_AlignName, "Akkon Min Width Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMinSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Min Size Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fMaxSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Max Size Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fGroupingDistance = ModelFile.GetFData(m_AlignName, "Akkon Grouping Distance Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nMinBoundaryOverlap = ModelFile.GetIData(m_AlignName, "Akkon Min Boundary Overlap" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_bUseEdgeFARemove = ModelFile.GetBData(m_AlignName, "Akkon Use Edge False Alarm Filter" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fWHRatio = (float)ModelFile.GetFData(m_AlignName, "Akkon FAR WH Ratio" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nEdgeRange = ModelFile.GetIData(m_AlignName, "Akkon FAR Edge Range" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEdgeStrengthCut = (float)ModelFile.GetFData(m_AlignName, "Akkon FAR Strength Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEdgeSizeCut = ModelFile.GetIData(m_AlignName, "Akkon FAR Size Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fBWRatio = (float)ModelFile.GetFData(m_AlignName, "Akkon BW Peak Ratiot" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nROIDiv = ModelFile.GetIData(m_AlignName, "Akkon ROI Division Count" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nAkkonInLine = ModelFile.GetIData(m_AlignName, "Akkon In ROI Line Count" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fAkkonInArea = (float)ModelFile.GetFData(m_AlignName, "Akkon In ROI Line Area" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fBWRatioMax = (float)ModelFile.GetFData(m_AlignName, "Akkon BW Ratio Max" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fEnhstdcut = (float)ModelFile.GetFData(m_AlignName, "Akkon Enh Std Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nShadowPeakcut = ModelFile.GetIData(m_AlignName, "Akkon Shadow Peak Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nRawUpShootcut = ModelFile.GetIData(m_AlignName, "Akkon Raw Up Shoot Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawAvgMin = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Avg Min" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawAvgMax = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Avg Max" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawStdMin = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Std Min" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawStdMax = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Std Max" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawShadowMin = ModelFile.GetIData(m_AlignName, "Akkon Raw Shadow Min" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fRawShadowMax = ModelFile.GetIData(m_AlignName, "Akkon Raw Shadow Max" + StageNo.ToString() + TabNo.ToString());
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Offset", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
+                //ModelFile.SetData(m_AlignName, "Akkon Strength Boost Weight", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
 
 
-
-                //ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].);
-                //ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].m_AkkonInspFilter.);
-
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fStdDevLeadJudge = (float)ModelFile.GetFData(m_AlignName, "Akkon Standard Deviation Lead Judge" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bImulInspection = ModelFile.GetBData(m_AlignName, "Akkon Imul Inspection" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nIsFlexible = ModelFile.GetIData(m_AlignName, "Akkon Target Type" + StageNo.ToString() + TabNo.ToString());// 0 : RIGID, 1 : FLEIBLE
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_nInspType = ModelFile.GetIData(m_AlignName, "Akkon Inspection Type" + StageNo.ToString() + TabNo.ToString());// 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nImulInspectionThresh = ModelFile.GetIData(m_AlignName, "Akkon Imul Inspection Threshold" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_fImulSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Imul size" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nWidthCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Width Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nHeightCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Heigth Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nRawPeakCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Raw Peak Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionFilter.s_nWHRawPeakCut = ModelFile.GetIData(m_AlignName, "Akkon Filter WH Raw Peak Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bUseAbsTh = ModelFile.GetBData(m_AlignName, "Akkon Use Absolute Threshold" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nAbsoluteThHi = ModelFile.GetIData(m_AlignName, "Akkon Absolute Threshold High" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nAbsoluteThLow = ModelFile.GetIData(m_AlignName, "Akkon Absolute Threshold Low" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nPanelInfo = ModelFile.GetIData(m_AlignName, "Akkon Panel Type" + StageNo.ToString() + TabNo.ToString());// 0 COF, 1 COG, 2 FOG
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMinStrength = (float)ModelFile.GetFData(m_AlignName, "Akkon Strength Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinHeight = ModelFile.GetIData(m_AlignName, "Akkon Min Heigtht Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinWidth = ModelFile.GetIData(m_AlignName, "Akkon Min Width Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMinSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Min Size Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fMaxSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Max Size Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fGroupingDistance = ModelFile.GetFData(m_AlignName, "Akkon Grouping Distance Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nMinBoundaryOverlap = ModelFile.GetIData(m_AlignName, "Akkon Min Boundary Overlap" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_bUseEdgeFARemove = ModelFile.GetBData(m_AlignName, "Akkon Use Edge False Alarm Filter" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fWHRatio = (float)ModelFile.GetFData(m_AlignName, "Akkon FAR WH Ratio" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nEdgeRange = ModelFile.GetIData(m_AlignName, "Akkon FAR Edge Range" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEdgeStrengthCut = (float)ModelFile.GetFData(m_AlignName, "Akkon FAR Strength Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEdgeSizeCut = ModelFile.GetIData(m_AlignName, "Akkon FAR Size Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fBWRatio = (float)ModelFile.GetFData(m_AlignName, "Akkon BW Peak Ratiot" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nROIDiv = ModelFile.GetIData(m_AlignName, "Akkon ROI Division Count" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nAkkonInLine = ModelFile.GetIData(m_AlignName, "Akkon In ROI Line Count" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fAkkonInArea = (float)ModelFile.GetFData(m_AlignName, "Akkon In ROI Line Area" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fBWRatioMax = (float)ModelFile.GetFData(m_AlignName, "Akkon BW Ratio Max" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fEnhstdcut = (float)ModelFile.GetFData(m_AlignName, "Akkon Enh Std Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nShadowPeakcut = ModelFile.GetIData(m_AlignName, "Akkon Shadow Peak Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nRawUpShootcut = ModelFile.GetIData(m_AlignName, "Akkon Raw Up Shoot Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawAvgMin = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Avg Min" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawAvgMax = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Avg Max" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawStdMin = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Std Min" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawStdMax = (float)ModelFile.GetFData(m_AlignName, "Akkon Raw Std Max" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawShadowMin = ModelFile.GetIData(m_AlignName, "Akkon Raw Shadow Min" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fRawShadowMax = ModelFile.GetIData(m_AlignName, "Akkon Raw Shadow Max" + StageNo.ToString() + TabNo.ToString());
 
 
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fDLPeakProb = (float)ModelFile.GetFData(m_AlignName, "DL Peak Prob" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_fDLSizeProb = (float)ModelFile.GetFData(m_AlignName, "DL Size Prob" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLSperateCut = ModelFile.GetIData(m_AlignName, "DL Sperate Cut" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLNetWorkType = ModelFile.GetIData(m_AlignName, "DL Network Type" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_bEdgeFlip = ModelFile.GetBData(m_AlignName, "DL Edge Flip" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLPatchSizeX = ModelFile.GetIData(m_AlignName, "DL Patch Size X" + StageNo.ToString() + TabNo.ToString());
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionParameter.s_nDLPatchSizeY = ModelFile.GetIData(m_AlignName, "DL Patch Size Y" + StageNo.ToString() + TabNo.ToString());
+                //ModelFile.SetData(m_AlignName, "Lead Total Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.);
+                //ModelFile.SetData(m_AlignName, "Lead Set Count", Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.m_AkkonInspFilter.);
+
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fStdDevLeadJudge = (float)ModelFile.GetFData(m_AlignName, "Akkon Standard Deviation Lead Judge" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bImulInspection = ModelFile.GetBData(m_AlignName, "Akkon Imul Inspection" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nIsFlexible = ModelFile.GetIData(m_AlignName, "Akkon Target Type" + StageNo.ToString() + TabNo.ToString());// 0 : RIGID, 1 : FLEIBLE
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_nInspType = ModelFile.GetIData(m_AlignName, "Akkon Inspection Type" + StageNo.ToString() + TabNo.ToString());// 0 : ThresholdMode, 1 : DLMode0, 2 : DLMode1, 3 : DLMode2
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nImulInspectionThresh = ModelFile.GetIData(m_AlignName, "Akkon Imul Inspection Threshold" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_fImulSize = (float)ModelFile.GetFData(m_AlignName, "Akkon Imul size" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nWidthCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Width Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nHeightCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Heigth Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nRawPeakCut = ModelFile.GetIData(m_AlignName, "Akkon Filter Raw Peak Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionFilter.s_nWHRawPeakCut = ModelFile.GetIData(m_AlignName, "Akkon Filter WH Raw Peak Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bUseAbsTh = ModelFile.GetBData(m_AlignName, "Akkon Use Absolute Threshold" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nAbsoluteThHi = ModelFile.GetIData(m_AlignName, "Akkon Absolute Threshold High" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nAbsoluteThLow = ModelFile.GetIData(m_AlignName, "Akkon Absolute Threshold Low" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nPanelInfo = ModelFile.GetIData(m_AlignName, "Akkon Panel Type" + StageNo.ToString() + TabNo.ToString());// 0 COF, 1 COG, 2 FOG
 
 
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonInspectionOption.s_bLogTrace = ModelFile.GetBData(m_AlignName, "Log Trace" + StageNo.ToString() + TabNo.ToString());
+
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fDLPeakProb = (float)ModelFile.GetFData(m_AlignName, "DL Peak Prob" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_fDLSizeProb = (float)ModelFile.GetFData(m_AlignName, "DL Size Prob" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLSperateCut = ModelFile.GetIData(m_AlignName, "DL Sperate Cut" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLNetWorkType = ModelFile.GetIData(m_AlignName, "DL Network Type" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_bEdgeFlip = ModelFile.GetBData(m_AlignName, "DL Edge Flip" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLPatchSizeX = ModelFile.GetIData(m_AlignName, "DL Patch Size X" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionParameter.s_nDLPatchSizeY = ModelFile.GetIData(m_AlignName, "DL Patch Size Y" + StageNo.ToString() + TabNo.ToString());
+
+
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonInspectionOption.s_bLogTrace = ModelFile.GetBData(m_AlignName, "Log Trace" + StageNo.ToString() + TabNo.ToString());
 
 
                 //Lead Group 부분 
-                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].LeadGroupCount = ModelFile.GetIData(m_AlignName, "Lead Group Count" + StageNo.ToString() + TabNo.ToString());
+                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.LeadGroupCount = ModelFile.GetIData(m_AlignName, "Lead Group Count" + StageNo.ToString() + TabNo.ToString());
 
                 for (int i = 0; i < Main.AlignUnit[CamNo].PAT[StageNo, TabNo].LeadGroupInfo.Count(); i++)
                 {
@@ -1981,7 +1981,7 @@ namespace COG
                                 CogRectangleAffine tempRectAffine = new CogRectangleAffine();
                                 tempRectAffine.SetOriginCornerXCornerY(nLeadPoint[nIndex, 0], nLeadPoint[nIndex, 1],
                                     nLeadPoint[nIndex, 2], nLeadPoint[nIndex, 3], nLeadPoint[nIndex, 6], nLeadPoint[nIndex, 7]);
-                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara[0].AkkonBumpROIList.Add(tempRectAffine);
+                                Main.AlignUnit[CamNo].PAT[StageNo, TabNo].AkkonPara.AkkonBumpROIList.Add(tempRectAffine);
                                 nCnt = 0;
                                 nIndex++;
                                 continue;

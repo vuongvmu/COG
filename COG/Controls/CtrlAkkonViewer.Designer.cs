@@ -75,7 +75,7 @@
             this.lblAkkonViewer.Name = "lblAkkonViewer";
             this.lblAkkonViewer.Size = new System.Drawing.Size(900, 40);
             this.lblAkkonViewer.TabIndex = 1;
-            this.lblAkkonViewer.Text = "Akkon";
+            this.lblAkkonViewer.Text = "AKKON";
             this.lblAkkonViewer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -185,13 +185,13 @@
             // 
             this.lblAkkonHistory.BackColor = System.Drawing.Color.DarkGray;
             this.lblAkkonHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAkkonHistory.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAkkonHistory.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.lblAkkonHistory.Location = new System.Drawing.Point(1, 1);
             this.lblAkkonHistory.Margin = new System.Windows.Forms.Padding(1);
             this.lblAkkonHistory.Name = "lblAkkonHistory";
             this.lblAkkonHistory.Size = new System.Drawing.Size(223, 38);
             this.lblAkkonHistory.TabIndex = 2;
-            this.lblAkkonHistory.Text = "Akkon Log";
+            this.lblAkkonHistory.Text = "AKKON LOG";
             this.lblAkkonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlAkkonResult

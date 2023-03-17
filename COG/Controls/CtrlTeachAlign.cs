@@ -732,10 +732,10 @@ namespace COG.Controls
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Save();
+            //Save();
         }
 
-        private void Save()
+        public void Save()
         {
             for (int tabCount = 0; tabCount < Main.DEFINE.TAP_UNIT_MAX; tabCount++)
             {

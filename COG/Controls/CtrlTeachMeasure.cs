@@ -1544,6 +1544,7 @@ namespace COG.Controls
             if (cmb != null)
             {
                 e.DrawBackground();
+                cmb.ItemHeight = lblLineCount.Height - 7;
 
                 if (e.Index >= 0)
                 {

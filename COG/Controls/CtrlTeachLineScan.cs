@@ -260,6 +260,7 @@ namespace COG.Controls
                         case eAxis.Axis_Z:
                             // Update Current Position
                             lblCurrentPositionZValue.Text = Main.LAF.AFStatus.MPos.ToString("F3");
+                            lblCuttentPositionZ.Text = Main.LAF.AFStatus.MPos.ToString("F3");
                             lblCurrentCogValue.Text = Main.LAF.AFStatus.CenterOfGravity.ToString();
 
                             // Update Negative Limit Sensor

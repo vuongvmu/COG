@@ -77,7 +77,7 @@
             this.lblAlignViewer.Name = "lblAlignViewer";
             this.lblAlignViewer.Size = new System.Drawing.Size(900, 40);
             this.lblAlignViewer.TabIndex = 0;
-            this.lblAlignViewer.Text = "Align";
+            this.lblAlignViewer.Text = "ALIGN";
             this.lblAlignViewer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -199,13 +199,13 @@
             // 
             this.lblAlignHistory.BackColor = System.Drawing.Color.DarkGray;
             this.lblAlignHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlignHistory.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAlignHistory.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.lblAlignHistory.Location = new System.Drawing.Point(1, 1);
             this.lblAlignHistory.Margin = new System.Windows.Forms.Padding(1);
             this.lblAlignHistory.Name = "lblAlignHistory";
             this.lblAlignHistory.Size = new System.Drawing.Size(223, 38);
             this.lblAlignHistory.TabIndex = 2;
-            this.lblAlignHistory.Text = "Align Log";
+            this.lblAlignHistory.Text = "ALIGN LOG";
             this.lblAlignHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlAlignResult

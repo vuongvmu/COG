@@ -185,8 +185,12 @@ namespace COG
 
             public CogFitCircleTool FitCicleTool = new CogFitCircleTool();
             #region ATT
-            public AkkonTagData[] AkkonPara = new AkkonTagData[Main.DEFINE.AKKON_MAX];
-            public AkkonInspectionResult[] AkkonResult = new AkkonInspectionResult[Main.DEFINE.AKKON_MAX];
+            //public AkkonTagData[] AkkonPara = new AkkonTagData[Main.DEFINE.AKKON_MAX];
+            public AkkonTagData AkkonPara = new AkkonTagData();
+
+            //public AkkonInspectionResult[] AkkonResult = new AkkonInspectionResult[Main.DEFINE.AKKON_MAX];
+            public AkkonInspectionResult AkkonResult = new AkkonInspectionResult(); //[Main.DEFINE.AKKON_MAX];
+
             public LeadGroupInfo[] LeadGroupInfo = new LeadGroupInfo[20]; //Group 개수, 임시 20개 지정
             public byte[] m_imgDataATT;
             public CogImage24PlanarColor m_imgOverlay;

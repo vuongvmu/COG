@@ -86,63 +86,63 @@ namespace COG
 #if ATT
                 case eTeachingItem.Align:
                     if (button.Name.ToString().Contains("MoveUp"))
-                        _teachAlignControl.MoveROIJog(eMoveDirection.Up);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.MoveROIJog(eMoveDirection.Up);
 
                     if (button.Name.ToString().Contains("MoveDown"))
-                        _teachAlignControl.MoveROIJog(eMoveDirection.Down);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.MoveROIJog(eMoveDirection.Down);
 
                     if (button.Name.ToString().Contains("MoveLeft"))
-                        _teachAlignControl.MoveROIJog(eMoveDirection.Left);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.MoveROIJog(eMoveDirection.Left);
 
                     if (button.Name.ToString().Contains("MoveRight"))
-                        _teachAlignControl.MoveROIJog(eMoveDirection.Right);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.MoveROIJog(eMoveDirection.Right);
 
                     if (button.Name.ToString().Contains("SizeIncreaseUpDown"))
-                        _teachAlignControl.SizeROIJog(eSizeDirection.IncreaseUpDown);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.SizeROIJog(eSizeDirection.IncreaseUpDown);
 
                     if (button.Name.ToString().Contains("SizeDecreaseUpDown"))
-                        _teachAlignControl.SizeROIJog(eSizeDirection.DecreaseUpDown);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.SizeROIJog(eSizeDirection.DecreaseUpDown);
 
                     if (button.Name.ToString().Contains("SizeIncreaseLeftRight"))
-                        _teachAlignControl.SizeROIJog(eSizeDirection.IncreaseLeftRight);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.SizeROIJog(eSizeDirection.IncreaseLeftRight);
 
                     if (button.Name.ToString().Contains("SizeDecreaseLeftRight"))
-                        _teachAlignControl.SizeROIJog(eSizeDirection.DecreaseLeftRight);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAlignControl.SizeROIJog(eSizeDirection.DecreaseLeftRight);
                     break;
 
                 case eTeachingItem.Akkon:
                     if (button.Name.ToString().Contains("MoveUp"))
-                        TeachAkkonControl.MoveROIJog(eMoveDirection.Up);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.MoveROIJog(eMoveDirection.Up);
 
                     if (button.Name.ToString().Contains("MoveDown"))
-                        TeachAkkonControl.MoveROIJog(eMoveDirection.Down);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.MoveROIJog(eMoveDirection.Down);
 
                     if (button.Name.ToString().Contains("MoveLeft"))
-                        TeachAkkonControl.MoveROIJog(eMoveDirection.Left);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.MoveROIJog(eMoveDirection.Left);
 
                     if (button.Name.ToString().Contains("MoveRight"))
-                        TeachAkkonControl.MoveROIJog(eMoveDirection.Right);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.MoveROIJog(eMoveDirection.Right);
 
                     if (button.Name.ToString().Contains("SizeIncreaseUpDown"))
-                        TeachAkkonControl.SizeROIJog(eSizeDirection.IncreaseUpDown);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SizeROIJog(eSizeDirection.IncreaseUpDown);
 
                     if (button.Name.ToString().Contains("SizeDecreaseUpDown"))
-                        TeachAkkonControl.SizeROIJog(eSizeDirection.DecreaseUpDown);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SizeROIJog(eSizeDirection.DecreaseUpDown);
 
                     if (button.Name.ToString().Contains("SizeIncreaseLeftRight"))
-                        TeachAkkonControl.SizeROIJog(eSizeDirection.IncreaseLeftRight);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SizeROIJog(eSizeDirection.IncreaseLeftRight);
 
                     if (button.Name.ToString().Contains("SizeDecreaseLeftRight"))
-                        TeachAkkonControl.SizeROIJog(eSizeDirection.DecreaseLeftRight);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SizeROIJog(eSizeDirection.DecreaseLeftRight);
 
                     if (button.Name.ToString().Contains("SkewCCW"))
-                        TeachAkkonControl.SkewROIJog(eSkewType.CCW);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SkewROIJog(eSkewType.CCW);
 
                     if (button.Name.ToString().Contains("SkewZero"))
-                        TeachAkkonControl.SkewROIJog(eSkewType.Zero);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SkewROIJog(eSkewType.Zero);
 
                     if (button.Name.ToString().Contains("SkewCW"))
-                        TeachAkkonControl.SkewROIJog(eSkewType.CW);
+                        FormMain.Instance().SelectUnitForm.VisionTeachForm.TeachAkkonControl.SkewROIJog(eSkewType.CW);
                     break;
 #endif
 #if CGMS
