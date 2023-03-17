@@ -35,7 +35,7 @@ namespace COG.Controls
         private int _selectedBeadIndex = 0;
         private int _tabNo = 0;
         private InspectionCount _inspectionCount = new InspectionCount();
-
+        //tlqkf
         public CtrlTeachShort(eTeachingPosition teachingPosition)
         {
             InitializeComponent();
