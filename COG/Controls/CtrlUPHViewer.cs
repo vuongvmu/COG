@@ -246,12 +246,14 @@ namespace COG.Controls
                 //string temp = Directory.GetCurrentDirectory() + @"\Log\AlignInspection_Stage1_Top.csv";
                 string temp = Directory.GetCurrentDirectory();
                 temp += string.Format(@"\Log\[CST100]Akkon_Stage1_Bottom_{0}.csv", dateTime);
+                string tempPath;
+                tempPath = Main.DEFINE.SYS_DATADIR + Main.DEFINE.LOG_DATADIR + dateTime + "\\" + Main.DEFINE.CELLLOG_CSVDIR + "Cell Data.csv";
 
-                FileInfo fileInfo = new FileInfo(temp);
+                FileInfo fileInfo = new FileInfo(tempPath);
                 if (fileInfo.Exists)
                 {
-                    _isOpenFilePath = temp;
-                    return JASUtility.CSVHelper.ReadData(temp);
+                    _isOpenFilePath = tempPath;
+                    return JASUtility.CSVHelper.ReadData(tempPath);
                 }
                 else
                     return null;

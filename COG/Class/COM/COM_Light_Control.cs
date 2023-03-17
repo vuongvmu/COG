@@ -212,7 +212,7 @@ namespace COG
 
         public static void Port_Initial()
         {
-            if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
+           // if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
             for (int i = 0; i < Main.DEFINE.Light_Control_Max; i++)
             {
                 Mutex_lock[i] = new Mutex();
@@ -345,7 +345,7 @@ namespace COG
 
         private static bool Port_Open(int portName)
         {
-            return true;
+            //return true;
 
             string m_sendData;
             int com;
@@ -388,7 +388,7 @@ namespace COG
 
         public static void Write(int portName, string SendData, bool bRetry = false)
         {
-            if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
+           // if (Main.DEFINE.OPEN_F || Main.DEFINE.OPEN_CAM) return;
 
             Mutex_lock[portName].WaitOne();
             try

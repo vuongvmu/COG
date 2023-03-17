@@ -180,6 +180,7 @@ namespace COG
 
             Main.System_Initial();
             Main.Vision_Initial();
+            Light.Port_Initial();
             Console.WriteLine("Vision Intialize Finished.");
 
             //Main.AlignUnit_Initial();   
@@ -191,6 +192,7 @@ namespace COG
 
 #if SIMUL
             LicenseCheck();
+            MessageBox.Show("Simlulation Mode");
 #else
             if (LicenseCheck())
             {
@@ -2857,8 +2859,8 @@ namespace COG
             {
                 if (GrabThreadFlag)
                 {
-                    //Grab_Squence();
-                    Test();
+                    Grab_Squence();
+                    //Test();
                 }
                 else
                     isLive = false;
@@ -2931,7 +2933,7 @@ namespace COG
 
         private void BTN_ATTINSP_Click(object sender, EventArgs e)
         {
-            TestImageLoad(0);
+            //TestImageLoad(0);
             GrabThreadFlag = true;
         }
 

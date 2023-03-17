@@ -303,17 +303,20 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 10, outputData, "Input Edge Filter Size", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
 
-                lblBeadCountValue.Text = outputData.ToString();
-                _cogBeadInspectionTool = new CogBeadInspectTool[outputData];
+                    lblBeadCountValue.Text = outputData.ToString();
+                    _cogBeadInspectionTool = new CogBeadInspectTool[outputData];
 
-                for (int i = 0; i < outputData; i++)
-                    _cogBeadInspectionTool[i] = new CogBeadInspectTool();
+                    for (int i = 0; i < outputData; i++)
+                        _cogBeadInspectionTool[i] = new CogBeadInspectTool();
 
-                AddBeadPointInComboBox(outputData);
-                CreateList(outputData);
-                _inspectionCount.BeadToolCount = outputData;
+                    AddBeadPointInComboBox(outputData);
+                    CreateList(outputData);
+                    _inspectionCount.BeadToolCount = outputData;
+                }
             }
         }
 
@@ -455,10 +458,12 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 10, outputData, "Max Num Resulte", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
-
-                lblMaxResultValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxNumResults = outputData;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
+                    lblMaxResultValue.Text = outputData.ToString();
+                    _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxNumResults = outputData;
+                }
             }
         }
 
@@ -471,13 +476,18 @@ namespace COG.Controls
         {
             double outputData = 0;
 
-            using (Form_KeyPad form_keypad = new Form_KeyPad(1, 10, outputData, "Input Width Deviation", 1))
+            using (Form_KeyPad form_keypad = new Form_KeyPad(0.1, 10.0, outputData, "Input Width Deviation", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
 
-                lblMaxWidthDeviationValue.Text = outputData.ToString("F3");
-                _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxWidthDeviation = outputData;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
+                    lblMaxWidthDeviationValue.Text = outputData.ToString("F1");
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxWidthDeviation = outputData;
+                }
+
             }
         }
 
@@ -493,10 +503,15 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 10, outputData, "Max Num Result", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
 
-                lblMaxSkipCountValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxSkipCount = outputData;
+                    lblMaxSkipCountValue.Text = outputData.ToString();
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].Pattern.FindParams.MaxSkipCount = outputData;
+                }
+
             }
         }
         #endregion
@@ -513,12 +528,16 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 100, outputData, "Input Caliper Spacing", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
 
-                lblCaliperSpacingValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].Pattern.CaliperSpacing = outputData;
-                _teachingDisplay.InteractiveGraphics.Clear();
-                Train();
+                    lblCaliperSpacingValue.Text = outputData.ToString();
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].Pattern.CaliperSpacing = outputData;
+                    _teachingDisplay.InteractiveGraphics.Clear();
+                    //Train();
+                }
             }
         }
 
@@ -534,12 +553,16 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 30, outputData, "Input Caliper Smoothing Factor", 1))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
 
-                lblSmoothingFactorValue.Text = outputData.ToString("F3");
-                _cogBeadInspectionTool[_selectedBeadIndex].Pattern.SmoothingFactor = outputData;
-                _teachingDisplay.InteractiveGraphics.Clear();
-                Train();
+                    lblSmoothingFactorValue.Text = outputData.ToString();
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].Pattern.SmoothingFactor = outputData;
+                    _teachingDisplay.InteractiveGraphics.Clear();
+                    //Train();
+                }
             }
         }
         #endregion
@@ -557,10 +580,14 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 255, outputData, "Input RunPara Contrast Thr"))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
 
-                lblContrastThresholdValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.ContrastThreshold = outputData;
+                    lblContrastThresholdValue.Text = outputData.ToString();
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.ContrastThreshold = outputData;
+                }
             }
         }
 
@@ -576,10 +603,14 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1, outputData, "Input RunPara AbsoltDist Thr"))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
 
-                lblAbsoluteDistanceValue.Text = outputData.ToString("F3");
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.AbsoluteDistanceThreshold = outputData;
+                    lblAbsoluteDistanceValue.Text = outputData.ToString("F3");
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.AbsoluteDistanceThreshold = outputData;
+                }
             }
         }
 
@@ -595,10 +626,14 @@ namespace COG.Controls
             using (Form_KeyPad form_keypad = new Form_KeyPad(1, 255, outputData, "Input RunPara Consecutive Falling Caliper"))
             {
                 form_keypad.ShowDialog();
-                outputData = (int)form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = (int)form_keypad.m_data;
 
-                lblConsecutiveFallingCaliperValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.ConsecutiveFailingCalipersMin = outputData;
+                    lblConsecutiveFallingCaliperValue.Text = outputData.ToString();
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.ConsecutiveFailingCalipersMin = outputData;
+                }
             }
         }
 
@@ -611,13 +646,17 @@ namespace COG.Controls
         {
             double outputData = 0;
 
-            using (Form_KeyPad form_keypad = new Form_KeyPad(1, 255, outputData, "Input RunPara Coverage "))
+            using (Form_KeyPad form_keypad = new Form_KeyPad(0.1, 0.99, outputData, "Input RunPara Coverage "))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
 
-                lblCoverageValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.CoverageMin = outputData;
+                    lblCoverageValue.Text = outputData.ToString("F2");
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.CoverageMin = outputData;
+                }
             }
         }
 
@@ -630,13 +669,17 @@ namespace COG.Controls
         {
             double outputData = 0;
 
-            using (Form_KeyPad form_keypad = new Form_KeyPad(1, 255, outputData, "Input RunPara Min Width"))
+            using (Form_KeyPad form_keypad = new Form_KeyPad(0.1, 0.99, outputData, "Input RunPara Min Width"))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
 
-                lblWidthValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.WidthMin = outputData;
+                    lblWidthValue.Text = outputData.ToString("F2");
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.WidthMin = outputData;
+                }
             }
         }
 
@@ -649,13 +692,17 @@ namespace COG.Controls
         {
             double outputData = 0;
 
-            using (Form_KeyPad form_keypad = new Form_KeyPad(1, 255, outputData, "Input RunPara Step Thr"))
+            using (Form_KeyPad form_keypad = new Form_KeyPad(0.01, 1.0, outputData, "Input RunPara Step Thr"))
             {
                 form_keypad.ShowDialog();
-                outputData = form_keypad.m_data;
+                if (form_keypad.bOK)
+                {
+                    outputData = form_keypad.m_data;
 
-                lblStepThresholdValue.Text = outputData.ToString();
-                _cogBeadInspectionTool[_selectedBeadIndex].RunParams.StepThreshold = outputData;
+                    lblStepThresholdValue.Text = outputData.ToString("F2");
+                    if (outputData != 0)
+                        _cogBeadInspectionTool[_selectedBeadIndex].RunParams.StepThreshold = outputData;
+                }
             }
         }
         #endregion

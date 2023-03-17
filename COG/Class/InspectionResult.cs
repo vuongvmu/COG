@@ -206,6 +206,9 @@ namespace COG.Class
             public double Dimension { get; set; } = 0.0;
 
             public int ShortCount { get; set; } = 0;
+
+            public static string HistoryName = "CGMSHistory";
+            public static List<string> CSVHeader = new List<string> { "No", "Result", "Particle Count", "Dimension", "Short Count"};
         }
     }
 }

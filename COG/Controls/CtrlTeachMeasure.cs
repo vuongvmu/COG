@@ -39,7 +39,7 @@ namespace COG.Controls
         private const int PAIR = 2;
         private CogCaliperTool[] _cogCaliperTool = new CogCaliperTool[PAIR];
         // private List<CogCaliperTool[]> _cogCaliperToolList = new List<CogCaliperTool[]>();
-        private List<MeasureLineParameter> _cogCaliperToolList = new List<MeasureLineParameter>();
+        //private List<MeasureLineParameter> _cogCaliperToolList = new List<MeasureLineParameter>();
         private int _lineCount = 0;
         private int _selectedLineIndex = 0;
 
@@ -295,22 +295,22 @@ namespace COG.Controls
                     break;
             }
 
-            if (_cogCaliperToolList.Count <= 0)
+            if (_measureLineParamList.Count <= 0)
                 return;
 
             for (int pair = 0; pair < PAIR; pair++)
             {
                 CogRectangleAffine cogRectAffine = new CogRectangleAffine();
-                cogRectAffine = _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region;
+                cogRectAffine = _measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region;
 
-                if (_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region.Selected)
+                if (_measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region.Selected)
                 {
                     cogRectAffine.CenterX += jogMoveX;
                     cogRectAffine.CenterY += jogMoveY;
                 }
 
                 cogRectAffine.Interactive = true;
-                _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region = cogRectAffine;
+                _measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region = cogRectAffine;
 
                 cogRectAffine.GraphicDOFEnable = CogRectangleAffineDOFConstants.Position | CogRectangleAffineDOFConstants.Size | CogRectangleAffineDOFConstants.Skew | CogRectangleAffineDOFConstants.Rotation;
                 _teachingDisplay.InteractiveGraphics.Add(cogRectAffine, "CALIPER", false);
@@ -351,22 +351,22 @@ namespace COG.Controls
                     break;
             }
 
-            if (_cogCaliperToolList.Count <= 0)
+            if (_measureLineParamList.Count <= 0)
                 return;
 
             for (int pair = 0; pair < PAIR; pair++)
             {
                 CogRectangleAffine cogRectAffine = new CogRectangleAffine();
-                cogRectAffine = _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region;
+                cogRectAffine = _measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region;
 
-                if (_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region.Selected)
+                if (_measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region.Selected)
                 {
                     cogRectAffine.SideXLength += jogSizeX;
                     cogRectAffine.SideYLength += jogSizeY;
                 }
 
                 cogRectAffine.Interactive = true;
-                _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[pair].Region = cogRectAffine;
+                _measureLineParamList[_selectedLineIndex].CogCaliperTool[pair].Region = cogRectAffine;
 
                 cogRectAffine.GraphicDOFEnable = CogRectangleAffineDOFConstants.Position | CogRectangleAffineDOFConstants.Size | CogRectangleAffineDOFConstants.Skew | CogRectangleAffineDOFConstants.Rotation;
                 _teachingDisplay.InteractiveGraphics.Add(cogRectAffine, "CALIPER", false);
@@ -473,7 +473,11 @@ namespace COG.Controls
         {
             if (_measureLineParamList.Count == 0)
                 _measureLineParamList.Add(new MeasureLineParameter());
-            _cogCaliperTool = _measureLineParamList[_selectedLineIndex].CogCaliperTool;
+            for (int i = 0; i < PAIR; i++)
+            {
+                if (_measureLineParamList[_selectedLineIndex].CogCaliperTool[i] != null)
+                    _cogCaliperTool[i] = _measureLineParamList[_selectedLineIndex].CogCaliperTool[i];
+            }
         }
 
         private void SetMeasureCircleItemProperty()
@@ -574,9 +578,10 @@ namespace COG.Controls
             }
 
             int measurePointIndex = outputData;
-            AddMeasurePointInComboBox(measurePointIndex);
 
             CreateList(measurePointIndex);
+            AddMeasurePointInComboBox(measurePointIndex);
+
            
         }
 
@@ -625,7 +630,7 @@ namespace COG.Controls
                     _lineCount = index;
                     if (_measureLineParamList.Count != index)
                     {
-                        _cogCaliperToolList.Clear();
+                        //_cogCaliperToolList.Clear();
                         _measureLineParamList.Clear();
                         for (int i = 0; i < index; i++)
                         {
@@ -646,7 +651,7 @@ namespace COG.Controls
                                     MeasureLineParameter param = new MeasureLineParameter();
                                     param.SetParam(new MeasureLineParameter());
 
-                                   
+                                    //_cogCaliperToolList.Add(param);
                                     _measureLineParamList.Add(param);
                                 }
                             }
@@ -662,7 +667,9 @@ namespace COG.Controls
                             {
                                 MeasureLineParameter param = new MeasureLineParameter();
                                 if (Main.AlignUnit[(int)_camNo].InspectionParams[(int)_stageNo].MeasureLineParamList.Count == 0)
+                                {
                                     _measureLineParamList.Add(new MeasureLineParameter());
+                                }
                                 else
                                 {
                                     param.SetParam(Main.AlignUnit[(int)_camNo].InspectionParams[(int)_stageNo].MeasureLineParamList[i]);
@@ -676,7 +683,7 @@ namespace COG.Controls
                                     MeasureLineParameter cogCaliperToolArray = new MeasureLineParameter();
 
                                
-                                    _cogCaliperToolList.Add(cogCaliperToolArray);
+                                    //_cogCaliperToolList.Add(cogCaliperToolArray);
 
                                     _measureLineParam = new MeasureLineParameter();
                                     _measureLineParamList.Add(_measureLineParam);
@@ -792,10 +799,12 @@ namespace COG.Controls
 
                     if (lbl.Name.ToString().Contains("1"))
                         //_cogCaliperTool[0].RunParams.FilterHalfSizeInPixels = outputData;
-                        _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.FilterHalfSizeInPixels = outputData;
+                        //_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.FilterHalfSizeInPixels = outputData;
+                        _measureLineParamList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.FilterHalfSizeInPixels = outputData;
                     else
                         //_cogCaliperTool[1].RunParams.FilterHalfSizeInPixels = outputData;
-                        _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.FilterHalfSizeInPixels = outputData;
+                        //_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.FilterHalfSizeInPixels = outputData;
+                        _measureLineParamList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.FilterHalfSizeInPixels = outputData;
                 }
 
                 int gg = 0;
@@ -820,11 +829,12 @@ namespace COG.Controls
 
                 if (lbl.Name.ToString().Contains("1"))
                     //_cogCaliperTool[0].RunParams.ContrastThreshold = outputData;
-                    _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.ContrastThreshold = outputData;
+                    //_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.ContrastThreshold = outputData;
+                    _measureLineParamList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge1].RunParams.ContrastThreshold = outputData;
                 else
                     //_cogCaliperTool[1].RunParams.ContrastThreshold = outputData;
-                    _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.ContrastThreshold = outputData;
-
+                    //_cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.ContrastThreshold = outputData;
+                    _measureLineParamList[_selectedLineIndex].CogCaliperTool[(int)ePair.Edge2].RunParams.ContrastThreshold = outputData;
             }
         }
 
@@ -948,23 +958,27 @@ namespace COG.Controls
             if (_measureLineParamList.Count <= 0)
                 return;
 
-            if (_cogCaliperToolList.Count <= 0)
-                return;
+            //if (_cogCaliperToolList.Count <= 0)
+            //    return;
+            if(_measureLineParamList[index].CogCaliperTool[(int)ePair.Edge1] != null)
+            {
+                lblLine1EdgeFilterSizeValue.Text = _measureLineParamList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.FilterHalfSizeInPixels.ToString();
+                lblLine1EdgeThresholdValue.Text = _measureLineParamList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.ContrastThreshold.ToString();
+                if (_measureLineParamList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.Edge0Polarity == CogCaliperPolarityConstants.DarkToLight)
+                    rdoLine1EdgeDarkToLight.Checked = true;
+                else
+                    rdoLine1EdgeLightToDark.Checked = true;
+            }
+            if (_measureLineParamList[index].CogCaliperTool[(int)ePair.Edge2] != null)
+            {
+                lblLine2EdgeFilterSizeValue.Text = _measureLineParamList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.FilterHalfSizeInPixels.ToString();
+                lblLine2EdgeThresholdValue.Text = _measureLineParamList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.ContrastThreshold.ToString();
+                if (_measureLineParamList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.Edge0Polarity == CogCaliperPolarityConstants.DarkToLight)
+                    rdoLine2EdgeDarkToLight.Checked = true;
+                else
+                    rdoLine2EdgeLightToDark.Checked = true;
+            }
 
-            lblLine1EdgeFilterSizeValue.Text = _cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.FilterHalfSizeInPixels.ToString();
-            lblLine2EdgeFilterSizeValue.Text = _cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.FilterHalfSizeInPixels.ToString();
-            lblLine1EdgeThresholdValue.Text = _cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.ContrastThreshold.ToString();
-            lblLine2EdgeThresholdValue.Text = _cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.ContrastThreshold.ToString();
-
-            if (_cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge1].RunParams.Edge0Polarity == CogCaliperPolarityConstants.DarkToLight)
-                rdoLine1EdgeDarkToLight.Checked = true;
-            else
-                rdoLine1EdgeLightToDark.Checked = true;
-
-            if (_cogCaliperToolList[index].CogCaliperTool[(int)ePair.Edge2].RunParams.Edge0Polarity == CogCaliperPolarityConstants.DarkToLight)
-                rdoLine2EdgeDarkToLight.Checked = true;
-            else
-                rdoLine2EdgeLightToDark.Checked = true;
         }
 
         private void SetCircleCaliperNumber(object sender)
@@ -1065,10 +1079,10 @@ namespace COG.Controls
             switch (_measureType)
             {
                 case eMeasureType.Line:
-                    if (_cogCaliperToolList.Count <= 0)
+                    if (_measureLineParamList.Count <= 0)
                         return;
 
-                    _cogCaliperToolList[_selectedLineIndex].CogCaliperTool[(int)edgeNo].RunParams.Edge0Polarity = edgePolarity;
+                    _measureLineParamList[_selectedLineIndex].CogCaliperTool[(int)edgeNo].RunParams.Edge0Polarity = edgePolarity;
                     break;
 
                 case eMeasureType.Circle:
@@ -1169,7 +1183,7 @@ namespace COG.Controls
                 for (int lineCount = 0; lineCount < _lineCount; lineCount++)
                 {
                     MeasureLineParameter lineParam = new MeasureLineParameter();
-                    lineParam.CogCaliperTool = _cogCaliperToolList[lineCount].CogCaliperTool;
+                    lineParam.CogCaliperTool = _measureLineParamList[lineCount].CogCaliperTool;
                     _measureLineParamList[lineCount] = lineParam.Copy();
                 }
             }
@@ -1254,7 +1268,7 @@ namespace COG.Controls
                 //DrawLabel(_teachingDisplay, resultMessage,0);
                 FormMain.Instance().SelectUnitForm.VisionTeachForm.DrawLabel(_teachingDisplay, resultMessage, 0);
 
-                resultMessage = string.Format("Point 1 X:{0:F3} Y:{1:F3}", resultPoint[1].X, resultPoint[1].Y);
+                resultMessage = string.Format("Point 2 X:{0:F3} Y:{1:F3}", resultPoint[1].X, resultPoint[1].Y);
                 //DrawLabel(_teachingDisplay, resultMessage,1);
                 FormMain.Instance().SelectUnitForm.VisionTeachForm.DrawLabel(_teachingDisplay, resultMessage, 1);
 

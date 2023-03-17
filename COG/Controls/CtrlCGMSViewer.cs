@@ -54,16 +54,13 @@ namespace COG.Controls
             cogDisplayThumbnail.PopupMenu = false;
         }
 
-        public void UpdateDisplay(int imageIndex, int row = 0, int col = 0, CogImage8Grey image = null)
+        public void UpdateDisplay(int imageIndex)
         {
             if (_cogRecordDisplay.Image != null)
                 _cogRecordDisplay.Image = null;
 
             Console.WriteLine((imageIndex + 1).ToString() + "번 째 이미지 선택");
-            //_cogRecordDisplay.Image = image[row, col];
-            //_cogRecordDisplay.Image = image[row][col];
-            //_cogRecordDisplay.Image = Main.AlignUnit[0].PAT[row, col].m_CogLineScanBuf
-
+            //_cogRecordDisplay.Image = 넣을 이미지;
 
             //CGMSDrawBoxList[displayIndex].UpdateCGMSDisplay(image);
         }
