@@ -244,7 +244,7 @@ namespace COG
 
             lbl.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
             lbl.TextAlign = ContentAlignment.MiddleCenter;
-            lbl.Text = name.ToString();
+            lbl.Text = name.ToString().ToUpper();
             lbl.Dock = DockStyle.Fill;
 
             return lbl;
@@ -260,7 +260,7 @@ namespace COG
             chk.Appearance = Appearance.Button;
             chk.CheckedChanged += Chk_CheckedChanged;
             chk.Name = "lbl" + name.ToString();
-            chk.Text = name.ToString();
+            chk.Text = name.ToString()/*.ToUpper()*/;
             chk.TextAlign = ContentAlignment.MiddleCenter;
             chk.Dock = DockStyle.Fill;
 

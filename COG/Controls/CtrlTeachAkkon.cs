@@ -98,8 +98,8 @@ namespace COG.Controls
 
                 case eTeachingPosition.Stage1_Scan_Start:
                     // 임시
-                    ////_stageNo = eStageNo.Inspection1;
-                    ////_camNo = eCameraNo.Inspection1;
+                    _stageNo = eStageNo.Stage1;
+                    _camNo = eCameraNo.PreAlign;
                     break;
 
                 default:
@@ -617,6 +617,7 @@ namespace COG.Controls
                     }
                 }
 
+                cmbGroupNumber.SelectedIndex = 0;
                 RefreshAkkonRegion();
             }
         }
@@ -1932,10 +1933,10 @@ namespace COG.Controls
                 else
                     tabAkkonData.SelectedIndex = 1;
 
-                btn.BackColor = Color.Gray;
+                btn.BackColor = Color.LimeGreen;
             }
             else
-                btn.BackColor = Color.Silver;
+                btn.BackColor = Color.DarkGray;
         }
 
         private void btnAkkonTest_Click(object sender, EventArgs e)

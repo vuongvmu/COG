@@ -617,6 +617,27 @@ namespace COG
                 Main.GetImageFile(Main.vision.CogImgTool[0], openfileDialog.FileName);
                 Main.vision.CogCamBuf[0] = Main.vision.CogImgTool[0].OutputImage;
                 Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_CogLineScanBuf = (CogImage8Grey)Main.vision.CogCamBuf[0];
+
+                // PJH_TEST_230321_S
+                //Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf = new OpenCvSharp.Mat(ofd.FileName, OpenCvSharp.ImreadModes.Grayscale);
+
+                //if (Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf.Depth() != (int)OpenCvSharp.ImreadModes.Grayscale)
+                //    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf, Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY);
+
+                //Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf = new OpenCvSharp.Mat(ofd.FileName, OpenCvSharp.ImreadModes.Grayscale);
+
+                //if (Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf.Depth() != (int)OpenCvSharp.ImreadModes.Grayscale)
+                //    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY); ;
+                Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf = new OpenCvSharp.Mat(openfileDialog.FileName, OpenCvSharp.ImreadModes.Grayscale);
+
+                if (Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf.Depth() != (int)OpenCvSharp.ImreadModes.Grayscale)
+                    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf, Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY);
+
+                Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf = new OpenCvSharp.Mat(openfileDialog.FileName, OpenCvSharp.ImreadModes.Grayscale);
+
+                if (Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf.Depth() != (int)OpenCvSharp.ImreadModes.Grayscale)
+                    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY); ;
+                // PJH_TEST_230321_E
             }
 
             TeachDisplay.Image = Main.AlignUnit[(int)_camNo].PAT[(int)_stageNo, _tabNo].m_CogLineScanBuf;

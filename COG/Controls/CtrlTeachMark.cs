@@ -99,7 +99,7 @@ namespace COG.Controls
                 case eTeachingPosition.Stage1_Scan_Start:
                     // 임시
                     _stageNo = eStageNo.Stage1;
-                    _camNo = eCameraNo.Inspection1;
+                    _camNo = eCameraNo.PreAlign;
                     break;
 
                 default:
@@ -893,6 +893,7 @@ namespace COG.Controls
         private void CreateObject()
         {
 #if ATT
+            CreateList();
             SetAlignProperty();
             SetAkkonProperty();
 
@@ -997,8 +998,10 @@ namespace COG.Controls
                     _markDisplay.Image = null;
             }
 
-            lblMarkScore.Text = (_patternList[(int)_markIndex][(int)_targetObject, (int)_markPosition].Score * 100).ToString();
-            lblMarkAngleThreshold.Text = _patternList[(int)_markIndex][(int)_targetObject, (int)_markPosition].Angle.ToString();
+            // PJH_TEST_230321_S
+            //lblMarkScore.Text = (_patternList[(int)_markIndex][(int)_targetObject, (int)_markPosition].Score * 100).ToString();
+            //lblMarkAngleThreshold.Text = _patternList[(int)_markIndex][(int)_targetObject, (int)_markPosition].Angle.ToString();
+            // PJH_TEST_230321_E
 
             if (_markPosition == eMarkPosition.Left)
                 nudLightDimmingLevel.Text = Main.TeachingPositionList[(int)eTeachingPosition.Stage1_PreAlign_Left].OpticParam.LightLevel.ToString();

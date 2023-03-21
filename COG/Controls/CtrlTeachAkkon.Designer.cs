@@ -28,24 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlTeachAkkon));
             this.tlpTeach = new System.Windows.Forms.TableLayoutPanel();
             this.tlpAkkonDataGridView = new System.Windows.Forms.TableLayoutPanel();
             this.tabAkkonData = new System.Windows.Forms.TabControl();
             this.tpAkkonROI = new System.Windows.Forms.TabPage();
             this.dgvAkkonROI = new System.Windows.Forms.DataGridView();
-            this.COL_00 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COL_04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colROINo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLeftTop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRightTop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRightBottom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLeftBottom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpAkkonResult = new System.Windows.Forms.TabPage();
             this.dgvAkkonResult = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colResultNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStrength = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colJudgement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpAkkonDataShow = new System.Windows.Forms.TableLayoutPanel();
             this.rdoAkkonResult = new System.Windows.Forms.RadioButton();
             this.rdoAkkonROI = new System.Windows.Forms.RadioButton();
@@ -73,17 +79,6 @@
             this.lblHeightCutValue = new System.Windows.Forms.Label();
             this.lblBWRatioValue = new System.Windows.Forms.Label();
             this.lblExtraLeadDisplayValue = new System.Windows.Forms.Label();
-            this.lblDimple = new System.Windows.Forms.Label();
-            this.lblDimpleNGCountValue = new System.Windows.Forms.Label();
-            this.lblAlarm = new System.Windows.Forms.Label();
-            this.lblAlarmCapacity = new System.Windows.Forms.Label();
-            this.lblAlarmNGCount = new System.Windows.Forms.Label();
-            this.lblAlarmCapacityValue = new System.Windows.Forms.Label();
-            this.lblAlarmNGCountValue = new System.Windows.Forms.Label();
-            this.lblDimpleThresholdValue = new System.Windows.Forms.Label();
-            this.lblDimpleNGCount = new System.Windows.Forms.Label();
-            this.lblDimpleThreshold = new System.Windows.Forms.Label();
-            this.chkUseDimple = new System.Windows.Forms.CheckBox();
             this.pnlGroup = new System.Windows.Forms.Panel();
             this.tlpGroup = new System.Windows.Forms.TableLayoutPanel();
             this.btnROIShow = new System.Windows.Forms.Button();
@@ -109,6 +104,20 @@
             this.btnCopyROI = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.pnlOption = new System.Windows.Forms.Panel();
+            this.tlpOption = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDimple = new System.Windows.Forms.Label();
+            this.lblDimpleNGCount = new System.Windows.Forms.Label();
+            this.lblDimpleNGCountValue = new System.Windows.Forms.Label();
+            this.lblDimpleThreshold = new System.Windows.Forms.Label();
+            this.lblDimpleThresholdValue = new System.Windows.Forms.Label();
+            this.chkUseDimple = new System.Windows.Forms.CheckBox();
+            this.lblAlarmNGCount = new System.Windows.Forms.Label();
+            this.lblAlarmCapacity = new System.Windows.Forms.Label();
+            this.lblAlarm = new System.Windows.Forms.Label();
+            this.lblAlarmNGCountValue = new System.Windows.Forms.Label();
+            this.lblAlarmCapacityValue = new System.Windows.Forms.Label();
+            this.chkUseAlarm = new System.Windows.Forms.CheckBox();
             this.pnlMakerParameter = new System.Windows.Forms.Panel();
             this.tlpMakerParameter = new System.Windows.Forms.TableLayoutPanel();
             this.cmbFilterDirection = new System.Windows.Forms.ComboBox();
@@ -147,13 +156,10 @@
             this.rdoGroup = new System.Windows.Forms.RadioButton();
             this.rdoMakerParmeter = new System.Windows.Forms.RadioButton();
             this.rdoEngineerParmeter = new System.Windows.Forms.RadioButton();
+            this.rdoOption = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAkkonTest = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
-            this.rdoOption = new System.Windows.Forms.RadioButton();
-            this.pnlOption = new System.Windows.Forms.Panel();
-            this.tlpOption = new System.Windows.Forms.TableLayoutPanel();
-            this.chkUseAlarm = new System.Windows.Forms.CheckBox();
             this.tlpTeach.SuspendLayout();
             this.tlpAkkonDataGridView.SuspendLayout();
             this.tabAkkonData.SuspendLayout();
@@ -169,13 +175,13 @@
             this.pnlGroup.SuspendLayout();
             this.tlpGroup.SuspendLayout();
             this.tlpCloneROI.SuspendLayout();
+            this.pnlOption.SuspendLayout();
+            this.tlpOption.SuspendLayout();
             this.pnlMakerParameter.SuspendLayout();
             this.tlpMakerParameter.SuspendLayout();
             this.pnlSelectParameter.SuspendLayout();
             this.tlpSelectParameter.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnlOption.SuspendLayout();
-            this.tlpOption.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpTeach
@@ -246,67 +252,98 @@
             // 
             this.dgvAkkonROI.AllowUserToAddRows = false;
             this.dgvAkkonROI.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAkkonROI.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAkkonROI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAkkonROI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.COL_00,
-            this.COL_01,
-            this.COL_02,
-            this.COL_03,
-            this.COL_04});
+            this.colROINo,
+            this.colLeftTop,
+            this.colRightTop,
+            this.colRightBottom,
+            this.colLeftBottom});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAkkonROI.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAkkonROI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAkkonROI.Location = new System.Drawing.Point(0, 0);
             this.dgvAkkonROI.Margin = new System.Windows.Forms.Padding(0);
             this.dgvAkkonROI.Name = "dgvAkkonROI";
             this.dgvAkkonROI.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAkkonROI.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.dgvAkkonROI.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAkkonROI.RowTemplate.Height = 23;
             this.dgvAkkonROI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAkkonROI.Size = new System.Drawing.Size(792, 234);
             this.dgvAkkonROI.TabIndex = 0;
             this.dgvAkkonROI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAkkonROI_CellClick);
             // 
-            // COL_00
+            // colROINo
             // 
-            this.COL_00.FillWeight = 110F;
-            this.COL_00.HeaderText = "No.";
-            this.COL_00.Name = "COL_00";
-            this.COL_00.ReadOnly = true;
-            this.COL_00.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.COL_00.Width = 70;
+            this.colROINo.FillWeight = 110F;
+            this.colROINo.HeaderText = "NO";
+            this.colROINo.MinimumWidth = 70;
+            this.colROINo.Name = "colROINo";
+            this.colROINo.ReadOnly = true;
+            this.colROINo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colROINo.Width = 70;
             // 
-            // COL_01
+            // colLeftTop
             // 
-            this.COL_01.FillWeight = 140F;
-            this.COL_01.HeaderText = "LeftTop";
-            this.COL_01.Name = "COL_01";
-            this.COL_01.ReadOnly = true;
-            this.COL_01.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.COL_01.Width = 140;
+            this.colLeftTop.FillWeight = 140F;
+            this.colLeftTop.HeaderText = "LEFT TOP";
+            this.colLeftTop.MinimumWidth = 160;
+            this.colLeftTop.Name = "colLeftTop";
+            this.colLeftTop.ReadOnly = true;
+            this.colLeftTop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colLeftTop.Width = 160;
             // 
-            // COL_02
+            // colRightTop
             // 
-            this.COL_02.FillWeight = 140F;
-            this.COL_02.HeaderText = "RightTop";
-            this.COL_02.Name = "COL_02";
-            this.COL_02.ReadOnly = true;
-            this.COL_02.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.COL_02.Width = 140;
+            this.colRightTop.FillWeight = 140F;
+            this.colRightTop.HeaderText = "RIGHT TOP";
+            this.colRightTop.MinimumWidth = 160;
+            this.colRightTop.Name = "colRightTop";
+            this.colRightTop.ReadOnly = true;
+            this.colRightTop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colRightTop.Width = 160;
             // 
-            // COL_03
+            // colRightBottom
             // 
-            this.COL_03.FillWeight = 140F;
-            this.COL_03.HeaderText = "RightBottom";
-            this.COL_03.Name = "COL_03";
-            this.COL_03.ReadOnly = true;
-            this.COL_03.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.COL_03.Width = 140;
+            this.colRightBottom.FillWeight = 140F;
+            this.colRightBottom.HeaderText = "RIGHT BOTTOM";
+            this.colRightBottom.MinimumWidth = 160;
+            this.colRightBottom.Name = "colRightBottom";
+            this.colRightBottom.ReadOnly = true;
+            this.colRightBottom.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colRightBottom.Width = 160;
             // 
-            // COL_04
+            // colLeftBottom
             // 
-            this.COL_04.FillWeight = 140F;
-            this.COL_04.HeaderText = "LeftBottom";
-            this.COL_04.Name = "COL_04";
-            this.COL_04.ReadOnly = true;
-            this.COL_04.Width = 140;
+            this.colLeftBottom.FillWeight = 140F;
+            this.colLeftBottom.HeaderText = "LEFT BOTTOM";
+            this.colLeftBottom.MinimumWidth = 160;
+            this.colLeftBottom.Name = "colLeftBottom";
+            this.colLeftBottom.ReadOnly = true;
+            this.colLeftBottom.Width = 160;
             // 
             // tpAkkonResult
             // 
@@ -323,13 +360,29 @@
             // 
             this.dgvAkkonResult.AllowUserToAddRows = false;
             this.dgvAkkonResult.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAkkonResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAkkonResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAkkonResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.colResultNo,
+            this.colCount,
+            this.colLength,
+            this.colStrength,
+            this.colJudgement});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAkkonResult.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAkkonResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAkkonResult.Location = new System.Drawing.Point(0, 0);
             this.dgvAkkonResult.Name = "dgvAkkonResult";
@@ -338,44 +391,49 @@
             this.dgvAkkonResult.Size = new System.Drawing.Size(792, 234);
             this.dgvAkkonResult.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
+            // colResultNo
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 80;
+            this.colResultNo.HeaderText = "NO";
+            this.colResultNo.MinimumWidth = 70;
+            this.colResultNo.Name = "colResultNo";
+            this.colResultNo.ReadOnly = true;
+            this.colResultNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colResultNo.Width = 80;
             // 
-            // dataGridViewTextBoxColumn2
+            // colCount
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Count";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 140;
+            this.colCount.HeaderText = "COUNT";
+            this.colCount.MinimumWidth = 160;
+            this.colCount.Name = "colCount";
+            this.colCount.ReadOnly = true;
+            this.colCount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCount.Width = 160;
             // 
-            // dataGridViewTextBoxColumn3
+            // colLength
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Length";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 140;
+            this.colLength.HeaderText = "LENGTH";
+            this.colLength.MinimumWidth = 160;
+            this.colLength.Name = "colLength";
+            this.colLength.ReadOnly = true;
+            this.colLength.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colLength.Width = 160;
             // 
-            // dataGridViewTextBoxColumn4
+            // colStrength
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Strength";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.Width = 140;
+            this.colStrength.HeaderText = "STRENGTH";
+            this.colStrength.MinimumWidth = 160;
+            this.colStrength.Name = "colStrength";
+            this.colStrength.ReadOnly = true;
+            this.colStrength.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colStrength.Width = 160;
             // 
-            // dataGridViewTextBoxColumn5
+            // colJudgement
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Judgement";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 140;
+            this.colJudgement.HeaderText = "JUDGEMENT";
+            this.colJudgement.MinimumWidth = 160;
+            this.colJudgement.Name = "colJudgement";
+            this.colJudgement.ReadOnly = true;
+            this.colJudgement.Width = 160;
             // 
             // tlpAkkonDataShow
             // 
@@ -803,167 +861,6 @@
             this.lblExtraLeadDisplayValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblExtraLeadDisplayValue.Click += new System.EventHandler(this.lblExtraLeadDisplayValue_Click);
             // 
-            // lblDimple
-            // 
-            this.lblDimple.BackColor = System.Drawing.Color.DarkGray;
-            this.lblDimple.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDimple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDimple.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDimple.Location = new System.Drawing.Point(0, 40);
-            this.lblDimple.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDimple.Name = "lblDimple";
-            this.lblDimple.Size = new System.Drawing.Size(61, 20);
-            this.lblDimple.TabIndex = 18;
-            this.lblDimple.Text = "DIMPLE";
-            this.lblDimple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDimpleNGCountValue
-            // 
-            this.lblDimpleNGCountValue.BackColor = System.Drawing.Color.White;
-            this.lblDimpleNGCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDimpleNGCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDimpleNGCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDimpleNGCountValue.Location = new System.Drawing.Point(61, 40);
-            this.lblDimpleNGCountValue.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDimpleNGCountValue.Name = "lblDimpleNGCountValue";
-            this.lblDimpleNGCountValue.Size = new System.Drawing.Size(61, 20);
-            this.lblDimpleNGCountValue.TabIndex = 27;
-            this.lblDimpleNGCountValue.Text = "0";
-            this.lblDimpleNGCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDimpleNGCountValue.Click += new System.EventHandler(this.lblDimpleNGCountValue_Click);
-            // 
-            // lblAlarm
-            // 
-            this.lblAlarm.BackColor = System.Drawing.Color.DarkGray;
-            this.lblAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAlarm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlarm.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAlarm.Location = new System.Drawing.Point(0, 120);
-            this.lblAlarm.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAlarm.Name = "lblAlarm";
-            this.lblAlarm.Size = new System.Drawing.Size(61, 20);
-            this.lblAlarm.TabIndex = 18;
-            this.lblAlarm.Text = "ALARM";
-            this.lblAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAlarmCapacity
-            // 
-            this.lblAlarmCapacity.BackColor = System.Drawing.Color.DarkGray;
-            this.lblAlarmCapacity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAlarmCapacity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlarmCapacity.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAlarmCapacity.Location = new System.Drawing.Point(61, 100);
-            this.lblAlarmCapacity.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAlarmCapacity.Name = "lblAlarmCapacity";
-            this.lblAlarmCapacity.Size = new System.Drawing.Size(61, 20);
-            this.lblAlarmCapacity.TabIndex = 18;
-            this.lblAlarmCapacity.Text = "NG CAPACITY";
-            this.lblAlarmCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAlarmNGCount
-            // 
-            this.lblAlarmNGCount.BackColor = System.Drawing.Color.DarkGray;
-            this.lblAlarmNGCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAlarmNGCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlarmNGCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAlarmNGCount.Location = new System.Drawing.Point(122, 100);
-            this.lblAlarmNGCount.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAlarmNGCount.Name = "lblAlarmNGCount";
-            this.lblAlarmNGCount.Size = new System.Drawing.Size(61, 20);
-            this.lblAlarmNGCount.TabIndex = 18;
-            this.lblAlarmNGCount.Text = "NG COUNT";
-            this.lblAlarmNGCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAlarmCapacityValue
-            // 
-            this.lblAlarmCapacityValue.BackColor = System.Drawing.Color.White;
-            this.lblAlarmCapacityValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAlarmCapacityValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlarmCapacityValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAlarmCapacityValue.Location = new System.Drawing.Point(61, 120);
-            this.lblAlarmCapacityValue.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAlarmCapacityValue.Name = "lblAlarmCapacityValue";
-            this.lblAlarmCapacityValue.Size = new System.Drawing.Size(61, 20);
-            this.lblAlarmCapacityValue.TabIndex = 27;
-            this.lblAlarmCapacityValue.Text = "0";
-            this.lblAlarmCapacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAlarmCapacityValue.Click += new System.EventHandler(this.lblAlarmCapacityValue_Click);
-            // 
-            // lblAlarmNGCountValue
-            // 
-            this.lblAlarmNGCountValue.BackColor = System.Drawing.Color.White;
-            this.lblAlarmNGCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAlarmNGCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAlarmNGCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblAlarmNGCountValue.Location = new System.Drawing.Point(122, 120);
-            this.lblAlarmNGCountValue.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAlarmNGCountValue.Name = "lblAlarmNGCountValue";
-            this.lblAlarmNGCountValue.Size = new System.Drawing.Size(61, 20);
-            this.lblAlarmNGCountValue.TabIndex = 27;
-            this.lblAlarmNGCountValue.Text = "0";
-            this.lblAlarmNGCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAlarmNGCountValue.Click += new System.EventHandler(this.lblAlarmNGCountValue_Click);
-            // 
-            // lblDimpleThresholdValue
-            // 
-            this.lblDimpleThresholdValue.BackColor = System.Drawing.Color.White;
-            this.lblDimpleThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDimpleThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDimpleThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDimpleThresholdValue.Location = new System.Drawing.Point(122, 40);
-            this.lblDimpleThresholdValue.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDimpleThresholdValue.Name = "lblDimpleThresholdValue";
-            this.lblDimpleThresholdValue.Size = new System.Drawing.Size(61, 20);
-            this.lblDimpleThresholdValue.TabIndex = 27;
-            this.lblDimpleThresholdValue.Text = "0";
-            this.lblDimpleThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDimpleThresholdValue.Click += new System.EventHandler(this.lblDimpleThresholdValue_Click);
-            // 
-            // lblDimpleNGCount
-            // 
-            this.lblDimpleNGCount.BackColor = System.Drawing.Color.DarkGray;
-            this.lblDimpleNGCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDimpleNGCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDimpleNGCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDimpleNGCount.Location = new System.Drawing.Point(61, 20);
-            this.lblDimpleNGCount.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDimpleNGCount.Name = "lblDimpleNGCount";
-            this.lblDimpleNGCount.Size = new System.Drawing.Size(61, 20);
-            this.lblDimpleNGCount.TabIndex = 18;
-            this.lblDimpleNGCount.Text = "NG COUNT";
-            this.lblDimpleNGCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDimpleThreshold
-            // 
-            this.lblDimpleThreshold.BackColor = System.Drawing.Color.DarkGray;
-            this.lblDimpleThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDimpleThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDimpleThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDimpleThreshold.Location = new System.Drawing.Point(122, 20);
-            this.lblDimpleThreshold.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDimpleThreshold.Name = "lblDimpleThreshold";
-            this.lblDimpleThreshold.Size = new System.Drawing.Size(61, 20);
-            this.lblDimpleThreshold.TabIndex = 18;
-            this.lblDimpleThreshold.Text = "THRESHOLD";
-            this.lblDimpleThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // chkUseDimple
-            // 
-            this.chkUseDimple.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkUseDimple.AutoSize = true;
-            this.chkUseDimple.BackColor = System.Drawing.Color.DarkGray;
-            this.chkUseDimple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkUseDimple.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.chkUseDimple.Location = new System.Drawing.Point(183, 40);
-            this.chkUseDimple.Margin = new System.Windows.Forms.Padding(0);
-            this.chkUseDimple.Name = "chkUseDimple";
-            this.chkUseDimple.Size = new System.Drawing.Size(63, 20);
-            this.chkUseDimple.TabIndex = 47;
-            this.chkUseDimple.Text = "On";
-            this.chkUseDimple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkUseDimple.UseVisualStyleBackColor = false;
-            this.chkUseDimple.CheckedChanged += new System.EventHandler(this.chkUseDimple_CheckedChanged);
-            // 
             // pnlGroup
             // 
             this.pnlGroup.Controls.Add(this.tlpGroup);
@@ -1380,6 +1277,228 @@
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // pnlOption
+            // 
+            this.pnlOption.Controls.Add(this.tlpOption);
+            this.pnlOption.Location = new System.Drawing.Point(274, 197);
+            this.pnlOption.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlOption.Name = "pnlOption";
+            this.pnlOption.Size = new System.Drawing.Size(246, 166);
+            this.pnlOption.TabIndex = 292;
+            // 
+            // tlpOption
+            // 
+            this.tlpOption.ColumnCount = 4;
+            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpOption.Controls.Add(this.lblDimple, 0, 2);
+            this.tlpOption.Controls.Add(this.lblDimpleNGCount, 1, 1);
+            this.tlpOption.Controls.Add(this.lblDimpleNGCountValue, 1, 2);
+            this.tlpOption.Controls.Add(this.lblDimpleThreshold, 2, 1);
+            this.tlpOption.Controls.Add(this.lblDimpleThresholdValue, 2, 2);
+            this.tlpOption.Controls.Add(this.chkUseDimple, 3, 2);
+            this.tlpOption.Controls.Add(this.lblAlarmNGCount, 2, 5);
+            this.tlpOption.Controls.Add(this.lblAlarmCapacity, 1, 5);
+            this.tlpOption.Controls.Add(this.lblAlarm, 0, 6);
+            this.tlpOption.Controls.Add(this.lblAlarmNGCountValue, 2, 6);
+            this.tlpOption.Controls.Add(this.lblAlarmCapacityValue, 1, 6);
+            this.tlpOption.Controls.Add(this.chkUseAlarm, 3, 6);
+            this.tlpOption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpOption.Location = new System.Drawing.Point(0, 0);
+            this.tlpOption.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpOption.Name = "tlpOption";
+            this.tlpOption.RowCount = 8;
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOption.Size = new System.Drawing.Size(246, 166);
+            this.tlpOption.TabIndex = 0;
+            // 
+            // lblDimple
+            // 
+            this.lblDimple.BackColor = System.Drawing.Color.DarkGray;
+            this.lblDimple.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDimple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDimple.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDimple.Location = new System.Drawing.Point(0, 40);
+            this.lblDimple.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDimple.Name = "lblDimple";
+            this.lblDimple.Size = new System.Drawing.Size(61, 20);
+            this.lblDimple.TabIndex = 18;
+            this.lblDimple.Text = "DIMPLE";
+            this.lblDimple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDimpleNGCount
+            // 
+            this.lblDimpleNGCount.BackColor = System.Drawing.Color.DarkGray;
+            this.lblDimpleNGCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDimpleNGCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDimpleNGCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDimpleNGCount.Location = new System.Drawing.Point(61, 20);
+            this.lblDimpleNGCount.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDimpleNGCount.Name = "lblDimpleNGCount";
+            this.lblDimpleNGCount.Size = new System.Drawing.Size(61, 20);
+            this.lblDimpleNGCount.TabIndex = 18;
+            this.lblDimpleNGCount.Text = "NG COUNT";
+            this.lblDimpleNGCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDimpleNGCountValue
+            // 
+            this.lblDimpleNGCountValue.BackColor = System.Drawing.Color.White;
+            this.lblDimpleNGCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDimpleNGCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDimpleNGCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDimpleNGCountValue.Location = new System.Drawing.Point(61, 40);
+            this.lblDimpleNGCountValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDimpleNGCountValue.Name = "lblDimpleNGCountValue";
+            this.lblDimpleNGCountValue.Size = new System.Drawing.Size(61, 20);
+            this.lblDimpleNGCountValue.TabIndex = 27;
+            this.lblDimpleNGCountValue.Text = "0";
+            this.lblDimpleNGCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDimpleNGCountValue.Click += new System.EventHandler(this.lblDimpleNGCountValue_Click);
+            // 
+            // lblDimpleThreshold
+            // 
+            this.lblDimpleThreshold.BackColor = System.Drawing.Color.DarkGray;
+            this.lblDimpleThreshold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDimpleThreshold.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDimpleThreshold.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDimpleThreshold.Location = new System.Drawing.Point(122, 20);
+            this.lblDimpleThreshold.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDimpleThreshold.Name = "lblDimpleThreshold";
+            this.lblDimpleThreshold.Size = new System.Drawing.Size(61, 20);
+            this.lblDimpleThreshold.TabIndex = 18;
+            this.lblDimpleThreshold.Text = "THRESHOLD";
+            this.lblDimpleThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDimpleThresholdValue
+            // 
+            this.lblDimpleThresholdValue.BackColor = System.Drawing.Color.White;
+            this.lblDimpleThresholdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDimpleThresholdValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDimpleThresholdValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDimpleThresholdValue.Location = new System.Drawing.Point(122, 40);
+            this.lblDimpleThresholdValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDimpleThresholdValue.Name = "lblDimpleThresholdValue";
+            this.lblDimpleThresholdValue.Size = new System.Drawing.Size(61, 20);
+            this.lblDimpleThresholdValue.TabIndex = 27;
+            this.lblDimpleThresholdValue.Text = "0";
+            this.lblDimpleThresholdValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDimpleThresholdValue.Click += new System.EventHandler(this.lblDimpleThresholdValue_Click);
+            // 
+            // chkUseDimple
+            // 
+            this.chkUseDimple.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkUseDimple.AutoSize = true;
+            this.chkUseDimple.BackColor = System.Drawing.Color.DarkGray;
+            this.chkUseDimple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkUseDimple.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.chkUseDimple.Location = new System.Drawing.Point(183, 40);
+            this.chkUseDimple.Margin = new System.Windows.Forms.Padding(0);
+            this.chkUseDimple.Name = "chkUseDimple";
+            this.chkUseDimple.Size = new System.Drawing.Size(63, 20);
+            this.chkUseDimple.TabIndex = 47;
+            this.chkUseDimple.Text = "On";
+            this.chkUseDimple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkUseDimple.UseVisualStyleBackColor = false;
+            this.chkUseDimple.CheckedChanged += new System.EventHandler(this.chkUseDimple_CheckedChanged);
+            // 
+            // lblAlarmNGCount
+            // 
+            this.lblAlarmNGCount.BackColor = System.Drawing.Color.DarkGray;
+            this.lblAlarmNGCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAlarmNGCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAlarmNGCount.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblAlarmNGCount.Location = new System.Drawing.Point(122, 100);
+            this.lblAlarmNGCount.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAlarmNGCount.Name = "lblAlarmNGCount";
+            this.lblAlarmNGCount.Size = new System.Drawing.Size(61, 20);
+            this.lblAlarmNGCount.TabIndex = 18;
+            this.lblAlarmNGCount.Text = "NG COUNT";
+            this.lblAlarmNGCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAlarmCapacity
+            // 
+            this.lblAlarmCapacity.BackColor = System.Drawing.Color.DarkGray;
+            this.lblAlarmCapacity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAlarmCapacity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAlarmCapacity.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblAlarmCapacity.Location = new System.Drawing.Point(61, 100);
+            this.lblAlarmCapacity.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAlarmCapacity.Name = "lblAlarmCapacity";
+            this.lblAlarmCapacity.Size = new System.Drawing.Size(61, 20);
+            this.lblAlarmCapacity.TabIndex = 18;
+            this.lblAlarmCapacity.Text = "NG CAPACITY";
+            this.lblAlarmCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAlarm
+            // 
+            this.lblAlarm.BackColor = System.Drawing.Color.DarkGray;
+            this.lblAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAlarm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAlarm.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblAlarm.Location = new System.Drawing.Point(0, 120);
+            this.lblAlarm.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAlarm.Name = "lblAlarm";
+            this.lblAlarm.Size = new System.Drawing.Size(61, 20);
+            this.lblAlarm.TabIndex = 18;
+            this.lblAlarm.Text = "ALARM";
+            this.lblAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAlarmNGCountValue
+            // 
+            this.lblAlarmNGCountValue.BackColor = System.Drawing.Color.White;
+            this.lblAlarmNGCountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAlarmNGCountValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAlarmNGCountValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblAlarmNGCountValue.Location = new System.Drawing.Point(122, 120);
+            this.lblAlarmNGCountValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAlarmNGCountValue.Name = "lblAlarmNGCountValue";
+            this.lblAlarmNGCountValue.Size = new System.Drawing.Size(61, 20);
+            this.lblAlarmNGCountValue.TabIndex = 27;
+            this.lblAlarmNGCountValue.Text = "0";
+            this.lblAlarmNGCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlarmNGCountValue.Click += new System.EventHandler(this.lblAlarmNGCountValue_Click);
+            // 
+            // lblAlarmCapacityValue
+            // 
+            this.lblAlarmCapacityValue.BackColor = System.Drawing.Color.White;
+            this.lblAlarmCapacityValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAlarmCapacityValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAlarmCapacityValue.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblAlarmCapacityValue.Location = new System.Drawing.Point(61, 120);
+            this.lblAlarmCapacityValue.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAlarmCapacityValue.Name = "lblAlarmCapacityValue";
+            this.lblAlarmCapacityValue.Size = new System.Drawing.Size(61, 20);
+            this.lblAlarmCapacityValue.TabIndex = 27;
+            this.lblAlarmCapacityValue.Text = "0";
+            this.lblAlarmCapacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlarmCapacityValue.Click += new System.EventHandler(this.lblAlarmCapacityValue_Click);
+            // 
+            // chkUseAlarm
+            // 
+            this.chkUseAlarm.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkUseAlarm.AutoSize = true;
+            this.chkUseAlarm.BackColor = System.Drawing.Color.DarkGray;
+            this.chkUseAlarm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkUseAlarm.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.chkUseAlarm.Location = new System.Drawing.Point(183, 120);
+            this.chkUseAlarm.Margin = new System.Windows.Forms.Padding(0);
+            this.chkUseAlarm.Name = "chkUseAlarm";
+            this.chkUseAlarm.Size = new System.Drawing.Size(63, 20);
+            this.chkUseAlarm.TabIndex = 47;
+            this.chkUseAlarm.Text = "On";
+            this.chkUseAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkUseAlarm.UseVisualStyleBackColor = false;
+            this.chkUseAlarm.CheckedChanged += new System.EventHandler(this.chkUseAlarm_CheckedChanged);
             // 
             // pnlMakerParameter
             // 
@@ -1999,6 +2118,23 @@
             this.rdoEngineerParmeter.UseVisualStyleBackColor = false;
             this.rdoEngineerParmeter.CheckedChanged += new System.EventHandler(this.rdoParameterType_CheckedChanged);
             // 
+            // rdoOption
+            // 
+            this.rdoOption.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdoOption.BackColor = System.Drawing.Color.DarkGray;
+            this.rdoOption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rdoOption.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.rdoOption.Location = new System.Drawing.Point(640, 0);
+            this.rdoOption.Margin = new System.Windows.Forms.Padding(0);
+            this.rdoOption.Name = "rdoOption";
+            this.rdoOption.Size = new System.Drawing.Size(160, 60);
+            this.rdoOption.TabIndex = 1;
+            this.rdoOption.TabStop = true;
+            this.rdoOption.Text = "OPTION";
+            this.rdoOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdoOption.UseVisualStyleBackColor = false;
+            this.rdoOption.CheckedChanged += new System.EventHandler(this.rdoParameterType_CheckedChanged);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
@@ -2048,84 +2184,6 @@
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
-            // rdoOption
-            // 
-            this.rdoOption.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdoOption.BackColor = System.Drawing.Color.DarkGray;
-            this.rdoOption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdoOption.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.rdoOption.Location = new System.Drawing.Point(640, 0);
-            this.rdoOption.Margin = new System.Windows.Forms.Padding(0);
-            this.rdoOption.Name = "rdoOption";
-            this.rdoOption.Size = new System.Drawing.Size(160, 60);
-            this.rdoOption.TabIndex = 1;
-            this.rdoOption.TabStop = true;
-            this.rdoOption.Text = "OPTION";
-            this.rdoOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdoOption.UseVisualStyleBackColor = false;
-            this.rdoOption.CheckedChanged += new System.EventHandler(this.rdoParameterType_CheckedChanged);
-            // 
-            // pnlOption
-            // 
-            this.pnlOption.Controls.Add(this.tlpOption);
-            this.pnlOption.Location = new System.Drawing.Point(274, 197);
-            this.pnlOption.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlOption.Name = "pnlOption";
-            this.pnlOption.Size = new System.Drawing.Size(246, 166);
-            this.pnlOption.TabIndex = 292;
-            // 
-            // tlpOption
-            // 
-            this.tlpOption.ColumnCount = 4;
-            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpOption.Controls.Add(this.lblDimple, 0, 2);
-            this.tlpOption.Controls.Add(this.lblDimpleNGCount, 1, 1);
-            this.tlpOption.Controls.Add(this.lblDimpleNGCountValue, 1, 2);
-            this.tlpOption.Controls.Add(this.lblDimpleThreshold, 2, 1);
-            this.tlpOption.Controls.Add(this.lblDimpleThresholdValue, 2, 2);
-            this.tlpOption.Controls.Add(this.chkUseDimple, 3, 2);
-            this.tlpOption.Controls.Add(this.lblAlarmNGCount, 2, 5);
-            this.tlpOption.Controls.Add(this.lblAlarmCapacity, 1, 5);
-            this.tlpOption.Controls.Add(this.lblAlarm, 0, 6);
-            this.tlpOption.Controls.Add(this.lblAlarmNGCountValue, 2, 6);
-            this.tlpOption.Controls.Add(this.lblAlarmCapacityValue, 1, 6);
-            this.tlpOption.Controls.Add(this.chkUseAlarm, 3, 6);
-            this.tlpOption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpOption.Location = new System.Drawing.Point(0, 0);
-            this.tlpOption.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpOption.Name = "tlpOption";
-            this.tlpOption.RowCount = 8;
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpOption.Size = new System.Drawing.Size(246, 166);
-            this.tlpOption.TabIndex = 0;
-            // 
-            // chkUseAlarm
-            // 
-            this.chkUseAlarm.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkUseAlarm.AutoSize = true;
-            this.chkUseAlarm.BackColor = System.Drawing.Color.DarkGray;
-            this.chkUseAlarm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkUseAlarm.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
-            this.chkUseAlarm.Location = new System.Drawing.Point(183, 120);
-            this.chkUseAlarm.Margin = new System.Windows.Forms.Padding(0);
-            this.chkUseAlarm.Name = "chkUseAlarm";
-            this.chkUseAlarm.Size = new System.Drawing.Size(63, 20);
-            this.chkUseAlarm.TabIndex = 47;
-            this.chkUseAlarm.Text = "On";
-            this.chkUseAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkUseAlarm.UseVisualStyleBackColor = false;
-            this.chkUseAlarm.CheckedChanged += new System.EventHandler(this.chkUseAlarm_CheckedChanged);
-            // 
             // CtrlTeachAkkon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -2151,14 +2209,14 @@
             this.tlpGroup.ResumeLayout(false);
             this.tlpGroup.PerformLayout();
             this.tlpCloneROI.ResumeLayout(false);
+            this.pnlOption.ResumeLayout(false);
+            this.tlpOption.ResumeLayout(false);
+            this.tlpOption.PerformLayout();
             this.pnlMakerParameter.ResumeLayout(false);
             this.tlpMakerParameter.ResumeLayout(false);
             this.pnlSelectParameter.ResumeLayout(false);
             this.tlpSelectParameter.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.pnlOption.ResumeLayout(false);
-            this.tlpOption.ResumeLayout(false);
-            this.tlpOption.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2173,17 +2231,7 @@
         private System.Windows.Forms.RadioButton rdoEngineerParmeter;
         private System.Windows.Forms.Panel pnlSelectParameter;
         private System.Windows.Forms.DataGridView dgvAkkonROI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_00;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_01;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_02;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_03;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COL_04;
         private System.Windows.Forms.DataGridView dgvAkkonResult;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TableLayoutPanel tlpAkkonDataGridView;
         private System.Windows.Forms.TabControl tabAkkonData;
         private System.Windows.Forms.TabPage tpAkkonROI;
@@ -2290,5 +2338,15 @@
         private System.Windows.Forms.Panel pnlOption;
         private System.Windows.Forms.TableLayoutPanel tlpOption;
         private System.Windows.Forms.CheckBox chkUseAlarm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colROINo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLeftTop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRightTop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRightBottom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLeftBottom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colResultNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLength;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStrength;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colJudgement;
     }
 }

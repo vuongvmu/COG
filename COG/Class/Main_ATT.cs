@@ -234,7 +234,7 @@ namespace COG
         /// <returns>검사 시작 실패</returns>
         public static bool ATT_InspectByTap(int nCamNo, int nStageNo, int nTapNo)
         {
-            Console.WriteLine("압흔검사요청[" + nTapNo.ToString() + "] - [" + nTapNo.ToString() + "] : [" + DateTime.Now.ToString() + "]");
+            Console.WriteLine("압흔검사요청[" + DateTime.Now.ToString() + "]");
             Console.WriteLine("ATT_InspectionByTap - nCamNo : " + nCamNo.ToString() + " / nStageNo : " + nStageNo.ToString() + " / nTapNo " + nTapNo.ToString());
             bool bRet = false;
 
@@ -245,7 +245,9 @@ namespace COG
             {
                 //IntPtr unmanagedPointer = Marshal.AllocHGlobal(AlignUnit[nStageNo].PAT[0, nTapNo].m_imgDataATT.Length);
                 //Marshal.Copy(AlignUnit[nStageNo].PAT[0, nTapNo].m_imgDataATT, 0, unmanagedPointer, AlignUnit[nStageNo].PAT[0, nTapNo].m_imgDataATT.Length);
-                bRet = ATTWrapper.AWATTFullInspection(nStageNo, nTapNo, (byte*)Main.AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_MatLineScanBuf.DataPointer, AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_imgCols, AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_imgRows);
+
+                bRet = ATTWrapper.AWATTFullInspection(nStageNo, nTapNo, Main.AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_MatLineScanBuf.DataPointer,
+                    AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_imgCols, AlignUnit[nCamNo].PAT[nStageNo, nTapNo].m_imgRows);
 
                 //Console.WriteLine("ATTWrapper.AWATTFullInspection - " + bRet.ToString() + " [" + DateTime.Now.ToString() + "]");
                 Console.WriteLine("ATTWrapper.AWATTFullInspection - " + bRet.ToString());
@@ -1014,10 +1016,7 @@ namespace COG
             return adAngle * OpenCvSharp.Cv2.PI / 180.0;
         }
 
-        // PJH_20221013_S
         public delegate void CALLBACKFUNC(int nStageNo, int nTapNo, bool bSliceInsp, int nError);
-        // PJH_20221013_E
-
         internal static class NativeMethods
         {
 #if DEBUG

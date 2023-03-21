@@ -184,7 +184,7 @@
             this.tlpMotionJog.Name = "tlpMotionJog";
             this.tlpMotionJog.RowCount = 1;
             this.tlpMotionJog.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMotionJog.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.tlpMotionJog.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tlpMotionJog.Size = new System.Drawing.Size(477, 297);
             this.tlpMotionJog.TabIndex = 5;
             // 
@@ -1227,7 +1227,7 @@
             this.btnStopTeachingPosition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStopTeachingPosition.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.btnStopTeachingPosition.Image = global::COG.Properties.Resources.Check48;
-            this.btnStopTeachingPosition.Location = new System.Drawing.Point(345, 3);
+            this.btnStopTeachingPosition.Location = new System.Drawing.Point(395, 3);
             this.btnStopTeachingPosition.Name = "btnStopTeachingPosition";
             this.btnStopTeachingPosition.Size = new System.Drawing.Size(94, 95);
             this.btnStopTeachingPosition.TabIndex = 200;
@@ -1243,7 +1243,7 @@
             this.btnMoveTeachingPosition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMoveTeachingPosition.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.btnMoveTeachingPosition.Image = global::COG.Properties.Resources.START;
-            this.btnMoveTeachingPosition.Location = new System.Drawing.Point(245, 3);
+            this.btnMoveTeachingPosition.Location = new System.Drawing.Point(295, 3);
             this.btnMoveTeachingPosition.Name = "btnMoveTeachingPosition";
             this.btnMoveTeachingPosition.Size = new System.Drawing.Size(94, 95);
             this.btnMoveTeachingPosition.TabIndex = 199;
@@ -1262,7 +1262,7 @@
             this.tlpTeachingList.Name = "tlpTeachingList";
             this.tlpTeachingList.RowCount = 1;
             this.tlpTeachingList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTeachingList.Size = new System.Drawing.Size(684, 76);
+            this.tlpTeachingList.Size = new System.Drawing.Size(784, 76);
             this.tlpTeachingList.TabIndex = 1;
             // 
             // tlpFormFunction
@@ -1288,7 +1288,7 @@
             this.tlpFormFunction.Name = "tlpFormFunction";
             this.tlpFormFunction.RowCount = 1;
             this.tlpFormFunction.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFormFunction.Size = new System.Drawing.Size(684, 101);
+            this.tlpFormFunction.Size = new System.Drawing.Size(784, 101);
             this.tlpFormFunction.TabIndex = 1;
             // 
             // btnExit
@@ -1298,7 +1298,7 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnExit.Location = new System.Drawing.Point(587, 3);
+            this.btnExit.Location = new System.Drawing.Point(687, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(94, 95);
             this.btnExit.TabIndex = 293;
@@ -1314,7 +1314,7 @@
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSave.Location = new System.Drawing.Point(487, 3);
+            this.btnSave.Location = new System.Drawing.Point(587, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 95);
             this.btnSave.TabIndex = 292;
@@ -1370,7 +1370,7 @@
             this.tlpMotionPopup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpMotionPopup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tlpMotionPopup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tlpMotionPopup.Size = new System.Drawing.Size(684, 861);
+            this.tlpMotionPopup.Size = new System.Drawing.Size(784, 861);
             this.tlpMotionPopup.TabIndex = 1;
             // 
             // pnlFunction
@@ -1381,7 +1381,7 @@
             this.pnlFunction.Location = new System.Drawing.Point(0, 76);
             this.pnlFunction.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFunction.Name = "pnlFunction";
-            this.pnlFunction.Size = new System.Drawing.Size(684, 684);
+            this.pnlFunction.Size = new System.Drawing.Size(784, 684);
             this.pnlFunction.TabIndex = 2;
             // 
             // tlpMotionParameter
@@ -1405,7 +1405,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(684, 861);
+            this.ClientSize = new System.Drawing.Size(784, 861);
             this.ControlBox = false;
             this.Controls.Add(this.tlpMotionPopup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
