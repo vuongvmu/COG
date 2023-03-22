@@ -192,7 +192,7 @@ namespace COG
 
 #if SIMUL
             LicenseCheck();
-            MessageBox.Show("Simlulation Mode");
+            MessageBox.Show("Simulation Mode");
 #else
             if (LicenseCheck())
             {

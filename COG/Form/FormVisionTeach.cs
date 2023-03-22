@@ -636,7 +636,17 @@ namespace COG
                 Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf = new OpenCvSharp.Mat(openfileDialog.FileName, OpenCvSharp.ImreadModes.Grayscale);
 
                 if (Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf.Depth() != (int)OpenCvSharp.ImreadModes.Grayscale)
-                    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY); ;
+                    OpenCvSharp.Cv2.CvtColor(Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, Main.AlignUnit[/*(int)_camNo*/0].PAT[(int)_stageNo, _tabNo].m_MatLineScanOriginalBuf, OpenCvSharp.ColorConversionCodes.BGR2GRAY);
+
+                if(Main.vision.CogImgTool[0].OutputImage.Width > 0)
+                {
+                    Main.AlignUnit[0].PAT[0, _tabNo].m_imgDataATT = new byte[Main.vision.CogImgTool[0].OutputImage.Width * Main.vision.CogImgTool[0].OutputImage.Height];
+                    Main.AlignUnit[0].PAT[0, _tabNo].m_imgCols = Main.vision.CogImgTool[0].OutputImage.Width;
+                    Main.AlignUnit[0].PAT[0, _tabNo].m_imgRows = Main.vision.CogImgTool[0].OutputImage.Height;
+                    Main.AlignUnit[0].PAT[0, _tabNo].m_OrginalImgCols = Main.AlignUnit[0].PAT[0, _tabNo].m_imgCols;
+                    Main.AlignUnit[0].PAT[0, _tabNo].m_OrginalImgRows = Main.AlignUnit[0].PAT[0, _tabNo].m_imgRows;
+                }
+                
                 // PJH_TEST_230321_E
             }
 

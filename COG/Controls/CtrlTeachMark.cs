@@ -935,7 +935,7 @@ namespace COG.Controls
                     {
                         _patternParam[targetIndex, positionIndex] = new PatternMatchParameter();
 
-#if !SIMUL
+#if SIMUL
                         tempTool[targetIndex, positionIndex] = new CogPMAlignTool();
                         _patternParam[targetIndex, positionIndex].SetParam(Main.AlignUnit[(int)_camNo].InspectionParams[(int)_stageNo].PatternList[markIndex][targetIndex, positionIndex]);
                         tempTool[targetIndex, positionIndex] = _patternParam[targetIndex, positionIndex].CogPMAlignTool;
