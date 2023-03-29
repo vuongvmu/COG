@@ -401,6 +401,7 @@ namespace COG
             //strPath = String.Format("D:\\MacronDllTrace\\result{0:D}_{1:D}.bmp", nStageNo, nTapNo);
             //Cv2.ImWrite(strPath, m_rstImage);
         }
+
         public static void ATT_GetResultImageView(int nCamNo, int nStageNo, int nTapNo)
         {
             unsafe

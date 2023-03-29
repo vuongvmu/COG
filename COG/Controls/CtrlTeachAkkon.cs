@@ -2037,23 +2037,25 @@ namespace COG.Controls
                 bool bRightMarkCheck = false;
                 // 임시
                 int m_PatNo_Sub = 0;
-                _akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].InputImage = _teachingDisplay.Image;
-                _akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].InputImage = _teachingDisplay.Image;
+                // PJH_TEST_230321_S
+                //_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].InputImage = _teachingDisplay.Image;
+                //_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].InputImage = _teachingDisplay.Image;
                 
-                _akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Run();
-                _akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Run();
+                //_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Run();
+                //_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Run();
 
-                if (_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Results != null)
-                {
-                    if (_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Results.Count >= 1)
-                        bLeftMarkCheck = true;
-                }
-                if (_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Results != null)
-                {
-                    if (_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Results.Count >= 1)
-                        bRightMarkCheck = true;
-                }
+                //if (_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Results != null)
+                //{
+                //    if (_akkonTagData[_tabNo].LeftPattern[m_PatNo_Sub].Results.Count >= 1)
+                //        bLeftMarkCheck = true;
+                //}
+                //if (_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Results != null)
+                //{
+                //    if (_akkonTagData[_tabNo].RightPattern[m_PatNo_Sub].Results.Count >= 1)
+                //        bRightMarkCheck = true;
+                //}
 
+                // PJH_TEST_230321_E
                 if (bLeftMarkCheck && bRightMarkCheck)
                 {
                     //추후 Score 기능 추가 예정 - YSH        

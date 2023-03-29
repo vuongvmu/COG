@@ -37,7 +37,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\Runtime\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;SIMUL_x, ATT, CGMS_x</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SIMUL, ATT, CGMS_x</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
